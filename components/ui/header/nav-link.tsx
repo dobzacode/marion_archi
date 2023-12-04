@@ -1,16 +1,17 @@
 'use client';
 
-import { VariantProps, cva } from 'class-variance-authority';
 import { cn } from '@/lib/utils';
+import { VariantProps, cva } from 'class-variance-authority';
 import Link, { LinkProps } from 'next/link';
 import { usePathname } from 'next/navigation';
 import { FC } from 'react';
 
-const linkVariants = cva('', {
+const linkVariants = cva('flex items-center text-center', {
+  
   variants: {
     size: {
       small: 'py-small px-sub-large body leading-body font-medium',
-      medium: 'py-sub-medium px-sub-large sub-heading',
+      medium: 'py-small px-medium sub-heading',
       large: 'py-small px-sub-large heading'
     },
     intent: {

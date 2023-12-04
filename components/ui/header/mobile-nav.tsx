@@ -1,18 +1,12 @@
 'use client';
 
-import Icon from '@mdi/react';
-import { AnimatePresence, motion } from 'framer-motion';
 import { cn } from '@/lib/utils';
-import React, { FC, useEffect, useRef, useState } from 'react';
-
-import { mdiClose, mdiMenu } from '@mdi/js';
-import useBetterMediaQuery from '@/components/hooks/use-better-media-query';
-import { Variants } from 'framer-motion';
-import { usePathname } from 'next/navigation';
+import { mdiMenu } from '@mdi/js';
+import Icon from '@mdi/react';
+import React, { FC, useState } from 'react';
 import Logo from '../branding/logo';
-import NavLink from './nav-link';
 import { navLinks } from './nav';
-
+import NavLink from './nav-link';
 
 interface NavProps {
   children?: React.ReactNode;
@@ -26,32 +20,14 @@ interface NavProps {
     | 'warning'
     | 'info'
     | 'neutral'
-
-
     | null
     | undefined;
   linkSize: 'small' | 'medium' | 'large' | null | undefined;
   size?: 'small' | 'medium' | 'large' | null | undefined;
 }
 
-
-
-
-
-
-
-
 const MobileNav: FC<NavProps> = ({ className, linkSize, intent, size }: NavProps) => {
-  const isMobileLargePlus = useBetterMediaQuery('(min-width: 500px)');
-
   const [showMenu, setShowMenu] = useState<boolean>(false);
-
-
-
-
-
-  const navRef = useRef();
-  const footerRef = useRef();
 
   const modalOffset = () => {
     switch (size) {
@@ -65,27 +41,31 @@ const MobileNav: FC<NavProps> = ({ className, linkSize, intent, size }: NavProps
   };
 
   return (
-    <>
-      <header className={cn(className)}>
-       <nav>
-            <ul className={'flex gap-large'}>
-              {navLinks.map((link, i) => {
-                return (
-                  <NavLink                                
-                    intent={intent}
-                    key={link.name}
-                    hover={true}
-                    size={linkSize}                
-                    href={link.href}
-                  >
-                    {link.name}
-                  </NavLink>
-                );
-              })}
-            </ul>
-          </nav>  
-      </header> 
-    </>
+    <nav className={className}>
+     <Logo
+        href="/"
+        className="font-bold tracking-widest"
+        intent={intent}
+        textType="heading"
+      >
+       MD
+      </Logo>
+      <button onClick={() => setShowMenu(!showMenu)}>
+        <Icon path={mdiMenu} size={3.5}></Icon>
+      </button>
+      <div
+        className={cn(
+          'h-screen w-screen bg-white duration-700',
+          'absolute z-10',
+          showMenu ? 'left-0' : '-left-[768px] ',
+          modalOffset()
+        )}
+      >
+        <ul className={'mt-sub-large flex flex-col justify-center  gap-large'}>
+          {navLinks.map((link) => {return <NavLink rounded="small" hover={true} size={linkSize} href={link.href} key={link.name}  intent={intent}>{link.name}</NavLink>})}
+        </ul>
+      </div>
+    </nav>
   );
 };
 

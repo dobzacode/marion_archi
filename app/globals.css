@@ -1,19 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=roboto:wght@200;300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@200;300;400;600&display=swap');
+@import url('https://fonts.cdnfonts.com/css/distortion-dos-analogue');
 
 @tailwind components;
 @tailwind base;
 
 @layer components {
   .heading--extra-large {
-    @apply text-heading-sub-extra-large font-light leading-heading-sub-extra-large tablet:text-heading-extra-large tablet:leading-heading-extra-large;
+    @apply text-heading-sub-extra-large font-normal font-['Distortion_Dos_Analogue'] leading-heading-sub-extra-large tablet:text-heading-extra-large tablet:leading-heading-extra-large;
   }
 
   .heading--sub-extra-large {
-    @apply text-heading-sub-extra-large font-semibold leading-heading-sub-extra-large;
+    @apply text-heading-sub-extra-large font-normal leading-heading-sub-extra-large;
   }
 
   .heading--large {
-    @apply text-heading-sub-large font-light leading-heading-sub-large tablet:text-heading-large tablet:leading-heading-large;
+    @apply text-heading-sub-large font-normal leading-heading-sub-large tablet:text-heading-large tablet:leading-heading-large;
   }
 
   .heading--sub-large {
@@ -21,19 +22,19 @@
   }
 
   .heading {
-    @apply text-heading font-light leading-heading;
+    @apply text-heading font-normal leading-heading;
   }
 
   .sub-heading {
-    @apply text-sub-heading font-extralight leading-sub-heading tracking-wider;
+    @apply text-sub-heading font-normal leading-sub-heading tracking-wider;
   }
 
   .body {
-    @apply text-body font-light leading-[2rem] tracking-[0.15em];
+    @apply text-body font-normal leading-[2rem] tracking-[0.15em];
   }
 
   .caption {
-    @apply text-caption font-light leading-caption;
+    @apply text-caption font-normal leading-caption;
   }
 
   .brutalism-border {

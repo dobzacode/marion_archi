@@ -1,5 +1,5 @@
-import { VariantProps, cva } from 'class-variance-authority';
 import { cn } from '@/lib/utils';
+import { VariantProps, cva } from 'class-variance-authority';
 import { HTMLAttributes } from 'react';
 import MobileNav from './mobile-nav';
 import Nav from './nav';
@@ -51,16 +51,17 @@ function Header({ children, className, size, intent, textColor, ...props }: Head
       <Nav
         linkSize="medium"
         intent={textColor}
-        className="mx-large hidden w-full items-center justify-between gap-large tablet:flex"
+        className="laptop-large:px-large px-small hidden w-full items-center justify-between gap-large tablet:flex"
       ></Nav>
       <MobileNav
         linkSize="medium"
         intent={textColor}
         size={size}
-        className="mx-small flex w-full items-center justify-between gap-large mobile-large:mx-sub-large tablet:hidden"
+        className="flex w-full items-center justify-between gap-large tablet:hidden"
       ></MobileNav>
     </header>
   );
 }
 
 export { Header, sectionVariants };
+

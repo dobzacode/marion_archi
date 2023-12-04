@@ -16,8 +16,7 @@ interface NavProps extends HTMLProps<HTMLElement> {
     | 'warning'
     | 'info'
     | 'neutral'
-    | 'black'
-    | 'white'
+    
     | null
     | undefined;
 }
@@ -35,41 +34,12 @@ const Nav: FC<NavProps> = ({ className, linkSize, intent }) => {
         href="/"
         className="font-bold tracking-widest"
         intent={intent}
-        textType="heading--sub-large"
+        textType="heading"
       >
-        DESIGN SYSTEM
+       MD
       </Logo>
-      <ul className="laptopL:gap-large flex justify-center tablet:gap-small laptop:gap-sub-large">
-        <NavLink
-          rounded="small"
-          hover={true}
-          size={linkSize}
-          intent={intent}
-          currentNavStyle={intent}
-          href="/color"
-        >
-          Color
-        </NavLink>
-        <NavLink
-          rounded="small"
-          hover={true}
-          size={linkSize}
-          intent={intent}
-          currentNavStyle={intent}
-          href="/typography"
-        >
-          Typography
-        </NavLink>
-        <NavLink
-          rounded="small"
-          hover={true}
-          size={linkSize}
-          intent={intent}
-          currentNavStyle={intent}
-          href="/component"
-        >
-          Component
-        </NavLink>
+      <ul className="laptopL:gap-large flex justify-center tablet:gap-small laptop:gap-sub-large whitespace-nowrap">
+        {navLinks.map((link) => {return <NavLink rounded="small" hover={true} size={linkSize} href={link.href} key={link.name}  intent={intent}>{link.name}</NavLink>})}
       </ul>
     </nav>
   );

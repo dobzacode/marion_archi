@@ -1,9 +1,11 @@
-import HeroBlock from '@/components/landing/hero-block';
+import CvSection from '@/components/landing/cv-section';
+import HeroSection from '@/components/landing/hero-section';
 
 export default function Home() {
   return (
-    <main>
-      <HeroBlock></HeroBlock>
+    <main className="flex flex-col gap-extra-large">
+      <HeroSection></HeroSection>
+      <CvSection></CvSection>
     </main>
   );
 }

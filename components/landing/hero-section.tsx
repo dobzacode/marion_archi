@@ -1,12 +1,12 @@
 import { H1 } from '../ui/text/h1';
 import H2 from '../ui/text/h2';
 
-export default function HeroBlock() {
+export default function HeroSection() {
   return (
-    <section className="flex w-full justify-between px-small">
+    <section className="flex w-full justify-between px-small py-extra-large">
       <div className="relative w-1/2">
         <svg
-          className="absolute -z-20 max-h-[40rem] w-full overflow-visible fill-primary20 transition-all duration-slow group-hover:fill-primary20"
+          className="z-10 max-h-[40rem] w-full overflow-visible fill-primary20 transition-all duration-slow group-hover:fill-primary20"
           viewBox="0 0 100 100"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -16,9 +16,13 @@ export default function HeroBlock() {
           />
         </svg>
       </div>
-      <div className="relative mt-small flex w-1/2 flex-col gap-small">
-        <H1 textType="heading--large">MARION DELEERSNYDER</H1>
-        <H2 textType="heading">DESIGNER D&apos;ESPACE & DESIGNER DE SERVICE</H2>
+      <div className="relative flex w-1/2 flex-col gap-small pt-small">
+        <H1 className="slideInFromRight" textType="heading--large">
+          MARION DELEERSNYDER
+        </H1>
+        <H2 className="slideInFromLeft" textType="heading">
+          DESIGNER D&apos;ESPACE & DESIGNER DE SERVICE
+        </H2>
       </div>
     </section>
   );

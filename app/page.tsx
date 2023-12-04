@@ -1,3 +1,9 @@
+import HeroBlock from '@/components/landing/hero-block';
+
 export default function Home() {
-  return <main className="flex min-h-screen "></main>;
+  return (
+    <main>
+      <HeroBlock></HeroBlock>
+    </main>
+  );
 }

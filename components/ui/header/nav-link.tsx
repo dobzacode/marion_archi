@@ -101,8 +101,6 @@ const NavLink: FC<NavLinkProps> = ({
   currentNavStyle,
   ...props
 }: NavLinkProps) => {
-
-
   return (
     <li>
       <Link
@@ -112,8 +110,7 @@ const NavLink: FC<NavLinkProps> = ({
             size,
             rounded,
             hover,
-            intent,
-            
+            intent
           })
         )}
         {...props}

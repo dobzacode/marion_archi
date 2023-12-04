@@ -6,7 +6,7 @@
 
 @layer components {
   .heading--extra-large {
-    @apply text-heading-sub-extra-large font-normal font-['Distortion_Dos_Analogue'] leading-heading-sub-extra-large tablet:text-heading-extra-large tablet:leading-heading-extra-large;
+    @apply font-['Distortion_Dos_Analogue'] text-heading-sub-extra-large font-normal leading-heading-sub-extra-large tablet:text-heading-extra-large tablet:leading-heading-extra-large;
   }
 
   .heading--sub-extra-large {
@@ -79,7 +79,6 @@ html {
   font-size: 62.5%;
   font-family: Roboto;
 }
-
 
 .hidden-div {
   transition-duration: 600ms;

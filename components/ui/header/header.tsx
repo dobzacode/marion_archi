@@ -38,8 +38,6 @@ interface HeaderProps
     | 'warning'
     | 'info'
     | 'neutral'
-    
-   
     | null
     | undefined;
 }
@@ -51,7 +49,7 @@ function Header({ children, className, size, intent, textColor, ...props }: Head
       <Nav
         linkSize="medium"
         intent={textColor}
-        className="laptop-large:px-large px-small hidden w-full items-center justify-between gap-large tablet:flex"
+        className="hidden w-full items-center justify-between gap-large px-small tablet:flex laptop-large:px-large"
       ></Nav>
       <MobileNav
         linkSize="medium"
@@ -64,4 +62,3 @@ function Header({ children, className, size, intent, textColor, ...props }: Head
 }
 
 export { Header, sectionVariants };
-

@@ -1,15 +1,11 @@
-"use client"
+'use client';
 
-import { FC, InputHTMLAttributes } from "react";
+import { FC, InputHTMLAttributes } from 'react';
 
 interface CheckboxProps extends InputHTMLAttributes<HTMLInputElement> {
   children?: React.ReactNode;
 }
-const InputCheckbox: FC<CheckboxProps> = ({
-  className,
-  id,
-  ...props
-}: CheckboxProps) => {
+const InputCheckbox: FC<CheckboxProps> = ({ className, id, ...props }: CheckboxProps) => {
   return <input name={id} {...props}></input>;
 };
 

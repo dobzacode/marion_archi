@@ -3,11 +3,9 @@
 import { cn } from '@/lib/utils';
 import { VariantProps, cva } from 'class-variance-authority';
 import Link, { LinkProps } from 'next/link';
-import { usePathname } from 'next/navigation';
 import { FC } from 'react';
 
 const linkVariants = cva('flex items-center text-center', {
-  
   variants: {
     size: {
       small: 'py-small px-sub-large body leading-body font-medium',
@@ -103,13 +101,11 @@ const NavLink: FC<NavLinkProps> = ({
   currentNavStyle,
   ...props
 }: NavLinkProps) => {
-  const pathname = usePathname();
-  const isActive = pathname === props.href;
+
 
   return (
     <li>
       <Link
-
         className={cn(
           linkVariants({
             className,
@@ -117,7 +113,7 @@ const NavLink: FC<NavLinkProps> = ({
             rounded,
             hover,
             intent,
-            currentNavStyle: isActive ? intent : 'transparent'
+            
           })
         )}
         {...props}

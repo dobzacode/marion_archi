@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 
 /**
  * Modified from link below
@@ -13,8 +13,8 @@ export default function useBetterMediaQuery(mediaQueryString: string) {
     const mediaQueryList = window.matchMedia(mediaQueryString);
     const listener = () => setMatches(!!mediaQueryList.matches);
     listener();
-    mediaQueryList.addEventListener("change", listener);
-    return () => mediaQueryList.removeEventListener("change", listener);
+    mediaQueryList.addEventListener('change', listener);
+    return () => mediaQueryList.removeEventListener('change', listener);
   }, [mediaQueryString]);
 
   return matches;

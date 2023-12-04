@@ -1,7 +1,7 @@
-import { mdiAccount } from "@mdi/js";
-import Icon from "@mdi/react";
-import Image from "next/image";
-import { FC } from "react";
+import { mdiAccount } from '@mdi/js';
+import Icon from '@mdi/react';
+import Image from 'next/image';
+import { FC } from 'react';
 
 interface AvatarProps {
   className?: string;
@@ -12,18 +12,12 @@ interface AvatarProps {
   fill?: boolean;
 }
 
-const Avatar: FC<AvatarProps> = ({
-  className,
-  size = 3,
-  src,
-  alt,
-  ...props
-}) => {
+const Avatar: FC<AvatarProps> = ({ className, size = 3, src, alt, ...props }) => {
   if (src) {
     return (
       <Image
         src={src}
-        alt={alt || "profile-picture"}
+        alt={alt || 'profile-picture'}
         width={size * 10}
         height={size * 10}
         className={className}

@@ -1,14 +1,11 @@
 'use client';
 
-import { useTranslations } from 'next-intl';
 import { useFormStatus } from 'react-dom';
 import { BarLoader } from 'react-spinners';
 import Button from '../button/button';
 
-export function SubmitButton({ isEmail = false }: { isEmail?: boolean }) {
+export function SubmitButton() {
   const { pending } = useFormStatus();
-
-  const t = useTranslations('form');
 
   console.log(pending);
 
@@ -21,7 +18,7 @@ export function SubmitButton({ isEmail = false }: { isEmail?: boolean }) {
       intent="info"
       aria-disabled={pending}
     >
-      {!isEmail ? t('submit') : t('subscribe')}
+      <p>ENVOYER</p>
       {pending && (
         <BarLoader
           className="bg-info80"

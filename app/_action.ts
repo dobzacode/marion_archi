@@ -5,10 +5,10 @@ import { google } from 'googleapis';
 export async function contactAction(formData: FormData) {
   const values: (FormDataEntryValue | null)[][] = [
     [
-      formData.get('PrÃ©nom'),
-      formData.get(t('lastname')),
+      formData.get('firstname'),
+      formData.get('lastname'),
       formData.get('email'),
-      formData.get(t('subject')),
+      formData.get('subject'),
       formData.get('message')
     ]
   ];

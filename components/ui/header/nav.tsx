@@ -35,7 +35,12 @@ const Nav: FC<NavProps> = ({ className, linkSize, intent }) => {
 
   return (
     <nav className={className}>
-      <Logo href="/" className="font-bold tracking-widest" intent={intent} textType="heading">
+      <Logo
+        href="/"
+        className="font-['Distortion_Dos_Analogue'] font-bold tracking-widest"
+        intent={intent}
+        textType="heading--large"
+      >
         MD
       </Logo>
       <ul className="laptopL:gap-large flex justify-center overflow-visible whitespace-nowrap tablet:gap-small  laptop:gap-sub-large">

@@ -37,7 +37,7 @@ const Nav: FC<NavProps> = ({ className, linkSize, intent }) => {
     <nav className={className}>
       <Logo
         href="/"
-        className="font-['Distortion_Dos_Analogue'] font-bold tracking-widest"
+        className="font-['Distortion_Dos_Analogue'] font-bold tracking-widest "
         intent={intent}
         textType="heading--large"
       >

@@ -22,7 +22,7 @@ export default function HeroSection() {
       <div className="w-[100rem]"></div>
       <div className="relative flex flex-col gap-small pt-large">
         <H1
-          className="slideInFromRight opacity-0 animation-delay-[3s]"
+          className="slideInFromRight animation-delay-[3s]!importra opacity-0"
           textType="heading--extra-large"
         >
           MARION DELEERSNYDER

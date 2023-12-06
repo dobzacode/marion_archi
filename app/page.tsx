@@ -1,4 +1,4 @@
-import CvSection from '@/components/landing/cv-section';
+import CvSection from '@/components/landing/cv-section/cv-section';
 import HeroSection from '@/components/landing/hero-section';
 
 export default function Home() {

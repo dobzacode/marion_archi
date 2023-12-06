@@ -1,9 +1,9 @@
 import P from '@/components/ui/text/p';
 import { cn } from '@/lib/utils';
-import DesignEspaceTitleBlock from './design-espace-title-block';
-import SubSection from './sub-section';
+import SubSection from '../sub-section';
+import DesignEspaceTitleBlock from './vie-associative-title-block';
 
-export default function DesignEspaceSection() {
+export default function VieAssociativeSection() {
   return (
     <section className="flex w-full flex-wrap-reverse justify-center gap-extra-large px-[10px] py-extra-large max-laptop:mt-large tablet:gap-small">
       <ol className="-mt-sub-large flex w-[80rem] flex-col items-center gap-large max-[1298px]:mt-extra-large tablet:px-large  laptop:gap-extra-large">

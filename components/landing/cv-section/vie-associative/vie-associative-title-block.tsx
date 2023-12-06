@@ -14,10 +14,10 @@ export default function VieAssociativeTitleBlock({ className }: { className: str
       <motion.div
         initial={{ x: '-50%' }}
         animate={{ x: isInView ? 0 : '-50%', transition: { duration: 0.5 } }}
-        className="relative h-[25rem] max-mobile-large:-mt-medium max-mobile-large:mb-small"
+        className="relative h-[25rem] "
       >
         <H3
-          className=" relative z-50 rotate-12 font-['Distortion_Dos_Analogue']  text-primary1 max-mobile-large:translate-x-28 max-mobile-large:translate-y-28 max-mobile-large:rotate-2"
+          className=" relative z-50 rotate-12 font-['Distortion_Dos_Analogue']  text-primary1 "
           textType={'heading'}
         >
           VIE ASSOCIATIVE & <br className="mobile-large:hidden"></br>

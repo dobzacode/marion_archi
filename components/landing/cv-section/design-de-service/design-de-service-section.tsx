@@ -5,13 +5,13 @@ import DesignDeServiceTitleBlock from './design-de-service-title-block';
 
 export default function DesignDeServiceSection() {
   return (
-    <section className="flex w-full translate-x-20 flex-row-reverse flex-wrap-reverse justify-center gap-extra-large px-[10px] py-extra-large max-laptop:mt-large tablet:gap-small">
-      <ol className="-mt-sub-large flex w-[80rem] flex-col items-center gap-large max-[1298px]:mt-extra-large max-laptop:-translate-x-20 tablet:px-large laptop:translate-x-[15%]  laptop:gap-extra-large">
+    <section className="flex w-full translate-x-20 flex-row-reverse flex-wrap-reverse justify-center gap-extra-large px-[10px] py-extra-large max-laptop:mt-large max-tablet:-mt-large max-tablet:gap-medium tablet:gap-small">
+      <ol className="-mt-sub-large flex w-[80rem] flex-col items-center gap-large max-[1298px]:mt-extra-large max-laptop:-translate-x-20 tablet:px-large laptop:gap-extra-large  min-[1298px]:translate-x-[15%]">
         <SubSection
           direction={'right'}
           custom={0}
           title="PROJETS"
-          className="ml-large flex flex-col  gap-extra-small duration-slowest before:top-[10%]  before:content-['\2022']  max-[1298px]:ml-large max-tablet:ml-0  tablet:w-auto"
+          className="flex flex-col gap-extra-small  duration-slowest before:top-[10%] before:content-['\2022']  max-[1298px]:ml-small  max-tablet:ml-0 tablet:ml-large  tablet:w-auto"
           href="/"
         >
           <svg
@@ -64,7 +64,7 @@ export default function DesignDeServiceSection() {
           direction={'right'}
           custom={1}
           title="RECHERCHES"
-          className="relative ml-medium flex flex-col gap-extra-small duration-slowest  before:top-[5%] before:content-['\2022'] "
+          className="relative flex flex-col gap-extra-small duration-slowest before:top-[5%] before:content-['\2022']  tablet:-ml-large min-[1298px]:ml-medium "
           href="/"
         >
           <svg

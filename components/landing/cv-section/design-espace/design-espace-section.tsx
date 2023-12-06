@@ -5,7 +5,7 @@ import DesignEspaceTitleBlock from './design-espace-title-block';
 
 export default function DesignEspaceSection() {
   return (
-    <section className="flex w-full flex-wrap-reverse justify-center gap-extra-large px-[10px] py-extra-large max-laptop:mt-large tablet:gap-small">
+    <section className="flex w-full flex-wrap-reverse justify-center gap-extra-large px-[10px] py-extra-large max-laptop:mt-large max-tablet:pb-[20rem] tablet:gap-small">
       <ol className="-mt-sub-large flex w-[80rem] flex-col items-center gap-large max-[1298px]:mt-extra-large tablet:px-large  laptop:gap-extra-large">
         <SubSection
           custom={0}

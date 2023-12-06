@@ -117,7 +117,7 @@ export default function DesignDeServiceTitleBlock({ className }: { className: st
             initial={{ fillOpacity: 0 }}
             animate={{
               fillOpacity: isInView ? 1 : 0,
-              transition: { duration: 0.5 }
+              transition: { duration: 0.7 }
             }}
             viewBox="0 0 200 200"
             xmlns="http://www.w3.org/2000/svg"

@@ -46,7 +46,12 @@ const MobileNav: FC<NavProps> = ({ className, linkSize, intent, size }: NavProps
 
   return (
     <nav className={className}>
-      <Logo href="/" className="font-bold tracking-widest" intent={intent} textType="heading">
+      <Logo
+        href="/"
+        className="font-['Distortion_Dos_Analogue'] font-bold tracking-widest"
+        intent={intent}
+        textType="heading--large"
+      >
         MD
       </Logo>
       <button onClick={() => setShowMenu(!showMenu)}>
@@ -55,7 +60,7 @@ const MobileNav: FC<NavProps> = ({ className, linkSize, intent, size }: NavProps
       <div
         className={cn(
           'h-screen w-screen bg-primary1 duration-700',
-          'absolute z-10',
+          'absolute z-[60]',
           showMenu ? 'left-0' : '-left-[768px] ',
           modalOffset()
         )}

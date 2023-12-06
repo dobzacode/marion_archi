@@ -4,10 +4,10 @@ import H2 from '../ui/text/h2';
 
 export default function HeroSection() {
   return (
-    <section className="flex h-[68rem] w-full justify-between gap-extra-large px-small py-large">
-      <div className="absolute left-0 top-[22%] z-10 w-[100rem] scale-90">
+    <section className="flex w-full justify-between py-large max-[1298px]:flex-row-reverse max-[700px]:pt-extra-large tablet:h-[68rem] tablet:px-small laptop:gap-extra-large">
+      <div className="absolute right-0 top-[22%] z-10 w-[100rem] scale-90 max-[1298px]:w-[80rem] max-[1298px]:-translate-y-[10%] max-[1298px]:translate-x-[10%] max-laptop:translate-x-[20%] max-laptop:scale-90 max-tablet:-translate-y-[20%] max-tablet:scale-[83%] max-[700px]:mt-large max-[680px]:-translate-y-[25%] max-mobile-large:-left-[230px] max-[500px]:w-[70rem] min-[1298px]:right-[35vw]">
         <svg
-          className=" fade  relative z-10 w-full overflow-visible  fill-primary10    transition-all duration-slow  group-hover:fill-primary20"
+          className=" fade  lapto relative z-10 w-fit  overflow-visible    fill-primary10 transition-all  duration-slow group-hover:fill-primary20"
           viewBox="-10 0 130 100"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -19,15 +19,18 @@ export default function HeroSection() {
 
         <Avatar className="animate-draw absolute top-0 z-40 w-full  overflow-visible [&>*]:stroke-primary80  [&>.sto]:fill-none"></Avatar>
       </div>
-      <div className="w-[100rem]"></div>
-      <div className="relative flex flex-col gap-small pt-large">
+      <div className="laptop:w-[100rem]"></div>
+      <div className="relative z-10 flex flex-col gap-small pt-extra-large max-[1298px]:translate-x-[20%] max-[1298px]:translate-y-[30%] max-[1150px]:translate-x-[10%] max-laptop:translate-x-0 tablet:pt-large">
         <H1
-          className="slideInFromRight animation-delay-[3s]!importra opacity-0"
+          className="slideInFromRight  relative leading-[10rem]  opacity-0 animation-delay-[3s] max-[860px]:leading-[6rem] max-[651px]:leading-[6.6rem] max-[600px]:leading-[5.6rem] max-mobile-large:leading-[4rem]"
           textType="heading--extra-large"
         >
           MARION DELEERSNYDER
         </H1>
-        <H2 className="slideInFromLeft opacity-0 animation-delay-[3s]" textType="heading">
+        <H2
+          className="slideInFromRight relative opacity-0  animation-delay-[3s] max-[600px]:text-sub-heading max-[600px]:leading-sub-heading"
+          textType="heading"
+        >
           DESIGNER D&apos;ESPACE & DESIGNER DE SERVICE
         </H2>
       </div>

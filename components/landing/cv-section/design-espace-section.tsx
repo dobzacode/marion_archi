@@ -5,12 +5,12 @@ import SubSection from './sub-section';
 
 export default function DesignEspaceSection() {
   return (
-    <section className="flex w-full flex-wrap-reverse justify-center gap-extra-large px-[10px] py-extra-large tablet:gap-small">
+    <section className="flex w-full flex-wrap-reverse justify-center gap-extra-large px-[10px] py-extra-large max-laptop:mt-large tablet:gap-small">
       <ol className="-mt-sub-large flex w-[80rem] flex-col items-center gap-large max-[1298px]:mt-extra-large tablet:px-large  laptop:gap-extra-large">
         <SubSection
           custom={0}
           title="ARCHITECTURE INTERIEURS"
-          className="ml-small flex  flex-col gap-extra-small duration-slowest  before:top-[10%]  before:content-['\2022'] max-[1298px]:ml-large  tablet:w-auto"
+          className="ml-small flex flex-col  gap-extra-small duration-slowest before:top-[10%]  before:content-['\2022']  max-[1298px]:ml-large max-tablet:ml-0  tablet:w-auto"
           href="/"
         >
           <svg
@@ -49,7 +49,7 @@ export default function DesignEspaceSection() {
         <SubSection
           custom={1}
           title="ARCHITECTURE RETAIL"
-          className="relative flex flex-col gap-extra-small duration-slowest  before:top-[5%] before:content-['\2022'] "
+          className=" relative flex flex-col gap-extra-small duration-slowest  before:top-[5%] before:content-['\2022'] "
           href="/"
         >
           <svg
@@ -88,7 +88,7 @@ export default function DesignEspaceSection() {
         <SubSection
           custom={2}
           title="ARCHITECTURE"
-          className="relative ml-large flex flex-col gap-extra-small duration-slowest   before:top-[10%] before:content-['\2022'] "
+          className="relative ml-large flex flex-col gap-extra-small duration-slowest before:top-[10%]   before:content-['\2022'] max-tablet:ml-0 "
           href="/"
         >
           <svg
@@ -127,7 +127,7 @@ export default function DesignEspaceSection() {
         <SubSection
           custom={3}
           title="ARCHITECTURE ESPACES DE TRAVAIL TERTIARES"
-          className="relative  ml-sub-medium flex flex-col gap-extra-small  duration-slowest before:top-[10%] before:content-['\2022'] "
+          className="relative ml-sub-medium  flex flex-col gap-extra-small duration-slowest  before:top-[10%] before:content-['\2022'] max-tablet:ml-0 "
           href="/"
         >
           {' '}

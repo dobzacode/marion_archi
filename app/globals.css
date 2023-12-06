@@ -7,7 +7,7 @@
 
 @layer components {
   .heading--extra-large {
-    @apply font-['Distortion_Dos_Analogue'] text-heading-sub-extra-large font-normal leading-heading-sub-extra-large tablet:text-heading-extra-large tablet:leading-heading-extra-large;
+    @apply font-['Distortion_Dos_Analogue'] text-heading-sub-large font-normal  leading-heading-sub-extra-large mobile-large:text-[6.6rem] min-[600px]:text-[8rem] min-[860px]:text-heading-extra-large min-[860px]:leading-heading-extra-large;
   }
 
   .heading--sub-extra-large {

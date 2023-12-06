@@ -20,7 +20,7 @@ export default function HeroSection() {
         <Avatar className="animate-draw absolute top-0 z-40 w-full  overflow-visible [&>*]:stroke-primary80  [&>.sto]:fill-none"></Avatar>
       </div>
       <div className="laptop:w-[100rem]"></div>
-      <div className="relative z-10 flex flex-col gap-small pt-extra-large max-[1298px]:translate-x-[20%] max-[1298px]:translate-y-[30%] max-[1150px]:translate-x-[10%] max-laptop:translate-x-0 tablet:pt-large">
+      <div className="relative z-10 flex flex-col gap-small pt-extra-large max-[1298px]:translate-x-[20%] max-[1298px]:translate-y-[30%] max-[1150px]:translate-x-[10%] max-laptop:translate-x-0 tablet:pt-extra-large">
         <H1
           className="slideInFromRight  relative leading-[10rem]  opacity-0 animation-delay-[3s] max-[860px]:leading-[6rem] max-[651px]:leading-[6.6rem] max-[600px]:leading-[5.6rem] max-mobile-large:leading-[4rem]"
           textType="heading--extra-large"

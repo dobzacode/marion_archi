@@ -12,7 +12,7 @@ export default function DesignEspaceTitleBlock({ className }: { className: strin
 
   return (
     <div ref={ref} className={className}>
-      <div className="relative h-fit ">
+      <div className="relative h-fit max-[1298px]:-translate-x-[50%] max-[1298px]:-translate-y-16 max-laptop:-translate-y-[10vw] max-laptop:translate-x-[-15vw] max-tablet:-translate-y-16  max-tablet:translate-x-10 max-mobile-large:w-[40rem] max-mobile-large:-translate-y-10 max-mobile-large:translate-x-32">
         <motion.svg
           viewBox="0 0 200 200"
           xmlns="http://www.w3.org/2000/svg"
@@ -61,7 +61,7 @@ export default function DesignEspaceTitleBlock({ className }: { className: strin
             <strong className="before:bg-primary20">Indesign</strong>
           </P>
           <P
-            className="absolute -bottom-small  -top-[75px] right-[350px] z-20 -rotate-[12deg]  text-primary80  duration-slowest "
+            className="absolute -bottom-small -top-[68px]  right-[350px] z-20 -rotate-[12deg] text-primary80 duration-slowest  max-mobile-medium:-top-[70px]  max-mobile-medium:right-[320px] max-mobile-medium:rotate-[10deg]"
             textType="body"
           >
             <strong className="before:bg-primary20">Photoshop</strong>
@@ -79,7 +79,7 @@ export default function DesignEspaceTitleBlock({ className }: { className: strin
             Flamingo
           </P>
           <P
-            className="absolute -bottom-small -top-[30px] right-[80px] z-20   -rotate-[7deg]  text-primary80  duration-slowest "
+            className="absolute -bottom-small -top-[30px] right-[80px] z-20 -rotate-[7deg]   text-primary80  duration-slowest  max-[1298px]:right-[190px] "
             textType="body"
           >
             Microsoft
@@ -89,13 +89,14 @@ export default function DesignEspaceTitleBlock({ className }: { className: strin
       <motion.div
         initial={{ x: '-50%' }}
         animate={{ x: isInView ? 0 : '-50%', transition: { duration: 0.5 } }}
-        className="relative h-[25rem]"
+        className="relative h-[25rem] max-mobile-large:-mt-medium max-mobile-large:mb-small"
       >
         <H3
-          className=" relative z-20 -rotate-12 font-['Distortion_Dos_Analogue']  text-primary1"
+          className=" relative z-50 -rotate-12 font-['Distortion_Dos_Analogue']  text-primary1 max-mobile-large:translate-x-28 max-mobile-large:translate-y-28 max-mobile-large:rotate-2"
           textType={'heading'}
         >
-          ARCHITECTE D&apos;INTERIEUR ET DESIGNER D&apos;ESPACES
+          ARCHITECTE D&apos;INTERIEUR ET DESIGNER <br className="mobile-large:hidden"></br>
+          D&apos;ESPACES
         </H3>
         <motion.svg
           initial={{ fillOpacity: 0 }}
@@ -115,7 +116,7 @@ export default function DesignEspaceTitleBlock({ className }: { className: strin
           />
         </motion.svg>
       </motion.div>
-      <div className="relative h-fit -rotate-12">
+      <div className="relative h-fit -rotate-12 max-[1298px]:-translate-y-48 max-[1298px]:translate-x-[79%] max-laptop:-translate-y-[2vw] max-laptop:translate-x-[15vw] max-tablet:translate-x-10 max-tablet:translate-y-5 max-mobile-large:-translate-x-10">
         <svg
           viewBox="0 0 200 200"
           xmlns="http://www.w3.org/2000/svg"
@@ -139,10 +140,11 @@ export default function DesignEspaceTitleBlock({ className }: { className: strin
           animate={{ opacity: isInView ? 1 : 0, transition: { duration: 1, delay: 2.5 } }}
         >
           <P
-            className="absolute -bottom-small  right-0 z-20  text-primary80  duration-slowest "
+            className="absolute -bottom-small right-0 z-20 font-normal text-primary80 duration-slowest  max-mobile-large:-bottom-sub-large max-mobile-large:right-16"
             textType="sub-heading"
           >
-            2018 - BTS DESIGN ESPACE
+            2018 <br className="p-small mobile-large:hidden"></br>{' '}
+            <span className="max-mobile-large:hidden">-</span> BTS DESIGN ESPACE
           </P>
         </motion.div>
       </div>

@@ -25,8 +25,8 @@ export default function SubSection({
       custom={custom}
       className={`sub-heading   text-primary90 ${className}`}
     >
-      <Link href={href}>
-        <h4 className="relative z-0 font-['Distortion_Dos_Analogue'] text-primary80 duration-0 group-hover:z-20">
+      <Link className="peer w-fit " href={href}>
+        <h4 className="relative z-20 font-['Distortion_Dos_Analogue'] text-primary80 duration-0 group-hover:z-20">
           {title}
         </h4>
       </Link>

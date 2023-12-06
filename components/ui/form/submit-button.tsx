@@ -11,18 +11,19 @@ export function SubmitButton() {
 
   return (
     <Button
-      className={`relative border-b-2 border-info10 `}
+      className={`relative  overflow-hidden ${pending ? 'pointer-events-none' : ''}`}
       size="small"
       rounded="small"
       type="submit"
-      intent="info"
+      hover={true}
+      intent="pastelPrimary"
       aria-disabled={pending}
     >
-      <p>ENVOYER</p>
+      <p className="text-primary90">ENVOYER</p>
       {pending && (
         <BarLoader
-          className="bg-info80"
-          height="4px"
+          className="bg-primary50 text-primary40"
+          height="2px"
           cssOverride={{ width: '100%', position: 'absolute', bottom: '0' }}
         ></BarLoader>
       )}

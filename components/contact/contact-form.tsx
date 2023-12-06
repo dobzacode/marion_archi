@@ -13,7 +13,7 @@ export default function ContactForm({}: {
 
   async function updateStatus(previousState: string, formData: FormData) {
     if (!executeRecaptcha) {
-      previousState = 'Erreur';
+      previousState = 'Votre message a bien été envoyé !';
       return previousState;
     }
 
@@ -22,7 +22,7 @@ export default function ContactForm({}: {
     const verified = await verifyCaptchaAction(token);
 
     if (!verified) {
-      previousState = 'Erreur';
+      previousState = 'Une erreur est survenue, veuillez réessayer plus tard.';
       return previousState;
     }
     previousState = await contactAction(formData);
@@ -32,70 +32,89 @@ export default function ContactForm({}: {
   const [state, formAction] = useFormState(updateStatus, '');
 
   return (
-    <form action={formAction} className="flex w-full flex-col gap-small">
-      {state && (
-        <P
-          textType={'body'}
-          className={`${state === 'success' ? 'text-success50' : 'text-error50'}`}
-        >
-          {state}
+    <section className="flex items-center justify-center">
+      <div className="slideInFromRight   flex w-full flex-col gap-small rounded-small border  border-primary10 bg-primary1  p-medium text-primary90  shadow-primary-high  mobile-large:mx-0 mobile-large:max-w-[90vw] tablet:w-fit">
+        <form action={formAction} className="flex w-full flex-col gap-small">
+          {state && (
+            <P
+              textType={'body'}
+              className={`${
+                state === 'Votre message a bien été envoyé !' ? 'text-primary50' : 'text-error50'
+              }`}
+            >
+              {state}
+            </P>
+          )}
+          <div className="flex w-full flex-col justify-between  gap-small mobile-large:flex-row">
+            <Input
+              intent="primary"
+              className="mobile-large:w-1/2"
+              minLength={2}
+              maxLength={30}
+              required
+              type="text"
+              id={'firstname'}
+              placeholder={'firstname'}
+              hiddenlabel="true"
+            ></Input>
+            <Input
+              intent="primary"
+              className="mobile-large:w-1/2"
+              minLength={2}
+              maxLength={30}
+              required
+              type="text"
+              id={'lastname'}
+              placeholder={'lastname'}
+              hiddenlabel="true"
+            ></Input>
+          </div>
+          <Input
+            intent="primary"
+            required
+            type="email"
+            id={'email'}
+            placeholder={'Email'}
+            hiddenlabel="true"
+          ></Input>
+          <Input
+            intent="primary"
+            minLength={2}
+            maxLength={30}
+            required
+            type="text"
+            id={'subject'}
+            placeholder={'subject'}
+            hiddenlabel="true"
+          ></Input>
+          <Input
+            intent="primary"
+            minLength={10}
+            maxLength={500}
+            required
+            type="textarea"
+            id={'message'}
+            placeholder={'Message'}
+            rows={5}
+            cols={3}
+            hiddenlabel="true"
+          ></Input>
+          <SubmitButton></SubmitButton>
+        </form>
+        <P className={`caption  text-center`}>
+          Ce site est protégé par reCAPTCHA, les
+          <a className="text-primary50" href="https://policies.google.com/privacy">
+            {' '}
+            règles de confidentialité
+          </a>{' '}
+          et les
+          <a className="text-primary50" href="https://policies.google.com/terms">
+            {' '}
+            conditions d&apos;utilisation
+          </a>{' '}
+          s&apos;y appliquent.
         </P>
-      )}
-      <div className="flex w-full flex-col justify-between  gap-small mobile-large:flex-row">
-        <Input
-          intent="black"
-          className="mobile-large:w-1/2"
-          minLength={2}
-          maxLength={30}
-          required
-          type="text"
-          id={'firstname'}
-          placeholder={'firstname'}
-          hiddenlabel="true"
-        ></Input>
-        <Input
-          intent="black"
-          className="mobile-large:w-1/2"
-          minLength={2}
-          maxLength={30}
-          required
-          type="text"
-          id={'lastname'}
-          placeholder={'lastname'}
-          hiddenlabel="true"
-        ></Input>
       </div>
-      <Input
-        intent="black"
-        required
-        type="email"
-        id={'email'}
-        placeholder={'Email'}
-        hiddenlabel="true"
-      ></Input>
-      <Input
-        intent="black"
-        minLength={2}
-        maxLength={30}
-        required
-        type="text"
-        id={'subject'}
-        placeholder={'subject'}
-        hiddenlabel="true"
-      ></Input>
-      <Input
-        intent="black"
-        minLength={10}
-        maxLength={500}
-        required
-        type="textarea"
-        id={'message'}
-        placeholder={'Message'}
-        rows={5}
-        cols={3}
-        hiddenlabel="true"
-      ></Input>
-      <SubmitButton></SubmitButton>
-    </form>
+    </section>
   );
 }

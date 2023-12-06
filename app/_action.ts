@@ -40,11 +40,10 @@ export async function contactAction(formData: FormData) {
       }
     });
 
-    return 'success';
+    return 'Votre message a bien été envoyé !';
   } catch (error) {
-    console.log('coucou');
     console.log(error);
-    return 'error';
+    return 'Une erreur est survenue, veuillez réessayer plus tard.';
   }
 }
 

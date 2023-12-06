@@ -223,3 +223,7 @@ strong::before {
   z-index: -1;
   transform: rotate(-2deg);
 }
+
+.grecaptcha-badge {
+  visibility: hidden;
+}

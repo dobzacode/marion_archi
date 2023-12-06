@@ -18,6 +18,8 @@ export async function contactAction(formData: FormData) {
     key: process.env.GOOGLE_PRIVATE_KEY?.replace(/\\n/g, '\n') ?? ''
   };
 
+  console.log(config);
+
   const client = new google.auth.JWT(config.email, null || '', config.key, [
     'https://www.googleapis.com/auth/spreadsheets'
   ]);
@@ -40,6 +42,7 @@ export async function contactAction(formData: FormData) {
 
     return 'success';
   } catch (error) {
+    console.log('coucou');
     console.log(error);
     return 'error';
   }

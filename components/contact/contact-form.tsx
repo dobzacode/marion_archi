@@ -54,7 +54,7 @@ export default function ContactForm({}: {
               required
               type="text"
               id={'firstname'}
-              placeholder={'firstname'}
+              placeholder={'Nom'}
               hiddenlabel="true"
             ></Input>
             <Input
@@ -65,7 +65,7 @@ export default function ContactForm({}: {
               required
               type="text"
               id={'lastname'}
-              placeholder={'lastname'}
+              placeholder={'Prénom'}
               hiddenlabel="true"
             ></Input>
           </div>
@@ -82,19 +82,20 @@ export default function ContactForm({}: {
             minLength={2}
             maxLength={30}
             required
-            type="text"
-            id={'subject'}
-            placeholder={'subject'}
+            type="number"
+            id={'phone'}
+            placeholder={'Téléphone'}
             hiddenlabel="true"
           ></Input>
+
           <Input
             intent="primary"
             minLength={10}
             maxLength={500}
             required
             type="textarea"
-            id={'message'}
-            placeholder={'Message'}
+            id={'demande'}
+            placeholder={'Demande'}
             rows={5}
             cols={3}
             hiddenlabel="true"

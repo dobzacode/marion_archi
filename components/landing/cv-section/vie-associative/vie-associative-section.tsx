@@ -5,7 +5,7 @@ import VieAssociativeTitleBlock from './vie-associative-title-block';
 
 export default function VieAssociativeSection() {
   return (
-    <section className="flex w-full flex-col-reverse  items-center justify-center gap-extra-large px-[10px] max-laptop:mt-large max-laptop:h-[115rem] max-laptop:gap-small max-laptop:py-extra-large max-tablet:h-fit tablet:gap-small laptop:absolute laptop:-left-[15%] laptop:bottom-0 laptop:h-[80rem] laptop:pb-extra-large">
+    <section className="flex w-full flex-col-reverse items-center justify-center gap-extra-large px-[10px] max-laptop:mt-large max-laptop:h-[115rem] max-laptop:gap-small max-laptop:py-extra-large max-tablet:h-fit tablet:gap-small laptop:absolute laptop:-left-[15%] laptop:bottom-0 laptop:h-[80rem] laptop:translate-y-[90rem] laptop:pb-extra-large">
       <ol className="-mt-sub-large flex w-[80rem]   flex-col items-center gap-large max-tablet:w-fit tablet:h-[120rem]  tablet:px-large  laptop:gap-extra-large">
         <SubSection
           custom={0}
@@ -89,7 +89,7 @@ export default function VieAssociativeSection() {
             - <span className="underline underline-offset-2">employée</span> - Restauration du
             CROUS, encaissement, gestion des commandes.
           </P>
-          <div className="max-tablet:py-medium"></div>
+          <div className="py-medium"></div>
         </SubSection>
       </ol>
       <VieAssociativeTitleBlock className="laptop relative flex w-[40rem] flex-col pt-[210px]  max-laptop:translate-x-5 "></VieAssociativeTitleBlock>

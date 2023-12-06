@@ -12,8 +12,8 @@ import {
 import { v4 as uuidv4 } from 'uuid';
 import P from '../text/p';
 
-import { VariantProps, cva } from 'class-variance-authority';
 import { cn } from '@/lib/utils';
+import { VariantProps, cva } from 'class-variance-authority';
 import InputCheckbox from './input/input-checkbox';
 import InputRadio from './input/input-radio';
 import InputSearch from './input/input-search';
@@ -102,6 +102,7 @@ const Input: FC<InputProps> = forwardRef<HTMLInputElement, InputProps>(
         case 'text':
         case 'email':
         case 'password':
+        case 'number':
           return (
             <InputText
               className={cn(

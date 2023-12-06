@@ -3,13 +3,14 @@
 import { google } from 'googleapis';
 
 export async function contactAction(formData: FormData) {
+  console.log(formData);
   const values: (FormDataEntryValue | null)[][] = [
     [
       formData.get('firstname'),
       formData.get('lastname'),
       formData.get('email'),
-      formData.get('subject'),
-      formData.get('message')
+      formData.get('phone'),
+      formData.get('demande')
     ]
   ];
 
@@ -17,8 +18,6 @@ export async function contactAction(formData: FormData) {
     email: process.env.GOOGLE_CLIENT_EMAIL ?? '',
     key: process.env.GOOGLE_PRIVATE_KEY?.replace(/\\n/g, '\n') ?? ''
   };
-
-  console.log(config);
 
   const client = new google.auth.JWT(config.email, null || '', config.key, [
     'https://www.googleapis.com/auth/spreadsheets'

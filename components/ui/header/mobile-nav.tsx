@@ -4,7 +4,7 @@ import { cn } from '@/lib/utils';
 import { mdiMenu } from '@mdi/js';
 import Icon from '@mdi/react';
 import { usePathname } from 'next/navigation';
-import React, { FC, useState } from 'react';
+import React, { FC, useEffect, useState } from 'react';
 import { v4 } from 'uuid';
 import Logo from '../branding/logo';
 import { navLinks } from './nav';
@@ -38,11 +38,15 @@ const MobileNav: FC<NavProps> = ({ className, linkSize, intent, size }: NavProps
       case 'small':
         return 'top-large';
       case 'medium':
-        return 'top-sub-extra-large';
+        return 'top-large';
       case 'large':
         return 'top-extra-large';
     }
   };
+
+  useEffect(() => {
+    setShowMenu(false);
+  }, [pathname]);
 
   return (
     <nav className={className}>
@@ -59,13 +63,14 @@ const MobileNav: FC<NavProps> = ({ className, linkSize, intent, size }: NavProps
       </button>
       <div
         className={cn(
-          'h-screen w-screen bg-primary1 duration-700',
+          'h-screen w-screen   bg-primary1 duration-700',
           'absolute z-[60]',
           showMenu ? 'left-0' : '-left-[768px] ',
           modalOffset()
         )}
       >
-        <ul className={'mt-sub-large flex flex-col justify-center  gap-large'}>
+        <div className=" mt-medium w-[90%] border-t border-primary40 border-opacity-40"></div>
+        <ul className={'mt-medium flex flex-col justify-center  gap-large'}>
           <div className="group relative w-fit duration-slow" key={v4()}>
             <svg
               viewBox="0 0 200 200"
@@ -82,7 +87,13 @@ const MobileNav: FC<NavProps> = ({ className, linkSize, intent, size }: NavProps
                 transform="translate(90 115) scale(1.65, 0.8)"
               />
             </svg>
-            <NavLink rounded="small" size={linkSize} href={navLinks[0].href} intent={intent}>
+            <NavLink
+              rounded="small"
+              size={linkSize}
+              href={navLinks[0].href}
+              intent={intent}
+              className="px-0"
+            >
               {navLinks[0].name}
             </NavLink>
           </div>
@@ -102,7 +113,13 @@ const MobileNav: FC<NavProps> = ({ className, linkSize, intent, size }: NavProps
                 d="M32,-60.3C39.3,-51.1,41.6,-38.2,44.5,-27.5C47.5,-16.9,51.2,-8.4,56.2,2.9C61.3,14.2,67.6,28.5,61.9,34.4C56.2,40.4,38.4,38,26.1,36.2C13.7,34.4,6.9,33,-3.3,38.8C-13.6,44.6,-27.1,57.5,-40.4,59.9C-53.7,62.3,-66.7,54.2,-66.8,42.4C-66.9,30.7,-54,15.3,-48.5,3.2C-42.9,-8.9,-44.6,-17.8,-40.1,-21.9C-35.6,-26,-24.9,-25.2,-17.1,-34.2C-9.4,-43.2,-4.7,-61.9,3.8,-68.5C12.3,-75.1,24.6,-69.6,32,-60.3Z"
               />
             </svg>
-            <NavLink rounded="small" size={linkSize} href={navLinks[1].href} intent={intent}>
+            <NavLink
+              className="px-0"
+              rounded="small"
+              size={linkSize}
+              href={navLinks[1].href}
+              intent={intent}
+            >
               {navLinks[1].name}
             </NavLink>
           </div>
@@ -121,7 +138,13 @@ const MobileNav: FC<NavProps> = ({ className, linkSize, intent, size }: NavProps
                 transform="translate(110 115) scale(1.8, 0.9)"
               />
             </svg>
-            <NavLink rounded="small" size={linkSize} href={navLinks[2].href} intent={intent}>
+            <NavLink
+              rounded="small"
+              className="px-0"
+              size={linkSize}
+              href={navLinks[2].href}
+              intent={intent}
+            >
               {navLinks[2].name}
             </NavLink>
           </div>

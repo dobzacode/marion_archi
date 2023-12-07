@@ -1,5 +1,6 @@
 'use client';
 
+import useBetterMediaQuery from '@/components/hooks/use-better-media-query';
 import H3 from '@/components/ui/text/h3';
 import P from '@/components/ui/text/p';
 import { cn } from '@/lib/utils';
@@ -9,10 +10,58 @@ import { useRef } from 'react';
 export default function DesignEspaceTitleBlock({ className }: { className: string }) {
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true });
+  const isTablet = useBetterMediaQuery('(max-width:768px)');
+
+  const strokeVariants = !isTablet
+    ? {
+        initial: { pathLength: 0, pathOffset: 0.3 },
+        animate: {
+          pathLength: isInView ? 1 : 0,
+          pathOffset: isInView ? 0 : 0.3,
+          transition: { duration: 2, ease: 'easeOut', delay: 0.5 }
+        }
+      }
+    : { initial: { pathLength: 1, pathOffset: 0 } };
+
+  const secondStrokeVariants = !isTablet
+    ? {
+        initial: { pathLength: 0, pathOffset: 0.9 },
+        animate: {
+          pathLength: isInView ? 1 : 0,
+          pathOffset: isInView ? 0 : 0.9,
+          transition: { duration: 2, ease: 'easeOut', delay: 0.5 }
+        }
+      }
+    : { initial: { pathLength: 1, pathOffset: 0 } };
+
+  const textVariants = !isTablet
+    ? {
+        initial: { opacity: 0 },
+        animate: { opacity: isInView ? 1 : 0, transition: { duration: 1, delay: 2.5 } }
+      }
+    : { initial: { opacity: 1 } };
+
+  const mainDivVariants = !isTablet
+    ? {
+        initial: { x: '-50%' },
+        animate: { x: isInView ? 0 : '-50%', transition: { duration: 0.5 } }
+      }
+    : { initial: { x: 0 } };
+
+  const blockAnimation = isTablet
+    ? {
+        initial: { x: '-100%', opacity: 0 },
+        animate: {
+          x: isInView ? 0 : '-50%',
+          opacity: isInView ? 1 : 0,
+          transition: { duration: 2 }
+        }
+      }
+    : { initial: { x: 0 } };
 
   return (
-    <div ref={ref} className={className}>
-      <div className="relative h-fit max-[1298px]:-translate-x-[50%] max-[1298px]:-translate-y-16 max-laptop:-translate-y-[10vw] max-laptop:translate-x-[-15vw] max-tablet:-translate-y-16  max-tablet:translate-x-10 max-mobile-large:w-[40rem] max-mobile-large:-translate-y-10 max-mobile-large:translate-x-32">
+    <motion.div {...blockAnimation} ref={ref} className={className}>
+      <div className="relative h-fit  max-[1298px]:-translate-x-[50%] max-[1298px]:-translate-y-16 max-laptop:-translate-y-[10vw] max-laptop:translate-x-[-15vw] max-tablet:-translate-y-16  max-tablet:translate-x-10 max-mobile-large:w-[40rem] max-mobile-large:-translate-y-10 max-mobile-large:translate-x-32">
         <motion.svg
           viewBox="0 0 200 200"
           xmlns="http://www.w3.org/2000/svg"
@@ -21,21 +70,13 @@ export default function DesignEspaceTitleBlock({ className }: { className: strin
           )}
         >
           <motion.path
-            initial={{ pathLength: 0, pathOffset: 0.3 }}
-            animate={{
-              pathLength: isInView ? 1 : 0,
-              pathOffset: isInView ? 0 : 0.3,
-              transition: { duration: 2, ease: 'easeOut', delay: 0.5 }
-            }}
+            {...strokeVariants}
             d="M28.2,-59.8C31.2,-47.1,24.7,-28.8,25.1,-17.9C25.5,-7,32.9,-3.5,37.1,2.5C41.4,8.4,42.7,16.9,40.2,24.2C37.6,31.4,31.4,37.5,24.1,43.4C16.8,49.4,8.4,55.1,1.9,51.9C-4.6,48.6,-9.2,36.3,-15.5,29.8C-21.9,23.3,-29.9,22.6,-41,18.6C-52.1,14.6,-66.3,7.3,-73.5,-4.2C-80.8,-15.6,-81,-31.3,-70,-35.6C-59.1,-39.8,-37,-32.8,-23.4,-39.4C-9.9,-46.1,-5,-66.4,3.8,-73C12.6,-79.6,25.2,-72.5,28.2,-59.8Z"
             transform="translate(100 80) scale(1.2, 1)"
           />
         </motion.svg>
 
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: isInView ? 1 : 0, transition: { duration: 1, delay: 2.5 } }}
-        >
+        <motion.div {...textVariants}>
           <P
             className="absolute -top-[220px] right-[145px] z-20 rotate-[12deg]  text-primary80  duration-slowest "
             textType="body"
@@ -87,8 +128,7 @@ export default function DesignEspaceTitleBlock({ className }: { className: strin
         </motion.div>
       </div>
       <motion.div
-        initial={{ x: '-50%' }}
-        animate={{ x: isInView ? 0 : '-50%', transition: { duration: 0.5 } }}
+        {...mainDivVariants}
         className="relative h-[25rem] max-mobile-large:-mt-medium max-mobile-large:mb-small"
       >
         <H3
@@ -125,20 +165,12 @@ export default function DesignEspaceTitleBlock({ className }: { className: strin
           )}
         >
           <motion.path
-            initial={{ pathLength: 0, pathOffset: 0.9 }}
-            animate={{
-              pathLength: isInView ? 1 : 0,
-              pathOffset: isInView ? 0 : 0.5,
-              transition: { duration: 2, ease: 'easeOut', delay: 0.5 }
-            }}
+            {...secondStrokeVariants}
             d="M39.6,-60.2C50.6,-62.4,58,-50.1,63,-37.6C67.9,-25.2,70.3,-12.6,64.3,-3.5C58.2,5.6,43.8,11.3,34.1,15.5C24.4,19.7,19.5,22.5,14.6,25.9C9.8,29.4,4.9,33.3,-1.5,35.9C-7.8,38.5,-15.7,39.6,-20.5,36.2C-25.4,32.8,-27.2,24.8,-38.3,18C-49.3,11.2,-69.4,5.6,-77.4,-4.6C-85.5,-14.9,-81.4,-29.8,-69.5,-35C-57.6,-40.3,-38,-36,-25.1,-32.7C-12.2,-29.4,-6.1,-27.2,4.1,-34.3C14.4,-41.5,28.7,-58.1,39.6,-60.2Z"
             transform="translate(120 110) scale(1)"
           />
         </svg>
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: isInView ? 1 : 0, transition: { duration: 1, delay: 2.5 } }}
-        >
+        <motion.div {...textVariants}>
           <P
             className="absolute -bottom-small right-0 z-20 font-normal text-primary80 duration-slowest  max-mobile-large:-bottom-sub-large max-mobile-large:right-16"
             textType="sub-heading"
@@ -148,6 +180,6 @@ export default function DesignEspaceTitleBlock({ className }: { className: strin
           </P>
         </motion.div>
       </div>
-    </div>
+    </motion.div>
   );
 }

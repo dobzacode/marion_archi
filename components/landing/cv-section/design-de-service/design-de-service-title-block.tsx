@@ -1,5 +1,6 @@
 'use client';
 
+import useBetterMediaQuery from '@/components/hooks/use-better-media-query';
 import H3 from '@/components/ui/text/h3';
 import P from '@/components/ui/text/p';
 import { cn } from '@/lib/utils';
@@ -9,6 +10,44 @@ import { useRef } from 'react';
 export default function DesignDeServiceTitleBlock({ className }: { className: string }) {
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true });
+
+  const isTablet = useBetterMediaQuery('(max-width:768px)');
+
+  const strokeVariants = !isTablet
+    ? {
+        initial: { pathLength: 0, pathOffset: 0.3 },
+        animate: {
+          pathLength: isInView ? 1 : 0,
+          pathOffset: isInView ? 0 : 0.3,
+          transition: { duration: 2, ease: 'easeOut', delay: 0.5 }
+        }
+      }
+    : { initial: { pathLength: 1, pathOffset: 0 } };
+
+  const secondStrokeVariants = !isTablet
+    ? {
+        initial: { pathLength: 0, pathOffset: 0.9 },
+        animate: {
+          pathLength: isInView ? 1 : 0,
+          pathOffset: isInView ? 0 : 0.9,
+          transition: { duration: 2, ease: 'easeOut', delay: 0.5 }
+        }
+      }
+    : { initial: { pathLength: 1, pathOffset: 0 } };
+
+  const textVariants = !isTablet
+    ? {
+        initial: { opacity: 0 },
+        animate: { opacity: isInView ? 1 : 0, transition: { duration: 1, delay: 2.5 } }
+      }
+    : { initial: { opacity: 1 } };
+
+  const mainDivVariants = !isTablet
+    ? {
+        initial: { x: '-50%' },
+        animate: { x: isInView ? 0 : '-50%', transition: { duration: 0.5 } }
+      }
+    : { initial: { x: 0 } };
 
   return (
     <div ref={ref} className={className}>
@@ -21,21 +60,13 @@ export default function DesignDeServiceTitleBlock({ className }: { className: st
           )}
         >
           <motion.path
-            initial={{ pathLength: 0, pathOffset: 0.3 }}
-            animate={{
-              pathLength: isInView ? 1 : 0,
-              pathOffset: isInView ? 0 : 0.3,
-              transition: { duration: 2, ease: 'easeOut', delay: 0.5 }
-            }}
+            {...strokeVariants}
             d="M31.8,-48.5C44.2,-41.4,59.4,-37.8,71.1,-27.9C82.7,-18,90.8,-1.9,83.9,8.6C76.9,19,54.9,23.8,41.9,33.2C28.9,42.6,24.8,56.7,16.9,60.1C9,63.6,-2.7,56.4,-15,52.3C-27.3,48.2,-40.2,47.1,-50.7,40.7C-61.2,34.3,-69.3,22.7,-73.2,9.2C-77.1,-4.2,-76.9,-19.6,-68,-27.7C-59,-35.7,-41.5,-36.5,-28.7,-43.4C-16,-50.3,-8,-63.4,0.8,-64.7C9.7,-66,19.3,-55.6,31.8,-48.5Z"
             transform="translate(90 50) scale(1, 1)"
           />
         </motion.svg>
 
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: isInView ? 1 : 0, transition: { duration: 1, delay: 2.5 } }}
-        >
+        <motion.div {...textVariants}>
           <P
             className="absolute -top-[270px] right-[145px] z-20 rotate-[12deg]  text-primary80  duration-slowest "
             textType="body"
@@ -100,8 +131,7 @@ export default function DesignDeServiceTitleBlock({ className }: { className: st
       </div>
       <div className="max-mobile-large:-translate-y-10 max-mobile-medium:-translate-y-2">
         <motion.div
-          initial={{ x: '-50%' }}
-          animate={{ x: isInView ? 0 : '-50%', transition: { duration: 0.5 } }}
+          {...mainDivVariants}
           className="relative h-[25rem] max-mobile-large:-mt-medium max-mobile-large:mb-small"
         >
           <H3
@@ -140,20 +170,12 @@ export default function DesignDeServiceTitleBlock({ className }: { className: st
             )}
           >
             <motion.path
-              initial={{ pathLength: 0, pathOffset: 0.9 }}
-              animate={{
-                pathLength: isInView ? 1 : 0,
-                pathOffset: isInView ? 0 : 0.5,
-                transition: { duration: 2, ease: 'easeOut', delay: 0.5 }
-              }}
+              {...secondStrokeVariants}
               d="M39.6,-60.2C50.6,-62.4,58,-50.1,63,-37.6C67.9,-25.2,70.3,-12.6,64.3,-3.5C58.2,5.6,43.8,11.3,34.1,15.5C24.4,19.7,19.5,22.5,14.6,25.9C9.8,29.4,4.9,33.3,-1.5,35.9C-7.8,38.5,-15.7,39.6,-20.5,36.2C-25.4,32.8,-27.2,24.8,-38.3,18C-49.3,11.2,-69.4,5.6,-77.4,-4.6C-85.5,-14.9,-81.4,-29.8,-69.5,-35C-57.6,-40.3,-38,-36,-25.1,-32.7C-12.2,-29.4,-6.1,-27.2,4.1,-34.3C14.4,-41.5,28.7,-58.1,39.6,-60.2Z"
               transform="translate(120 110) scale(1)"
             />
           </svg>
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: isInView ? 1 : 0, transition: { duration: 1, delay: 2.5 } }}
-          >
+          <motion.div {...textVariants}>
             <P
               className="absolute -bottom-small -right-14 z-20 font-normal text-primary80 duration-slowest  max-mobile-large:-bottom-sub-large max-mobile-large:right-16"
               textType="sub-heading"

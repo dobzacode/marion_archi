@@ -48,19 +48,8 @@ export default function DesignEspaceTitleBlock({ className }: { className: strin
       }
     : { initial: { x: 0 } };
 
-  const blockAnimation = isTablet
-    ? {
-        initial: { x: '-100%', opacity: 0 },
-        animate: {
-          x: isInView ? 0 : '-50%',
-          opacity: isInView ? 1 : 0,
-          transition: { duration: 2 }
-        }
-      }
-    : { initial: { x: 0 } };
-
   return (
-    <motion.div {...blockAnimation} ref={ref} className={className}>
+    <div ref={ref} className={className}>
       <div className="relative h-fit  max-[1298px]:-translate-x-[50%] max-[1298px]:-translate-y-16 max-laptop:-translate-y-[10vw] max-laptop:translate-x-[-15vw] max-tablet:-translate-y-16  max-tablet:translate-x-10 max-mobile-large:w-[40rem] max-mobile-large:-translate-y-10 max-mobile-large:translate-x-32">
         <motion.svg
           viewBox="0 0 200 200"
@@ -180,6 +169,6 @@ export default function DesignEspaceTitleBlock({ className }: { className: strin
           </P>
         </motion.div>
       </div>
-    </motion.div>
+    </div>
   );
 }

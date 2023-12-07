@@ -1,5 +1,6 @@
 'use client';
 
+import useBetterMediaQuery from '@/components/hooks/use-better-media-query';
 import H3 from '@/components/ui/text/h3';
 import { cn } from '@/lib/utils';
 import { motion, useInView } from 'framer-motion';
@@ -9,13 +10,18 @@ export default function VieAssociativeTitleBlock({ className }: { className: str
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true });
 
+  const isTablet = useBetterMediaQuery('(max-width:768px)');
+
+  const mainDivVariants = !isTablet
+    ? {
+        initial: { x: '-50%' },
+        animate: { x: isInView ? 0 : '-50%', transition: { duration: 0.5 } }
+      }
+    : { initial: { x: 0 } };
+
   return (
     <div ref={ref} className={className}>
-      <motion.div
-        initial={{ x: '-50%' }}
-        animate={{ x: isInView ? 0 : '-50%', transition: { duration: 0.5 } }}
-        className="relative h-[25rem] "
-      >
+      <motion.div {...mainDivVariants} className="relative h-[25rem] ">
         <H3
           className=" relative z-50 rotate-12 font-['Distortion_Dos_Analogue']  text-primary1 "
           textType={'heading'}

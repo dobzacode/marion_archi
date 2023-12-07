@@ -66,7 +66,41 @@
 @tailwind utilities;
 
 :root {
-  --primary-color: theme('colors.primary40');
+  --primary-color-1: theme('colors.primary1');
+  --primary-color-10: theme('colors.primary10');
+  --primary-color-20: theme('colors.primary20');
+  --primary-color-30: theme('colors.primary30');
+  --primary-color-40: theme('colors.primary40');
+  --primary-color-50: theme('colors.primary50');
+  --primary-color-60: theme('colors.primary60');
+  --primary-color-70: theme('colors.primary70');
+  --primary-color-80: theme('colors.primary80');
+  --primary-color-90: theme('colors.primary90');
+  --primary-color-100: theme('colors.primary100');
+
+  --secondary-color-1: theme('colors.secondary1');
+  --secondary-color-10: theme('colors.secondary10');
+  --secondary-color-20: theme('colors.secondary20');
+  --secondary-color-30: theme('colors.secondary30');
+  --secondary-color-40: theme('colors.secondary40');
+  --secondary-color-50: theme('colors.secondary50');
+  --secondary-color-60: theme('colors.secondary60');
+  --secondary-color-70: theme('colors.secondary70');
+  --secondary-color-80: theme('colors.secondary80');
+  --secondary-color-90: theme('colors.secondary90');
+  --secondary-color-100: theme('colors.secondary100');
+
+  --tertiary-color-1: theme('colors.tertiary1');
+  --tertiary-color-10: theme('colors.tertiary10');
+  --tertiary-color-20: theme('colors.tertiary20');
+  --tertiary-color-30: theme('colors.tertiary30');
+  --tertiary-color-40: theme('colors.tertiary40');
+  --tertiary-color-50: theme('colors.tertiary50');
+  --tertiary-color-60: theme('colors.tertiary60');
+  --tertiary-color-70: theme('colors.tertiary70');
+  --tertiary-color-80: theme('colors.tertiary80');
+  --tertiary-color-90: theme('colors.tertiary90');
+  --tertiary-color-100: theme('colors.tertiary100');
   color: theme('colors.neutral80');
 }
 
@@ -184,7 +218,7 @@ input[type='search']:focus {
 }
 
 .toggle-checkbox:checked + .toggle-switch {
-  background: var(--primary-color);
+  background: var(--primary-color40);
 }
 
 .toggle-checkbox:checked + .toggle-switch:before {
@@ -226,4 +260,11 @@ strong::before {
 
 .grecaptcha-badge {
   visibility: hidden;
+}
+
+.glassmorphism-bg {
+  box-shadow: 0 8px 32px 0 hsla(26 22% 80%);
+  backdrop-filter: blur(4.5px);
+  -webkit-backdrop-filter: blur(4.5px);
+  border-radius: 10px;
 }

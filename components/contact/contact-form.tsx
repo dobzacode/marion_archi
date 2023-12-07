@@ -33,7 +33,7 @@ export default function ContactForm({}: {
 
   return (
     <section className="flex items-center justify-center">
-      <div className="slideInFromRight   flex w-full flex-col gap-small rounded-small border  border-primary10 bg-primary1  p-medium text-primary90  shadow-primary-high  mobile-large:mx-0 mobile-large:max-w-[90vw] tablet:w-fit">
+      <div className="slideInFromRight   glassmorphism-bg flex w-full flex-col gap-small rounded-small p-medium text-primary90   mobile-large:mx-0 mobile-large:max-w-[90vw] tablet:w-fit">
         <form action={formAction} className="flex w-full flex-col gap-small">
           {state && (
             <P

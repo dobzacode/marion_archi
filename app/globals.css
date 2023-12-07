@@ -263,8 +263,8 @@ strong::before {
 }
 
 .glassmorphism-bg {
-  box-shadow: 0 8px 32px 0 hsla(26 22% 80%);
-  backdrop-filter: blur(4.5px);
+  box-shadow: 0 4px 32px 0 hsla(26 22% 85%);
+  backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(4.5px);
   border-radius: 10px;
 }

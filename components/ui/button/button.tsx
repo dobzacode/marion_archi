@@ -1,5 +1,5 @@
-import { VariantProps, cva } from 'class-variance-authority';
 import { cn } from '@/lib/utils';
+import { VariantProps, cva } from 'class-variance-authority';
 import { ButtonHTMLAttributes, FC, forwardRef } from 'react';
 
 const buttonVariants = cva('whitespace-nowrap inline-flex items-center justify-center', {
@@ -48,7 +48,7 @@ const buttonVariants = cva('whitespace-nowrap inline-flex items-center justify-c
       full: 'rounded-full'
     },
     hover: {
-      true: 'duration-fast hover:scale-[102%]'
+      true: 'duration-fast '
     }
   },
 
@@ -56,7 +56,7 @@ const buttonVariants = cva('whitespace-nowrap inline-flex items-center justify-c
     {
       intent: ['primary', 'pastelPrimary'],
       hover: true,
-      className: ' hover:shadow-primary-medium dark:hover:shadow-primary-medium-light'
+      className: ' hover:shadow-neutral-medium dark:hover:shadow-primary-medium-light'
     },
     {
       intent: 'secondary',

@@ -11,7 +11,9 @@ export function SubmitButton() {
 
   return (
     <Button
-      className={`relative  overflow-hidden ${pending ? 'pointer-events-none' : ''}`}
+      className={`relative  overflow-hidden border border-primary90 border-opacity-10 bg-opacity-70 ${
+        pending ? 'pointer-events-none' : ''
+      }`}
       size="small"
       rounded="small"
       type="submit"

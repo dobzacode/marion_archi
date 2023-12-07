@@ -28,7 +28,7 @@ const inputVariants = cva('', {
       black:
         'bg-black placeholder:text-black5/[.4] text-black1 focus:outline-1 focus:outline-white  border-t-0 border-x-0 border-b border-black30 outline-white/[.2] shadow-inner dark:bg-black90 dark:text-black1 dark:placeholder:text-black10/[.4] dark:border-black10/[.2] dark:outline-black10/[.2]',
       primary:
-        'bg-primary5 placeholder:text-primary90/[.4] text-primary90 border-primary90/[.2] outline-primary90/[.2] dark:bg-primary90 dark:text-primary1 dark:placeholder:text-primary10/[.4] dark:border-primary10/[.2] dark:outline-primary10/[.2]',
+        'bg-primary5 bg-opacity-70 placeholder:text-primary90/[.4] text-primary90 border-primary90/[.2] outline-primary90/[.2] dark:bg-primary90 dark:text-primary1 dark:placeholder:text-primary10/[.4] dark:border-primary10/[.2] dark:outline-primary10/[.2]',
 
       secondary:
         'bg-secondary5 placeholder:text-secondary90/[.4] text-secondary90 border-secondary90/[.2] outline-secondary90/[.2]',

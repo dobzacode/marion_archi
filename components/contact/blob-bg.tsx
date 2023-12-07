@@ -46,7 +46,7 @@ const variantsThree: Variants = {
   initial: {
     opacity: 0,
     x: 1305,
-    y: 500
+    y: 1000
   },
   animate: {
     opacity: 1,
@@ -66,7 +66,7 @@ const variantsThree: Variants = {
 export default function BlobBg() {
   return (
     <div className="relative -z-10 h-full w-full translate-x-[5%] translate-y-[-30%] scale-y-[87%]">
-      <AnimateBlob variants={variantsOne} color="tertiary" saturation={10}>
+      <AnimateBlob variants={variantsOne} color="tertiary" saturation={80}>
         <animate
           className="shadow-medium-light"
           attributeName="d"
@@ -79,7 +79,7 @@ export default function BlobBg() {
         <AnimateBlob
           variants={variantsTwo}
           color="primary"
-          saturation={10}
+          saturation={60}
           className="right-0 scale-y-[20%]"
         >
           <animate
@@ -94,7 +94,7 @@ export default function BlobBg() {
         <AnimateBlob
           variants={variantsThree}
           color="secondary"
-          saturation={10}
+          saturation={20}
           className="right-0 "
         >
           <animate

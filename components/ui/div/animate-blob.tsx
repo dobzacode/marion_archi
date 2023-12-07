@@ -27,7 +27,7 @@ export default function AnimateBlob({
       variants={variants}
       animate="animate"
       initial="initial"
-      className={cn('absolute top-0 -z-10 translate-x-1/2', className)}
+      className={cn('absolute top-0 -z-10 translate-x-1/2 ', className)}
       version="1.1"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 1500 1500"

@@ -52,7 +52,7 @@ export default function MenuButton({
     >
       <button
         onClick={handleButtonClick}
-        className="min-[1100px]:heading sub-heading group peer relative z-20 px-small text-primary80 duration-medium hover:scale-110"
+        className="min-[1100px]:heading sub-heading slideInFromRight group peer relative z-20 px-small text-primary80 duration-medium hover:scale-110"
       >
         <strong
           className={cn(

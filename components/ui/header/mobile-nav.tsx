@@ -63,13 +63,13 @@ const MobileNav: FC<NavProps> = ({ className, linkSize, intent, size }: NavProps
       </button>
       <div
         className={cn(
-          'h-screen w-screen   bg-primary1 duration-700',
+          'h-screen w-screen   bg-primary1 duration-700 ',
           'absolute z-[60]',
           showMenu ? 'left-0' : '-left-[768px] ',
           modalOffset()
         )}
       >
-        <div className=" mt-medium w-[90%] border-t border-primary40 border-opacity-40"></div>
+        <div className=" mt-medium w-[90%] "></div>
         <ul className={'mt-medium flex flex-col justify-center  gap-large'}>
           <div className="group relative w-fit duration-slow" key={v4()}>
             <svg

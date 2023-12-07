@@ -40,9 +40,10 @@ export default function MenuButton({
   console.log(isActive);
 
   return !isTablet ? (
-    <div
+    <button
+      onClick={handleButtonClick}
       className={cn(
-        'py-sh-full  relative flex w-full items-center justify-center border-primary80 duration-slow  tablet:absolute tablet:h-1/2  tablet:w-1/2  tablet:py-0  ',
+        'py-sh-full group relative flex w-full items-center justify-center border-primary80 duration-slow  tablet:absolute tablet:h-1/2  tablet:w-1/2  tablet:py-0  ',
         placement,
         isActive && 'hover:z-10',
         !isActive && 'backdrop-contrat-0 backdrop-blur-sm backdrop-grayscale',
@@ -50,10 +51,7 @@ export default function MenuButton({
         className
       )}
     >
-      <button
-        onClick={handleButtonClick}
-        className="min-[1100px]:heading sub-heading slideInFromRight group peer relative z-20 px-small text-primary80 duration-medium hover:scale-110"
-      >
+      <div className="min-[1100px]:heading sub-heading  peer relative z-20 px-small text-primary80 duration-medium group-hover:z-50 group-hover:scale-110">
         <strong
           className={cn(
             'text-white duration-[2s] before:rotate-1 before:scale-x-0 before:bg-primary20 before:bg-blend-difference before:duration-slow ',
@@ -65,7 +63,7 @@ export default function MenuButton({
         >
           {label}
         </strong>
-      </button>
+      </div>
       <svg
         viewBox="0 0 200 200"
         xmlns="http://www.w3.org/2000/svg"
@@ -83,11 +81,12 @@ export default function MenuButton({
           transform="translate(0 -2) "
         />
       </svg>
-    </div>
+    </button>
   ) : (
-    <div
+    <button
+      onClick={handleButtonClick}
       className={cn(
-        'relative  flex h-full w-full items-center justify-center border-primary80 duration-slow  tablet:absolute tablet:h-1/2  tablet:w-1/2  tablet:py-0  ',
+        'group  relative flex h-full w-full items-center justify-center border-primary80 duration-slow  tablet:absolute tablet:h-1/2  tablet:w-1/2  tablet:py-0  ',
         placement,
         isActive && 'hover:z-10',
         !isActive && 'backdrop-contrat-0 backdrop-blur-sm backdrop-grayscale',
@@ -95,10 +94,7 @@ export default function MenuButton({
         className
       )}
     >
-      <button
-        onClick={handleButtonClick}
-        className="min-[1100px]:heading sub-heading group peer relative z-20 px-small text-primary80 duration-medium hover:scale-110"
-      >
+      <div className="min-[1100px]:heading sub-heading  peer relative z-20 px-small text-primary80 duration-medium group-hover:scale-110">
         <strong
           className={cn(
             'text-white duration-[2s] before:rotate-1 before:scale-x-0  before:bg-blend-difference before:duration-slow ',
@@ -110,7 +106,7 @@ export default function MenuButton({
         >
           {label}
         </strong>
-      </button>
+      </div>
       <svg
         viewBox="0 0 200 200"
         xmlns="http://www.w3.org/2000/svg"
@@ -128,6 +124,6 @@ export default function MenuButton({
           transform="translate(0 -2) "
         />
       </svg>
-    </div>
+    </button>
   );
 }

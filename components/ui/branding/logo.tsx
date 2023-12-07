@@ -1,11 +1,8 @@
-'use client';
-
 import Link, { LinkProps } from 'next/link';
 
-import { VariantProps } from 'class-variance-authority';
 import { cn } from '@/lib/utils';
+import { VariantProps } from 'class-variance-authority';
 import Image from 'next/image';
-import { usePathname, useRouter } from 'next/navigation';
 import { FC } from 'react';
 import { textVariants } from '../text/h1';
 import H3 from '../text/h3';
@@ -28,25 +25,9 @@ const Logo: FC<LogoProps> = ({
   customSetter,
   ...props
 }) => {
-  const router = useRouter();
-  const pathname = usePathname();
-
   if (src)
     return (
-      <Link
-        onClick={(e: any) => {
-          e.preventDefault();
-          customSetter ? customSetter() : '';
-          if (pathname === href) return;
-
-          document.querySelector('main')?.classList.add('hidden-div');
-          setTimeout(() => {
-            router.push(href as string);
-          }, 600);
-        }}
-        href={href}
-        {...props}
-      >
+      <Link href={href} {...props}>
         <Image
           className={className}
           placeholder="blur"
@@ -61,17 +42,7 @@ const Logo: FC<LogoProps> = ({
     );
 
   return (
-    <Link
-      onClick={(e: any) => {
-        e.preventDefault();
-        document.querySelector('main')?.classList.add('hidden-div');
-        setTimeout(() => {
-          router.push(href as string);
-        }, 2000);
-      }}
-      href={href}
-      {...props}
-    >
+    <Link href={href} {...props}>
       <H3
         className={cn(
           textVariants({

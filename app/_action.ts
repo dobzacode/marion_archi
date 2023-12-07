@@ -27,6 +27,8 @@ export async function contactAction(formData: FormData) {
 
   const spreadsheetId = process.env.SPREADSHEET_ID;
 
+  console.log(process.env.SPREADSHEET_ID, config);
+
   try {
     if (!spreadsheetId) throw new Error();
     await sheets.spreadsheets.values.append({

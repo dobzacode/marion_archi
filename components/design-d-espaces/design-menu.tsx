@@ -17,7 +17,7 @@ export default function DesignMenu({}) {
   }, [pathname, searchParams]);
 
   return (
-    <div className="relative left-0  z-40 h-[40rem] w-full overflow-hidden border-opacity-10 bg-primary99   max-tablet:-mt-large  tablet:h-1/2">
+    <div className="relative left-0  z-40 h-[40rem] w-full overflow-hidden border-opacity-10 bg-primary99   max-tablet:-mt-large  ">
       <nav className="slideInFromLeft h-full">
         <ul className="flex h-full flex-col tablet:block">
           <li className="h-full">

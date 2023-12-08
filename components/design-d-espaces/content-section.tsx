@@ -48,9 +48,16 @@ export default function ContentSection() {
 
   return (
     <section>
-      <ul className="flex">
+      <ul className="flex flex-wrap overflow-hidden">
         {projectsToShow.map((project, index) => {
-          return <ContentCard {...project} key={v4()}></ContentCard>;
+          return (
+            <ContentCard
+              index={index}
+              {...project}
+              actualType={actualType}
+              key={v4()}
+            ></ContentCard>
+          );
         })}
       </ul>
     </section>

@@ -13,7 +13,7 @@ export default function SubSection({
   direction = 'left'
 }: {
   children?: ReactNode;
-  href: string;
+  href: string | false;
   className?: string;
   title: string;
   custom: number;
@@ -27,11 +27,17 @@ export default function SubSection({
       custom={custom}
       className={`sub-heading   text-primary90 ${className} gap-sub-medium`}
     >
-      <Link className="peer w-fit " href={href}>
-        <h4 className="relative z-20 font-['Distortion_Dos_Analogue'] text-primary80 duration-0 group-hover:z-20">
+      {href ? (
+        <Link className="peer w-fit " href={href}>
+          <h4 className="relative z-20 font-['Distortion_Dos_Analogue'] text-primary80 duration-0 group-hover:z-20">
+            {title}
+          </h4>
+        </Link>
+      ) : (
+        <h4 className="peer relative z-20 w-fit cursor-pointer font-['Distortion_Dos_Analogue'] text-primary80 duration-0 group-hover:z-20">
           {title}
         </h4>
-      </Link>
+      )}
       {children}
     </motion.li>
   );

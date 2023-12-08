@@ -3,9 +3,8 @@ import DesignMenu from '@/components/design-d-espaces/design-menu';
 
 export default function Page() {
   return (
-    <main className="relative flex h-full w-full flex-col">
+    <main className="relative flex h-full w-full flex-col overflow-hidden">
       <DesignMenu></DesignMenu>
-
       <ContentSection></ContentSection>
     </main>
   );

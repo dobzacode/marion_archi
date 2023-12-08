@@ -11,7 +11,7 @@ export default function VieAssociativeSection() {
           custom={0}
           title="EMPLOIS"
           className="ml-large flex h-[30rem] flex-col gap-extra-small duration-slowest before:top-[10%]  before:content-['\2022']   max-tablet:ml-0  tablet:w-auto"
-          href="/"
+          href={false}
         >
           <svg
             viewBox="0 0 200 200"

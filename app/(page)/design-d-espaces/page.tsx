@@ -1,9 +1,12 @@
+import ContentSection from '@/components/design-d-espaces/content-section';
 import DesignMenu from '@/components/design-d-espaces/design-menu';
 
 export default function Page() {
   return (
-    <main className="h-screen w-full">
+    <main className="relative flex h-screen w-full flex-col">
       <DesignMenu></DesignMenu>
+
+      <ContentSection></ContentSection>
     </main>
   );
 }

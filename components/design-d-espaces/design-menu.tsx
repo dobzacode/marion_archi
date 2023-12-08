@@ -8,16 +8,16 @@ export default function DesignMenu({}) {
   const pathname = usePathname();
   const searchParams = useSearchParams();
 
-  const [actualType, setActualType] = useState<string>('archi_interieurs');
+  const [actualType, setActualType] = useState<string>('architecture_interieurs');
 
   useEffect(() => {
     searchParams.get('type')
       ? setActualType(searchParams.get('type') as string)
-      : setActualType('archi_interieurs');
+      : setActualType('architecture_interieurs');
   }, [pathname, searchParams]);
 
   return (
-    <div className="  absolute left-0 h-[40rem] w-full overflow-hidden border-opacity-10 bg-primary99   max-tablet:-mt-large  tablet:h-1/2">
+    <div className="relative left-0  z-40 h-[40rem] w-full overflow-hidden border-opacity-10 bg-primary99   max-tablet:-mt-large  tablet:h-1/2">
       <nav className="slideInFromLeft h-full">
         <ul className="flex h-full flex-col tablet:block">
           <li className="h-full">
@@ -27,11 +27,11 @@ export default function DesignMenu({}) {
               svgCss="left-0 -top-full translate-x-[-20vw] origin-[0%_0%]"
               placement="left-0 top-0"
               translation="translate-x-1/2 translate-y-[20%] max-laptop:translate-y-[30%] max-laptop:translate-x-[10%]"
-              type="archi_interieurs"
+              type="architecture_interieurs"
               label="ARCHITECTURE INTERIEURS"
               customScale="scale-x-[250%] scale-y-[300%]"
               path={pathname}
-              isActive={actualType === 'archi_interieurs'}
+              isActive={actualType === 'architecture_interieurs'}
             />
           </li>
           <li className="h-full">
@@ -42,10 +42,10 @@ export default function DesignMenu({}) {
               translation="-translate-x-1/2 translate-y-[100%]"
               placement="right-0 top-0"
               customScale="scale-x-[400%] scale-y-[300%]"
-              type="archi_retail"
+              type="architecture_retail"
               label="ARCHITECTURE RETAIL"
               path={pathname}
-              isActive={actualType === 'archi_retail'}
+              isActive={actualType === 'architecture_retail'}
             />
           </li>
           <li className="h-full">
@@ -54,10 +54,10 @@ export default function DesignMenu({}) {
               customHighlight=" before:h-[90%]"
               svgCss="right-[-0%] -bottom-[200%] translate-x-[100vw]  origin-[0%_0%] max-laptop:w-[60vw] max-tablet:w-[35vw]"
               placement="right-0 bottom-0"
-              type="archi"
+              type="architecture"
               label="ARCHITECTURE"
               path={pathname}
-              isActive={actualType === 'archi'}
+              isActive={actualType === 'architecture'}
             />
           </li>
           <li className="h-full">
@@ -67,10 +67,10 @@ export default function DesignMenu({}) {
               svgCss="left-[-50%] -bottom-[200%]   origin-[0%_0%] "
               placement="left-0 bottom-0"
               translation="translate-x-1/2 translate-y-[100%]"
-              type="archi_tertiaire"
+              type="architecture_tertiaire"
               label="ARCHITECTURE ESPACES DE TRAVAIL TERTIAIRES"
               path={pathname}
-              isActive={actualType === 'archi_tertiaire'}
+              isActive={actualType === 'architecture_tertiaire'}
             />
           </li>
         </ul>

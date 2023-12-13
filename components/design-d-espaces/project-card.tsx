@@ -50,6 +50,9 @@ export default function ProjectCard({
   }, [searchParams, id]);
 
   // -left-[100%] -left-[200%] -left-[300%] -left-[400%] -right-[10%] -right-[20%] -right-[30%] -right-[40%]
+  // laptop:-left-[100%] laptop:-left-[200%] laptop:-left-[300%] laptop:-left-[400%] laptop:-right-[10%] laptop:-right-[20%] laptop:-right-[30%] laptop:-right-[40%]
+  // tablet:-left-[100%] tablet:-left-[200%] tablet:-left-[300%] tablet:-left-[400%] tablet:-right-[10%] tablet:-right-[20%] tablet:-right-[30%] tablet:-right-[40%]
+  // mobile-large:-left-[100%] mobile-large:-left-[200%] mobile-large:-left-[300%] mobile-large:-left-[400%] mobile-large:-right-[10%] mobile-large:-right-[20%] mobile-large:-right-[30%] mobile-large:-right-[40%]
 
   return (
     <li
@@ -111,25 +114,27 @@ export default function ProjectCard({
         <div
           ref={contentRef}
           className={cn(
-            'absolute  top-full z-40 h-screen  w-screen overflow-hidden border-y border-primary90 border-opacity-10 bg-primary1 text-primary99 shadow-high',
-            `-left-[${(index % 5) * 100}%]`,
+            'absolute  top-full z-40   w-screen overflow-hidden border-y border-primary90 border-opacity-10 bg-primary1 text-primary99 shadow-high',
+            `laptop:-left-[${(index % 5) * 100}%] tablet:-left-[${
+              (index % 4) * 100
+            }%] mobile-large:-left-[${(index % 3) * 100}%]`,
             !showMore && 'z-[35]'
           )}
         >
           <ParallaxBackground
-            className=" -z-20 h-[50%] object-cover object-top"
+            className=" -z-20 object-cover object-top tablet:h-1/4 laptop:h-1/2"
             src="/assets/architecture_interieurs/INTERIEUR/banner-interieur.jpg"
             alt={`${project_name} picture`}
           ></ParallaxBackground>
 
-          <div className="relative h-[40rem] w-screen overflow-hidden">
+          <div className="relative h-[30rem] w-screen overflow-hidden laptop:h-[40rem]">
             <div
-              className={`- }%]
-              absolute top-0 w-[40rem] -rotate-12 items-center justify-center`}
+              className={`
+              absolute top-0 w-[30rem] -rotate-12 items-center justify-center mobile-large:w-[40rem]`}
             >
               <div className="relative">
                 <H3
-                  className=" relative  left-small top-large font-['Distortion_Dos_Analogue'] text-primary90   "
+                  className=" max-mobile-large:sub-heading relative  left-small top-large font-['Distortion_Dos_Analogue'] text-primary90   "
                   textType={'heading'}
                 >
                   {project_name}
@@ -138,45 +143,49 @@ export default function ProjectCard({
             </div>
             <div className="absolute -z-10 h-full w-full bg-primary10 bg-opacity-10"></div>
           </div>
-          <div className="flex w-full flex-col gap-medium bg-primary1 p-medium">
-            <P textType={'heading'} className="relative flex justify-between gap-small">
+          <div className="flex w-full flex-col gap-sub-large bg-primary1 px-small py-sub-large laptop:px-large laptop-large:px-extra-large">
+            <P textType={'heading'} className="relative flex flex-wrap justify-between gap-small">
               <span>BUDGET</span>
-              <strong
-                className={cn(
-                  ' before:z-20 before:bg-primary10 before:delay-[2s] before:duration-medium ',
-                  searchParams.get('project') === id ? 'before:scale-x-100' : 'before:scale-x-0'
-                )}
-              >
-                <span className="sub-heading relative z-30">
-                  RENOVATION {information.renovation}K
-                </span>
-              </strong>
-              <strong
-                className={cn(
-                  ' relative before:z-20 before:rotate-[-1deg] before:bg-primary10 before:delay-[2.2s] before:duration-medium',
-                  searchParams.get('project') === id ? 'before:scale-x-100' : 'before:scale-x-0'
-                )}
-              >
-                <span className="sub-heading relative z-30">
-                  HONORAIRES {information.honoraires}K
-                </span>
-              </strong>
-              <strong
-                className={cn(
-                  ' relative before:z-20 before:rotate-[3deg] before:bg-primary10 before:delay-[2.4s] before:duration-medium',
-                  searchParams.get('project') === id ? 'before:scale-x-100' : 'before:scale-x-0'
-                )}
-              >
-                <span className="sub-heading relative z-30">{information.dimension} M² </span>
-              </strong>
+              <span className="flex w-full flex-wrap justify-between gap-extra-small mobile-large:gap-medium tablet:w-4/6 tablet:gap-medium laptop:w-3/5">
+                <strong
+                  className={cn(
+                    ' before:z-20 before:bg-primary10 before:delay-[2s] before:duration-medium ',
+                    searchParams.get('project') === id ? 'before:scale-x-100' : 'before:scale-x-0'
+                  )}
+                >
+                  <span className="sub-heading relative z-30 leading-sub-heading">
+                    RENOVATION {information.renovation}K
+                  </span>
+                </strong>
+                <strong
+                  className={cn(
+                    ' relative before:z-20 before:rotate-[-1deg] before:bg-primary10 before:delay-[2.2s] before:duration-medium',
+                    searchParams.get('project') === id ? 'before:scale-x-100' : 'before:scale-x-0'
+                  )}
+                >
+                  <span className="sub-heading relative z-30 leading-sub-heading">
+                    HONORAIRES {information.honoraires}K
+                  </span>
+                </strong>
+                <strong
+                  className={cn(
+                    ' relative before:z-20 before:rotate-[3deg] before:bg-primary10 before:delay-[2.4s] before:duration-medium',
+                    searchParams.get('project') === id ? 'before:scale-x-100' : 'before:scale-x-0'
+                  )}
+                >
+                  <span className="sub-heading relative z-30 leading-sub-heading">
+                    {information.dimension} M²{' '}
+                  </span>
+                </strong>
+              </span>
             </P>
-            <div className="mx-extra-large flex justify-around gap-small">
-              <P textType={'body'} className="max-w-[70%]">
+            <div className=" flex flex-wrap-reverse justify-around gap-small tablet:flex-nowrap">
+              <P textType={'body'} className="tablet:w-2/3">
                 {information.description}
                 {information.description}
                 {information.description}
               </P>
-              <div className="relative h-[40rem] w-[50rem] overflow-hidden rounded-small">
+              <div className="relative h-[40rem] w-full overflow-hidden rounded-extra-small tablet:w-[50rem]">
                 <Image
                   src={'/assets/architecture_interieurs/INTERIEUR/schema.jpg'}
                   alt={`${project_name} schéma`}

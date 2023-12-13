@@ -32,3 +32,7 @@ export async function dynamicBlurDataUrl(url: string) {
 
   return `data:image/svg+xml;base64,${toBase64(blurSvg)}`;
 }
+
+export function imageByIndex(images: string[], index: number) {
+  return images[index % images.length];
+}

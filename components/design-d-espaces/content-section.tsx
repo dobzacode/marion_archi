@@ -22,7 +22,7 @@ export default function ContentSection() {
 
   return (
     <section>
-      <ul key="projectList" className="relative flex flex-wrap">
+      <ul key="projectList" className="relative flex flex-wrap ">
         <AnimatePresence mode="wait">
           {actualType === 'architecture_interieurs' && (
             <CategoryCard

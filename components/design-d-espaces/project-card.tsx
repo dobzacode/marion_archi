@@ -1,9 +1,11 @@
 import { cn } from '@/lib/utils';
+import { EmblaOptionsType } from 'embla-carousel';
 import { Variants, motion } from 'framer-motion';
 import Image from 'next/image';
 import { useSearchParams } from 'next/navigation';
 import { useEffect, useRef, useState } from 'react';
 import { CSSTransition } from 'react-transition-group';
+import EmblaCarousel from '../ui/div/carousel/embla-carousel';
 import ParallaxBackground from '../ui/div/parallax-background';
 import H3 from '../ui/text/h3';
 import P from '../ui/text/p';
@@ -48,6 +50,10 @@ export default function ProjectCard({
       setShowMore(false);
     }
   }, [searchParams, id]);
+
+  const OPTIONS: EmblaOptionsType = { dragFree: true, loop: true, active: true };
+  const SLIDE_COUNT = 9;
+  const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
 
   // -left-[100%] -left-[200%] -left-[300%] -left-[400%] -right-[10%] -right-[20%] -right-[30%] -right-[40%]
   // laptop:-left-[100%] laptop:-left-[200%] laptop:-left-[300%] laptop:-left-[400%] laptop:-right-[10%] laptop:-right-[20%] laptop:-right-[30%] laptop:-right-[40%]
@@ -193,6 +199,26 @@ export default function ProjectCard({
                   className="object-cover"
                 ></Image>
               </div>
+            </div>
+          </div>
+          <div className="flex w-full bg-primary1">
+            <div className="w-full">
+              <EmblaCarousel
+                imageArr={[
+                  '/assets/architecture_interieurs/INTERIEUR/gallery/picture1.jpg',
+                  '/assets/architecture_interieurs/INTERIEUR/gallery/picture1.jpg',
+                  '/assets/architecture_interieurs/INTERIEUR/gallery/picture2.jpg',
+                  '/assets/architecture_interieurs/INTERIEUR/gallery/picture1.jpg',
+                  '/assets/architecture_interieurs/INTERIEUR/gallery/picture2.jpg',
+                  '/assets/architecture_interieurs/INTERIEUR/gallery/picture1.jpg',
+                  '/assets/architecture_interieurs/INTERIEUR/gallery/picture1.jpg',
+                  '/assets/architecture_interieurs/INTERIEUR/gallery/picture2.jpg',
+                  '/assets/architecture_interieurs/INTERIEUR/gallery/picture1.jpg',
+                  '/assets/architecture_interieurs/INTERIEUR/gallery/picture2.jpg'
+                ]}
+                slides={SLIDES}
+                options={OPTIONS}
+              />
             </div>
           </div>
         </div>

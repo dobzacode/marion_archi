@@ -55,7 +55,7 @@ function Header({ children, className, size, intent, textColor, ...props }: Head
         linkSize="small"
         intent={textColor}
         size={size}
-        className="slideInFromTop relative z-50 flex w-full items-center justify-between gap-large bg-primary1 animation-delay-[2s] tablet:hidden"
+        className="slideInFromTop relative z-50 flex w-full items-center justify-between gap-large bg-primary1 px-small animation-delay-[2s] mobile-large:px-medium tablet:hidden"
       ></MobileNav>
     </header>
   );

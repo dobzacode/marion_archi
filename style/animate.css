@@ -90,21 +90,21 @@
 }
 
 .slide-in-enter {
-  transform: translateY(-1500px);
+  transform: translateX(-150vw);
 }
 
 .slide-in-enter-active {
-  transform: translateY(0);
+  transform: translateX(0);
   transition: transform 2s ease-out;
 }
 
 .slide-in-exit {
-  transform: translateY(0);
+  transform: translateX(0);
   opacity: 1; /* Opacité pendant la sortie */
 }
 
 .slide-in-exit-active {
-  transform: translateY(1500px);
+  transform: translateX(150vw);
   opacity: 0; /* Opacité pendant la sortie */
   transition:
     transform 1s ease-in,

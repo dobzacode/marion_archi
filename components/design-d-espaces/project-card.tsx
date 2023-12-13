@@ -40,7 +40,7 @@ export default function ProjectCard({
 }: ProjectProps) {
   const searchParams = useSearchParams();
 
-  const [showMore, setShowMore] = useState<boolean>(Boolean(searchParams.get('project')));
+  const [showMore, setShowMore] = useState<boolean>(Boolean(searchParams.get('project') === id));
 
   const contentRef = useRef<HTMLDivElement>(null);
 
@@ -149,8 +149,11 @@ export default function ProjectCard({
             </div>
             <div className="absolute -z-10 h-full w-full bg-primary10 bg-opacity-10"></div>
           </div>
-          <div className="flex w-full flex-col gap-sub-large bg-primary1 px-small py-sub-large laptop:px-large laptop-large:px-extra-large">
-            <P textType={'heading'} className="relative flex flex-wrap justify-between gap-small">
+          <div className="flex w-full flex-col gap-sub-large bg-primary1 px-small py-sub-large laptop:px-medium">
+            <P
+              textType={'heading'}
+              className="relative flex flex-wrap justify-between gap-small laptop:px-medium"
+            >
               <span>BUDGET</span>
               <span className="flex w-full flex-wrap justify-between gap-extra-small mobile-large:gap-medium tablet:w-4/6 tablet:gap-medium laptop:w-3/5">
                 <strong

@@ -1,4 +1,4 @@
-import { usePathname, useRouter } from 'next/navigation';
+import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import React, { useMemo } from 'react';
 import ProjectCard, { Project } from './project-card';
 
@@ -29,8 +29,20 @@ const CategoryCard: React.FC<CategoryCardProps> = React.memo(
       [arrLength]
     );
 
+    const secondVariants = {
+      hidden: { y: 0, opacity: 0 },
+      visible: () => ({
+        y: 0,
+        opacity: 1,
+        transition: {
+          duration: 0
+        }
+      })
+    };
+
     const router = useRouter();
     const pathname = usePathname();
+    const searchParams = useSearchParams();
 
     const handleButtonClick = (id: string) => {
       router.push(`${pathname}?type=${actualType}&project=${id}`, { scroll: false });
@@ -42,7 +54,7 @@ const CategoryCard: React.FC<CategoryCardProps> = React.memo(
           return (
             <ProjectCard
               src={`/assets/${actualType}/${project.project_name}/banner-${project.project_name}.jpg`}
-              variants={variants}
+              variants={!searchParams.get('project') ? variants : secondVariants}
               handleButtonClick={() => handleButtonClick(project.id)}
               index={index}
               key={project.id}

@@ -1,4 +1,6 @@
 import { cn } from '@/lib/utils';
+import { mdiEyeOffOutline } from '@mdi/js';
+import Icon from '@mdi/react';
 import { EmblaOptionsType } from 'embla-carousel';
 import { Variants, motion } from 'framer-motion';
 import Image from 'next/image';
@@ -85,6 +87,14 @@ export default function ProjectCard({
             showMore && 'grayscale-0'
           )}
         >
+          <Icon
+            path={mdiEyeOffOutline}
+            className={cn(
+              'absolute left-1/2 top-1/2 z-40 -translate-x-[400%] -translate-y-1/2 transform text-primary1 opacity-0 duration-[2s] group-hover:scale-110',
+              showMore && 'opacity-1 -translate-x-1/2'
+            )}
+            size={4}
+          />
           <H3
             textType={'body'}
             className={cn(
@@ -149,10 +159,10 @@ export default function ProjectCard({
             </div>
             <div className="absolute -z-10 h-full w-full bg-primary10 bg-opacity-10"></div>
           </div>
-          <div className="flex w-full flex-col gap-sub-large bg-primary1 px-small py-sub-large laptop:px-medium">
+          <div className="flex w-full flex-col gap-sub-large bg-primary1 py-sub-large tablet:px-small laptop:px-medium">
             <P
               textType={'heading'}
-              className="relative flex flex-wrap justify-between gap-small laptop:px-medium"
+              className="relative flex flex-wrap justify-between gap-small px-small tablet:px-0 laptop:px-medium"
             >
               <span>BUDGET</span>
               <span className="flex w-full flex-wrap justify-between gap-extra-small mobile-large:gap-medium tablet:w-4/6 tablet:gap-medium laptop:w-3/5">
@@ -188,13 +198,13 @@ export default function ProjectCard({
                 </strong>
               </span>
             </P>
-            <div className=" flex flex-wrap-reverse justify-around gap-small tablet:flex-nowrap">
-              <P textType={'body'} className="tablet:w-2/3">
+            <div className=" flex flex-wrap-reverse justify-around gap-medium tablet:flex-nowrap tablet:gap-small">
+              <P textType={'body'} className="px-small tablet:w-2/3 tablet:px-0 ">
                 {information.description}
                 {information.description}
                 {information.description}
               </P>
-              <div className="relative h-[40rem] w-full overflow-hidden rounded-extra-small tablet:w-[50rem]">
+              <div className="relative h-[40rem] w-full overflow-hidden tablet:w-[50rem] tablet:rounded-extra-small">
                 <Image
                   src={'/assets/architecture_interieurs/INTERIEUR/schema.jpg'}
                   alt={`${project_name} schéma`}

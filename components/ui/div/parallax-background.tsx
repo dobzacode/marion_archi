@@ -11,7 +11,7 @@ function TempComp({ src, alt, className }: { src: string; alt: string; className
   );
 
   const parallax = useParallax({
-    translateY: [-60, 30],
+    translateY: [-60, -10],
 
     speed: 0.1
   });

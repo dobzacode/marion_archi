@@ -58,9 +58,9 @@ export default function ProjectCard({
   const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
 
   // -left-[100%] -left-[200%] -left-[300%] -left-[400%] -right-[10%] -right-[20%] -right-[30%] -right-[40%]
-  // laptop:-left-[100%] laptop:-left-[200%] laptop:-left-[300%] laptop:-left-[400%] laptop:-right-[10%] laptop:-right-[20%] laptop:-right-[30%] laptop:-right-[40%]
-  // tablet:-left-[100%] tablet:-left-[200%] tablet:-left-[300%] tablet:-left-[400%] tablet:-right-[10%] tablet:-right-[20%] tablet:-right-[30%] tablet:-right-[40%]
-  // mobile-large:-left-[100%] mobile-large:-left-[200%] mobile-large:-left-[300%] mobile-large:-left-[400%] mobile-large:-right-[10%] mobile-large:-right-[20%] mobile-large:-right-[30%] mobile-large:-right-[40%]
+  // laptop:-left-[100%] laptop:-left-[0%] laptop:-left-[200%] laptop:-left-[300%] laptop:-left-[400%] laptop:-right-[10%] laptop:-right-[20%] laptop:-right-[30%] laptop:-right-[40%]
+  // tablet:-left-[100%] tablet:-left-[0%] tablet:-left-[200%] tablet:-left-[300%] tablet:-left-[400%] tablet:-right-[10%] tablet:-right-[20%] tablet:-right-[30%] tablet:-right-[40%]
+  // mobile-large:-left-[100%] mobile-large:-left-[0%] mobile-large:-left-[200%] mobile-large:-left-[300%] mobile-large:-left-[400%] mobile-large:-right-[10%] mobile-large:-right-[20%] mobile-large:-right-[30%] mobile-large:-right-[40%]
 
   return (
     <li
@@ -83,7 +83,7 @@ export default function ProjectCard({
           animate="visible"
           variants={variants}
           className={cn(
-            'group relative flex h-full w-full  cursor-pointer items-center justify-center overflow-hidden border border-primary90 border-opacity-10 grayscale duration-slow hover:grayscale-0',
+            'group relative flex h-full w-full  cursor-pointer items-center justify-center overflow-hidden border-y border-l border-primary90 border-opacity-10 grayscale duration-slow hover:grayscale-0',
             showMore && 'grayscale-0'
           )}
         >
@@ -159,13 +159,13 @@ export default function ProjectCard({
             </div>
             <div className="absolute -z-10 h-full w-full bg-primary10 bg-opacity-10"></div>
           </div>
-          <div className="flex w-full flex-col gap-sub-large bg-primary1 py-sub-large tablet:px-small laptop:px-medium">
+          <div className="flex w-full flex-col gap-sub-large bg-primary1 pb-[2px] pt-sub-large tablet:pl-small laptop:pl-medium">
             <P
               textType={'heading'}
               className="relative flex flex-wrap justify-between gap-small px-small tablet:px-0 laptop:px-medium"
             >
               <span>BUDGET</span>
-              <span className="flex w-full flex-wrap justify-between gap-extra-small mobile-large:gap-medium tablet:w-4/6 tablet:gap-medium laptop:w-3/5">
+              <span className="flex w-full flex-wrap justify-between gap-extra-small mobile-large:gap-medium tablet:w-4/6 tablet:gap-medium tablet:pr-small laptop:w-3/5 laptop:pr-medium">
                 <strong
                   className={cn(
                     ' before:z-20 before:bg-primary10 before:delay-[2s] before:duration-medium ',
@@ -204,7 +204,7 @@ export default function ProjectCard({
                 {information.description}
                 {information.description}
               </P>
-              <div className="relative h-[40rem] w-full overflow-hidden tablet:w-[50rem] tablet:rounded-extra-small">
+              <div className="relative h-[40rem] w-full overflow-hidden tablet:w-[50rem] ">
                 <Image
                   src={'/assets/architecture_interieurs/INTERIEUR/schema.jpg'}
                   alt={`${project_name} schéma`}

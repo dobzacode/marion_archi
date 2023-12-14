@@ -1,5 +1,6 @@
 'use client';
 
+import { cn } from '@/lib/utils';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { ReactNode } from 'react';
@@ -10,7 +11,8 @@ export default function SubSection({
   className,
   title,
   custom,
-  direction = 'left'
+  direction = 'left',
+  isProject
 }: {
   children?: ReactNode;
   href: string | false;
@@ -18,23 +20,28 @@ export default function SubSection({
   title: string;
   custom: number;
   direction?: 'left' | 'right';
+  isProject?: boolean;
 }) {
   return (
     <motion.li
       initial={{ opacity: 0, translateX: direction === 'left' ? '-10%' : '10%' }}
       whileInView={{ opacity: 1, translateX: 0, transition: { type: 'spring' } }}
-      viewport={{ margin: '-20% 0px -20% 0px', once: true }}
+      viewport={{ margin: !isProject ? '-20% 0px -20% 0px' : '0px', once: true }}
       custom={custom}
       className={`sub-heading   text-primary90 ${className} gap-sub-medium`}
     >
       {href ? (
         <Link className="peer w-fit " href={href}>
-          <h4 className="relative z-20 font-['Distortion_Dos_Analogue'] text-primary80 duration-0 group-hover:z-20">
+          <h4 className="relative z-20  font-['Distortion_Dos_Analogue'] text-primary80 duration-0 group-hover:z-20">
             {title}
           </h4>
         </Link>
       ) : (
-        <h4 className="peer relative z-20 w-fit cursor-pointer font-['Distortion_Dos_Analogue'] text-primary80 duration-0 group-hover:z-20">
+        <h4
+          className={cn(
+            "peer relative z-20 w-fit cursor-pointer font-['Distortion_Dos_Analogue'] text-primary80 duration-0 group-hover:z-20"
+          )}
+        >
           {title}
         </h4>
       )}

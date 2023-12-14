@@ -43,7 +43,7 @@ export default function MenuButton({
     <button
       onClick={handleButtonClick}
       className={cn(
-        'py-sh-full group relative flex w-full items-center justify-center border-primary80 duration-slow  tablet:absolute tablet:h-1/2  tablet:w-1/2  tablet:py-0  ',
+        'py-sh-full group relative flex h-full w-full items-center justify-center border-primary80 duration-slow  tablet:absolute tablet:h-1/2  tablet:w-1/2  tablet:py-0  ',
         placement,
         isActive && 'hover:z-10',
         !isActive && 'backdrop-contrat-0 backdrop-blur-sm backdrop-grayscale',

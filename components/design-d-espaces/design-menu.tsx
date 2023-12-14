@@ -2,7 +2,7 @@
 
 import { usePathname, useSearchParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
-import MenuButton from './menu-section';
+import MenuButton from './menu-button';
 
 export default function DesignMenu({}) {
   const pathname = usePathname();

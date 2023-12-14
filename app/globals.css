@@ -140,6 +140,10 @@ ol > li::before {
   transform: translateY(-50%);
 }
 
+ul > li::before {
+  content-visibility: hidden;
+}
+
 .hidden-div {
   transition-duration: 600ms;
   opacity: 0;

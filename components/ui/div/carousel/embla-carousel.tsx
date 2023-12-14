@@ -59,7 +59,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
                 onClick={() => {
                   openLightbox(index);
                 }}
-                className="embla__slide aspect-square h-[40rem] cursor-pointer  rounded-extra-small"
+                className="embla__slide mr-1 aspect-square h-[40rem]  cursor-pointer rounded-extra-small"
                 key={index}
               >
                 <div className="embla__slide__number">

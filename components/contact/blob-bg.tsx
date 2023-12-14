@@ -65,7 +65,7 @@ const variantsThree: Variants = {
 
 export default function BlobBg() {
   return (
-    <div className="relative -z-10 h-full w-full translate-x-[5%] translate-y-[-30%] scale-y-[87%]">
+    <div className="absolute  -z-10 h-full w-full -translate-y-[30%] translate-x-[5%] scale-y-[87%]">
       <AnimateBlob variants={variantsOne} color="tertiary" saturation={80}>
         <animate
           className="shadow-medium-light"

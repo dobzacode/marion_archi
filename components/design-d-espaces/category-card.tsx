@@ -15,6 +15,7 @@ const CategoryCard: React.FC<CategoryCardProps> = React.memo(
         hidden: { y: -1000 },
         visible: (i: number) => ({
           y: 0,
+          x: 0,
           transition: {
             delay: i * 0.115
           }

@@ -49,13 +49,13 @@ function Header({ children, className, size, intent, textColor, ...props }: Head
       <Nav
         linkSize="small"
         intent={textColor}
-        className="slideInFromTop hidden w-full items-center justify-between gap-large bg-primary1 px-small opacity-0 animation-delay-[2s] tablet:flex laptop-large:px-large"
+        className="slideInFromTop hidden w-full items-center justify-between gap-large bg-primary1 px-small opacity-0 animation-delay-[1.6s] tablet:flex laptop-large:px-large"
       ></Nav>
       <MobileNav
         linkSize="small"
         intent={textColor}
         size={size}
-        className="slideInFromTop relative z-50 flex w-full items-center justify-between gap-large bg-primary1 px-small animation-delay-[2s] mobile-large:px-medium tablet:hidden"
+        className="slideInFromTop relative z-50 flex w-full items-center justify-between gap-large bg-primary1 px-small animation-delay-[1.6s] mobile-large:px-medium tablet:hidden"
       ></MobileNav>
     </header>
   );

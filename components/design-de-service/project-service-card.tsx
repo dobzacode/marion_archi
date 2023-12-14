@@ -93,7 +93,7 @@ export default function ProjectServiceCard({
           <Icon
             path={mdiEyeOffOutline}
             className={cn(
-              'absolute left-1/2 top-1/2 z-40 -translate-x-[400%] -translate-y-1/2 transform text-primary1 opacity-0 duration-[fs] group-hover:scale-110',
+              'absolute left-1/2 top-1/2 z-40 -translate-x-[400%] -translate-y-1/2 transform text-primary1 opacity-0 duration-[2s] group-hover:scale-110',
               showMore && 'opacity-1 -translate-x-1/2'
             )}
             size={2.6}

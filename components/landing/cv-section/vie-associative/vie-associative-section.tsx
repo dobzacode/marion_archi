@@ -1,3 +1,4 @@
+import Footer from '@/components/ui/footer/footer';
 import P from '@/components/ui/text/p';
 import { cn } from '@/lib/utils';
 import SubSection from '../sub-section';
@@ -90,10 +91,12 @@ export default function VieAssociativeSection() {
             CROUS, encaissement, gestion des commandes.
           </P>
           <div className="py-medium"></div>
+          <Footer className="relative pb-small tablet:hidden"></Footer>
         </SubSection>
       </ol>
       <VieAssociativeTitleBlock className="laptop relative flex w-[40rem] flex-col pt-[210px]  max-laptop:translate-x-5 "></VieAssociativeTitleBlock>
       <div className="pb-large"></div>
+      <Footer className="-bottom-[70rem] pb-small max-tablet:hidden laptop:-bottom-[30rem] laptop:left-[17%] "></Footer>
     </section>
   );
 }

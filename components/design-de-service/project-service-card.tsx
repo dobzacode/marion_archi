@@ -1,7 +1,6 @@
 import { cn } from '@/lib/utils';
 import { mdiEyeOffOutline } from '@mdi/js';
 import Icon from '@mdi/react';
-import { EmblaOptionsType } from 'embla-carousel';
 import { Variants, motion } from 'framer-motion';
 import Image from 'next/image';
 import { useSearchParams } from 'next/navigation';
@@ -60,10 +59,6 @@ export default function ProjectServiceCard({
       setShowMore(false);
     }
   }, [searchParams, id]);
-
-  const OPTIONS: EmblaOptionsType = { dragFree: true, loop: true, active: true };
-  const SLIDE_COUNT = 9;
-  const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
 
   // -left-[100%] -left-[200%] -left-[300%] -left-[400%] -right-[10%] -right-[20%] -right-[30%] -right-[40%]
   // laptop:-left-[100%] laptop:-left-[200%] laptop:-left-[300%] laptop:-left-[400%] laptop:-right-[10%] laptop:-right-[20%] laptop:-right-[30%] laptop:-right-[40%]

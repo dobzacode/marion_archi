@@ -5,7 +5,7 @@ import P from '@/components/ui/text/p';
 
 export async function generateMetadata() {
   return {
-    title: 'Politique de Confidentialité | Marion Deleersnyder, Architecte de Confiance',
+    title: 'Mentions Légales | Marion Deleersnyder, Architecte - Informations Juridiques',
     description:
       "Consultez les mentions légales du site de Marion Deleersnyder pour obtenir des informations juridiques importantes. Découvrez les conditions d'utilisation, les droits d'auteur et d'autres détails légaux. Notre engagement envers la transparence garantit une expérience en ligne fiable et conforme à la loi."
   };

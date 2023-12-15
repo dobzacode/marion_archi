@@ -5,6 +5,7 @@ import P from '@/components/ui/text/p';
 import { useFormState } from 'react-dom';
 import { useGoogleReCaptcha } from 'react-google-recaptcha-v3';
 import { SubmitButton } from '../ui/form/submit-button';
+import { H1 } from '../ui/text/h1';
 
 export default function ContactForm({}: {
   // eslint-disable-next-line no-unused-vars
@@ -35,6 +36,10 @@ export default function ContactForm({}: {
     <section className="flex items-center justify-center">
       <div className="slideInFromRight glassmorphism-bg flex  w-full flex-col gap-small rounded-small border border-primary10 border-opacity-80 p-medium text-primary90 opacity-0 animation-delay-1000   mobile-large:mx-0 mobile-large:max-w-[90vw] tablet:w-fit">
         <form action={formAction} className="flex w-full flex-col gap-small">
+          <H1 textType={'sub-heading'} className="">
+            Formulaire de contact
+          </H1>
+          <hr className="border border-primary10"></hr>
           {state && (
             <P
               textType={'body'}

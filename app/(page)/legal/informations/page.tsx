@@ -3,6 +3,14 @@ import { H1 } from '@/components/ui/text/h1';
 import H2 from '@/components/ui/text/h2';
 import P from '@/components/ui/text/p';
 
+export async function generateMetadata() {
+  return {
+    title: 'Politique de Confidentialité | Marion Deleersnyder, Architecte de Confiance',
+    description:
+      "Consultez les mentions légales du site de Marion Deleersnyder pour obtenir des informations juridiques importantes. Découvrez les conditions d'utilisation, les droits d'auteur et d'autres détails légaux. Notre engagement envers la transparence garantit une expérience en ligne fiable et conforme à la loi."
+  };
+}
+
 export default function Home() {
   return (
     <main className="slideInFromLeft relative flex flex-col gap-sub-large px-small  text-primary90 mobile-large:px-large">

@@ -5,8 +5,9 @@ import P from '@/components/ui/text/p';
 
 export async function generateMetadata() {
   return {
-    title: '',
-    description: ''
+    title: 'Politique de Confidentialité | Marion Deleersnyder, Architecte de Confiance',
+    description:
+      'Découvrez comment nous protégeons votre vie privée sur le site de Marion Deleersnyder. Consultez notre politique de confidentialité pour comprendre comment nous traitons vos informations. Nous nous engageons à assurer la sécurité et la transparence dans toutes nos interactions en ligne.'
   };
 }
 

@@ -11,20 +11,20 @@ export function SubmitButton() {
 
   return (
     <Button
-      className={`relative  overflow-hidden border border-primary90 border-opacity-10 bg-opacity-70 ${
+      className={`relative  overflow-hidden border border-tertiary90 border-opacity-10 bg-opacity-70 ${
         pending ? 'pointer-events-none' : ''
       }`}
       size="small"
       rounded="small"
       type="submit"
       hover={true}
-      intent="pastelPrimary"
+      intent="pastelTertiary"
       aria-disabled={pending}
     >
-      <p className="text-primary90">ENVOYER</p>
+      <p className="text-tertiary90">ENVOYER</p>
       {pending && (
         <BarLoader
-          className="bg-primary50 text-primary40"
+          className="bg-tertiary50 text-tertiary40"
           height="2px"
           cssOverride={{ width: '100%', position: 'absolute', bottom: '0' }}
         ></BarLoader>

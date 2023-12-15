@@ -46,10 +46,10 @@ const Logo: FC<LogoProps> = ({
       <P
         className={cn(
           textVariants({
-            className,
             intent,
             textType,
-            hover
+            hover,
+            className
           })
         )}
       >

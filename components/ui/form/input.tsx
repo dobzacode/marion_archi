@@ -33,7 +33,7 @@ const inputVariants = cva('', {
       secondary:
         'bg-secondary5 placeholder:text-secondary90/[.4] text-secondary90 border-secondary90/[.2] outline-secondary90/[.2]',
       tertiary:
-        'bg-tertiary5 placeholder:text-tertiary90/[.4] text-tertiary90 border-tertiary90/[.2] outline-tertiary90/[.2]',
+        'bg-tertiary5 bg-opacity-70 placeholder:text-tertiary90/[.4] text-tertiary90 border-tertiary90/[.2] outline-tertiary90/[.2] dark:bg-tertiary90 dark:text-tertiary1 dark:placeholder:text-tertiary10/[.4] dark:border-tertiary10/[.2] dark:outline-tertiary10/[.2]',
       success:
         '  bg-success5 placeholder:text-success90/[.4] text-success90 border-success90/[.2] outline-success90/[.2]',
       error:

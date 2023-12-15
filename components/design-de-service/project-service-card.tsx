@@ -86,14 +86,14 @@ export default function ProjectServiceCard({
           animate="visible"
           variants={variants}
           className={cn(
-            'group relative flex h-full w-full  cursor-pointer items-center justify-center overflow-hidden border-y border-l border-primary90 border-opacity-10 grayscale duration-slow hover:grayscale-0',
+            'group relative flex h-full w-full  cursor-pointer items-center justify-center overflow-hidden border-y border-l border-secondary90 border-opacity-10 grayscale duration-slow hover:grayscale-0',
             showMore && 'grayscale-0'
           )}
         >
           <Icon
             path={mdiEyeOffOutline}
             className={cn(
-              'absolute left-1/2 top-1/2 z-40 -translate-x-[400%] -translate-y-1/2 transform text-primary1 opacity-0 duration-[2s] group-hover:scale-110',
+              'absolute left-1/2 top-1/2 z-40 -translate-x-[400%] -translate-y-1/2 transform text-secondary1 opacity-0 duration-[2s] group-hover:scale-110',
               showMore && 'opacity-1 -translate-x-1/2'
             )}
             size={2.6}
@@ -101,7 +101,7 @@ export default function ProjectServiceCard({
           <H3
             textType={'body'}
             className={cn(
-              'relative z-10 px-small text-center text-primary1 duration-[2s]  group-hover:scale-105',
+              'relative z-10 px-small text-center text-secondary1 duration-[2s]  group-hover:scale-105',
               showMore && 'translate-x-[150%] opacity-0'
             )}
           >
@@ -133,7 +133,7 @@ export default function ProjectServiceCard({
         <div
           ref={contentRef}
           className={cn(
-            'absolute  top-full z-40   w-screen overflow-hidden border-y border-primary90 border-opacity-10 bg-primary1 text-primary99 shadow-high',
+            'text-secondary99  absolute top-full   z-40 w-screen overflow-hidden border-y border-secondary90 border-opacity-10 bg-secondary1 shadow-high',
             `laptop:-left-[${(index % 5) * 100}%] tablet:-left-[${
               (index % 4) * 100
             }%] mobile-large:-left-[${(index % 3) * 100}%]`,
@@ -153,17 +153,17 @@ export default function ProjectServiceCard({
             >
               <div className="relative">
                 <H3
-                  className=" max-mobile-large:sub-heading relative  left-small top-large font-['Distortion_Dos_Analogue'] text-primary90   "
+                  className=" max-mobile-large:sub-heading relative  left-small top-large font-['Distortion_Dos_Analogue'] text-secondary90   "
                   textType={'heading'}
                 >
                   {project_name}
                 </H3>
               </div>
             </div>
-            <div className="absolute -z-10 h-full w-full bg-primary10 bg-opacity-10"></div>
+            <div className="absolute -z-10 h-full w-full bg-secondary10 bg-opacity-10"></div>
           </div>
 
-          <div className="flex flex-col gap-large bg-primary1 pt-medium">
+          <div className="flex flex-col gap-large bg-secondary1 pt-medium">
             <P
               textType={'heading'}
               className="relative flex flex-col items-center justify-center gap-small  py-small tablet:flex-row tablet:justify-between tablet:px-medium laptop:px-large"
@@ -171,7 +171,7 @@ export default function ProjectServiceCard({
               <span className="flex   text-center ">
                 <strong
                   className={cn(
-                    ' text-center before:z-20 before:h-[103%] before:bg-primary10 before:delay-[2s] before:duration-medium',
+                    ' text-center before:z-20 before:h-[103%] before:bg-secondary10 before:delay-[2s] before:duration-medium',
                     searchParams.get('project') === id ? 'before:scale-x-100' : 'before:scale-x-0'
                   )}
                 >
@@ -183,7 +183,7 @@ export default function ProjectServiceCard({
               <span className="flex text-center  ">
                 <strong
                   className={cn(
-                    ' text-center before:z-20 before:h-[103%] before:bg-primary10 before:delay-[2s] before:duration-medium',
+                    ' text-center before:z-20 before:h-[103%] before:bg-secondary10 before:delay-[2s] before:duration-medium',
                     searchParams.get('project') === id ? 'before:scale-x-100' : 'before:scale-x-0'
                   )}
                 >
@@ -193,7 +193,7 @@ export default function ProjectServiceCard({
                 </strong>
               </span>
             </P>
-            <ul className="mb-small flex h-full w-full flex-col justify-center gap-large bg-primary1 px-small tablet:px-large laptop:ml-large  laptop:flex-row  laptop:flex-wrap laptop:gap-extra-large min-[1300px]:items-center  ">
+            <ul className="mb-small flex h-full w-full flex-col justify-center gap-large bg-secondary1 px-small tablet:px-large laptop:ml-large  laptop:flex-row  laptop:flex-wrap laptop:gap-extra-large min-[1300px]:items-center  ">
               <SubSection
                 isProject={true}
                 href={false}
@@ -205,7 +205,7 @@ export default function ProjectServiceCard({
                   viewBox="0 0 200 200"
                   xmlns="http://www.w3.org/2000/svg"
                   className={cn(
-                    'pointer-events-none absolute z-10 w-[70rem] -translate-y-1/2 overflow-visible fill-primary1  duration-slow hover:translate-x-0 hover:fill-primary10 peer-hover:translate-x-0 peer-hover:fill-primary10 max-laptop:hidden max-laptop:fill-primary10 tablet:w-auto laptop:-translate-x-[150%]'
+                    'pointer-events-none absolute z-10 w-[70rem] -translate-y-1/2 overflow-visible fill-secondary1  duration-slow hover:translate-x-0 hover:fill-secondary10 peer-hover:translate-x-0 peer-hover:fill-secondary10 max-laptop:hidden max-laptop:fill-secondary10 tablet:w-auto laptop:-translate-x-[150%]'
                   )}
                 >
                   <path
@@ -234,7 +234,7 @@ export default function ProjectServiceCard({
                   viewBox="0 0 200 200"
                   xmlns="http://www.w3.org/2000/svg"
                   className={cn(
-                    'pointer-events-none absolute  z-10 w-[70rem] -translate-y-1/2 overflow-visible fill-primary1 transition-all duration-slow peer-hover:translate-x-0 peer-hover:fill-primary10 max-laptop:hidden max-laptop:fill-primary10 tablet:w-auto laptop:translate-x-[200%]'
+                    'pointer-events-none absolute  z-10 w-[70rem] -translate-y-1/2 overflow-visible fill-secondary1 transition-all duration-slow peer-hover:translate-x-0 peer-hover:fill-secondary10 max-laptop:hidden max-laptop:fill-secondary10 tablet:w-auto laptop:translate-x-[200%]'
                   )}
                 >
                   <path
@@ -262,7 +262,7 @@ export default function ProjectServiceCard({
                   viewBox="0 0 200 200"
                   xmlns="http://www.w3.org/2000/svg"
                   className={cn(
-                    'pointer-events-none absolute z-10 w-[70rem] -translate-y-1/2 overflow-visible fill-primary1 transition-all duration-slow peer-hover:translate-x-0 peer-hover:fill-primary10 max-laptop:hidden max-laptop:fill-primary10 tablet:w-auto laptop:-translate-x-[150%]'
+                    'pointer-events-none absolute z-10 w-[70rem] -translate-y-1/2 overflow-visible fill-secondary1 transition-all duration-slow peer-hover:translate-x-0 peer-hover:fill-secondary10 max-laptop:hidden max-laptop:fill-secondary10 tablet:w-auto laptop:-translate-x-[150%]'
                   )}
                 >
                   <path
@@ -288,7 +288,7 @@ export default function ProjectServiceCard({
                   viewBox="0 0 200 200"
                   xmlns="http://www.w3.org/2000/svg"
                   className={cn(
-                    'pointer-events-none absolute z-10 w-[70rem] -translate-y-1/2 overflow-visible  fill-primary1 transition-all duration-slow peer-hover:translate-x-0 peer-hover:fill-primary10 max-laptop:hidden max-laptop:fill-primary10 tablet:w-auto laptop:translate-x-[200%]'
+                    'pointer-events-none absolute z-10 w-[70rem] -translate-y-1/2 overflow-visible  fill-secondary1 transition-all duration-slow peer-hover:translate-x-0 peer-hover:fill-secondary10 max-laptop:hidden max-laptop:fill-secondary10 tablet:w-auto laptop:translate-x-[200%]'
                   )}
                 >
                   <path
@@ -316,7 +316,7 @@ export default function ProjectServiceCard({
                   viewBox="0 0 200 200"
                   xmlns="http://www.w3.org/2000/svg"
                   className={cn(
-                    'pointer-events-none absolute z-10 w-[70rem] -translate-y-1/2 overflow-visible fill-primary1  duration-slow peer-hover:translate-x-0 peer-hover:fill-primary10 max-laptop:hidden max-laptop:fill-primary10 tablet:w-auto laptop:-translate-x-[150%]'
+                    'pointer-events-none absolute z-10 w-[70rem] -translate-y-1/2 overflow-visible fill-secondary1  duration-slow peer-hover:translate-x-0 peer-hover:fill-secondary10 max-laptop:hidden max-laptop:fill-secondary10 tablet:w-auto laptop:-translate-x-[150%]'
                   )}
                 >
                   <path
@@ -344,7 +344,7 @@ export default function ProjectServiceCard({
                   viewBox="0 0 200 200"
                   xmlns="http://www.w3.org/2000/svg"
                   className={cn(
-                    'pointer-events-none absolute z-10 w-[70rem] -translate-y-1/2 overflow-visible fill-primary1  duration-slow peer-hover:translate-x-0 peer-hover:fill-primary10 max-laptop:hidden max-laptop:fill-primary10 tablet:w-auto laptop:translate-x-[200%]'
+                    'pointer-events-none absolute z-10 w-[70rem] -translate-y-1/2 overflow-visible fill-secondary1  duration-slow peer-hover:translate-x-0 peer-hover:fill-secondary10 max-laptop:hidden max-laptop:fill-secondary10 tablet:w-auto laptop:translate-x-[200%]'
                   )}
                 >
                   <path

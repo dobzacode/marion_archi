@@ -20,12 +20,12 @@ const PRIMARY_COLOR_SHADOW = `${PRIMARY_COLOR_HSL.split(',')[0]}deg ${
 }% ${LIGHTNESS_FACTOR}`;
 const PRIMARY_COLOR_LIGHT = `${PRIMARY_COLOR_HSL.split(',')[0]}deg ${69 - SATURATION_FACTOR}% 80%`;
 
-const SECONDARY_COLOR_HSL = '30, 15%';
+const SECONDARY_COLOR_HSL = '28, 30%';
 const SECONDARY_COLOR_SHADOW = `${SECONDARY_COLOR_HSL.split(',')[0]}deg ${
   100 - SATURATION_FACTOR
 }% ${LIGHTNESS_FACTOR} `;
 
-const TERTIARY_COLOR_HSL = '28, 22%';
+const TERTIARY_COLOR_HSL = '34, 28%';
 const TERTIARY_COLOR_SHADOW = `${TERTIARY_COLOR_HSL.split(',')[0]}deg ${
   93.2 - SATURATION_FACTOR
 }% ${LIGHTNESS_FACTOR} `;
@@ -171,6 +171,7 @@ module.exports = {
         secondary70: `hsl(${SECONDARY_COLOR_HSL}, 30%)`,
         secondary80: `hsl(${SECONDARY_COLOR_HSL}, 20%)`,
         secondary90: `hsl(${SECONDARY_COLOR_HSL}, 10%)`,
+        secondary99: `hsl(${SECONDARY_COLOR_HSL}, 1%)`,
         secondary100: `hsl(${SECONDARY_COLOR_HSL}, 0%)`,
 
         tertiary1: `hsl(${TERTIARY_COLOR_HSL}, 99%)`,

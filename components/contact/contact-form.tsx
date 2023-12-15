@@ -34,17 +34,17 @@ export default function ContactForm({}: {
 
   return (
     <section className="mx-extra-small flex items-center justify-center">
-      <div className="slideInFromRight glassmorphism-bg flex  w-full flex-col gap-small rounded-small border border-primary10 border-opacity-80 p-medium text-primary90 opacity-0 animation-delay-1000   mobile-large:mx-0 mobile-large:max-w-[90vw] tablet:w-fit">
+      <div className="slideInFromRight glassmorphism-bg flex  w-full flex-col gap-small rounded-small border border-tertiary10 border-opacity-80 p-medium text-tertiary90 opacity-0 animation-delay-1000   mobile-large:mx-0 mobile-large:max-w-[90vw] tablet:w-fit">
         <form action={formAction} className="flex w-full flex-col gap-small">
           <H1 textType={'sub-heading'} className="">
             Formulaire de contact
           </H1>
-          <hr className="border border-primary10"></hr>
+          <hr className="mb-1 border border-tertiary10"></hr>
           {state && (
             <P
               textType={'body'}
               className={`${
-                state === 'Votre message a bien été envoyé !' ? 'text-primary50' : 'text-error50'
+                state === 'Votre message a bien été envoyé !' ? 'text-tertiary50' : 'text-error50'
               }`}
             >
               {state}
@@ -52,7 +52,7 @@ export default function ContactForm({}: {
           )}
           <div className="flex w-full flex-col justify-between  gap-small mobile-large:flex-row">
             <Input
-              intent="primary"
+              intent="tertiary"
               className="mobile-large:w-1/2"
               minLength={2}
               maxLength={30}
@@ -63,7 +63,7 @@ export default function ContactForm({}: {
               hiddenlabel="true"
             ></Input>
             <Input
-              intent="primary"
+              intent="tertiary"
               className="mobile-large:w-1/2"
               minLength={2}
               maxLength={30}
@@ -75,7 +75,7 @@ export default function ContactForm({}: {
             ></Input>
           </div>
           <Input
-            intent="primary"
+            intent="tertiary"
             required
             type="email"
             id={'email'}
@@ -83,7 +83,7 @@ export default function ContactForm({}: {
             hiddenlabel="true"
           ></Input>
           <Input
-            intent="primary"
+            intent="tertiary"
             minLength={2}
             maxLength={30}
             required
@@ -94,7 +94,7 @@ export default function ContactForm({}: {
           ></Input>
 
           <Input
-            intent="primary"
+            intent="tertiary"
             minLength={10}
             maxLength={500}
             required
@@ -109,12 +109,12 @@ export default function ContactForm({}: {
         </form>
         <P className={`caption  text-center`}>
           Ce site est protégé par reCAPTCHA, les
-          <a className="text-primary50" href="https://policies.google.com/privacy">
+          <a className="text-tertiary50" href="https://policies.google.com/privacy">
             {' '}
             règles de confidentialité
           </a>{' '}
           et les
-          <a className="text-primary50" href="https://policies.google.com/terms">
+          <a className="text-tertiary50" href="https://policies.google.com/terms">
             {' '}
             conditions d&apos;utilisation
           </a>{' '}

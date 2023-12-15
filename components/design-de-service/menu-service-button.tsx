@@ -43,7 +43,7 @@ export default function MenuServiceButton({
     <button
       onClick={handleButtonClick}
       className={cn(
-        ' group relative flex w-full items-center justify-center border-primary80 duration-slow  tablet:absolute tablet:h-full  tablet:w-1/2  tablet:py-0  ',
+        ' group relative flex w-full items-center justify-center border-secondary80 duration-slow  tablet:absolute tablet:h-full  tablet:w-1/2  tablet:py-0  ',
         placement,
         isActive && 'hover:z-10',
         !isActive && 'backdrop-contrat-0 backdrop-blur-sm backdrop-grayscale',
@@ -51,13 +51,13 @@ export default function MenuServiceButton({
         className
       )}
     >
-      <div className="tablet:heading sub-heading  peer relative z-20 px-small text-primary80 duration-medium group-hover:z-50 group-hover:scale-110">
+      <div className="tablet:heading sub-heading  peer relative z-20 px-small text-secondary80 duration-medium group-hover:z-50 group-hover:scale-110">
         <strong
           className={cn(
-            'text-white duration-[2s] before:rotate-1 before:scale-x-0 before:bg-primary20 before:bg-blend-difference before:duration-slow ',
+            'text-white duration-[2s] before:rotate-1 before:scale-x-0 before:bg-secondary20 before:bg-blend-difference before:duration-slow ',
             customHighlight,
             isActive
-              ? 'z-40 text-primary90 before:scale-x-100 before:bg-primary1 before:duration-[2s]'
+              ? 'z-40 text-secondary90 before:scale-x-100 before:bg-secondary1 before:duration-[2s]'
               : ''
           )}
         >
@@ -68,7 +68,7 @@ export default function MenuServiceButton({
         viewBox="0 0 200 200"
         xmlns="http://www.w3.org/2000/svg"
         className={cn(
-          'pointer-events-none absolute z-10  w-[65vw] overflow-visible fill-primary20  stroke-[0.5px] duration-[2s] laptop:w-[45vw] min-[1300px]:w-[35vw] ',
+          'pointer-events-none absolute z-10  w-[65vw] overflow-visible fill-secondary20  stroke-[0.5px] duration-[2s] laptop:w-[45vw] min-[1300px]:w-[35vw] ',
           svgCss,
           isActive ? translation : 'grayscale',
           isActive && customScale,
@@ -86,7 +86,7 @@ export default function MenuServiceButton({
     <button
       onClick={handleButtonClick}
       className={cn(
-        'group  relative flex h-full w-full items-center justify-center border-primary80 duration-slow  tablet:absolute tablet:h-1/2  tablet:w-1/2  tablet:py-0  ',
+        'group  relative flex h-full w-full items-center justify-center border-secondary80 duration-slow  tablet:absolute tablet:h-1/2  tablet:w-1/2  tablet:py-0  ',
         placement,
         isActive && 'hover:z-10',
         !isActive && 'backdrop-contrat-0 backdrop-blur-sm backdrop-grayscale',
@@ -94,13 +94,13 @@ export default function MenuServiceButton({
         className
       )}
     >
-      <div className="min-[1100px]:heading sub-heading  peer relative z-20 px-small text-primary80 duration-medium group-hover:scale-110">
+      <div className="min-[1100px]:heading sub-heading  peer relative z-20 px-small text-secondary80 duration-medium group-hover:scale-110">
         <strong
           className={cn(
             'text-white duration-[2s] before:rotate-1 before:scale-x-0  before:bg-blend-difference before:duration-slow ',
             customHighlight,
             isActive
-              ? 'z-40 text-primary90 before:scale-x-100 before:bg-primary1 before:duration-[2s]'
+              ? 'z-40 text-secondary90 before:scale-x-100 before:bg-secondary1 before:duration-[2s]'
               : ''
           )}
         >
@@ -111,7 +111,7 @@ export default function MenuServiceButton({
         viewBox="0 0 200 200"
         xmlns="http://www.w3.org/2000/svg"
         className={cn(
-          'pointer-events-none absolute z-10  w-[65vw] overflow-visible fill-primary20  stroke-[0.5px] duration-[2s] laptop:w-[45vw] min-[1300px]:w-[35vw] ',
+          'pointer-events-none absolute z-10  w-[65vw] overflow-visible fill-secondary20  stroke-[0.5px] duration-[2s] laptop:w-[45vw] min-[1300px]:w-[35vw] ',
           svgCss,
           isActive ? translation : 'grayscale',
           isActive && customScale,

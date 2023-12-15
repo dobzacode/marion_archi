@@ -4,7 +4,7 @@ export default function Character() {
   return (
     <div className="absolute -bottom-[20rem] right-medium z-50 h-1/2 w-full  mobile-large:fixed mobile-large:bottom-0 tablet:right-extra-large laptop:w-1/2">
       <svg
-        className="animate-draw absolute -bottom-medium -right-[25rem] z-40 w-[60rem]   overflow-visible [&>*]:stroke-primary80  [&>.sto]:fill-none"
+        className="animate-draw absolute -bottom-medium -right-[25rem] z-40 w-[60rem]   overflow-visible [&>*]:stroke-tertiary80  [&>.sto]:fill-none"
         xmlns="http://www.w3.org/2000/svg"
         xmlnsXlink="http://www.w3.org/1999/xlink"
         xmlSpace="preserve"
@@ -83,8 +83,8 @@ export default function Character() {
         />
       </svg>
       <div className="fade absolute bottom-[20rem] right-[10rem] z-40 animation-delay-[2s] min-[600px]:right-[15rem]">
-        <div className="bubble right bg-primary20  backdrop-blur-3xl">
-          <P textType={'sub-heading'} className="text-primary90">
+        <div className="bubble right bg-tertiary20  backdrop-blur-3xl">
+          <P textType={'sub-heading'} className="text-tertiary90">
             Contacte-moi vite au 0606060606 ou à l&apos;adresse mail test@test.fr
           </P>
         </div>

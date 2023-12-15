@@ -3,10 +3,10 @@
 import { usePathname, useSearchParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
-import architecture from '@/public/design-d-espaces/architecture.json';
-import architecture_interieurs from '@/public/design-d-espaces/architecture_interieurs.json';
-import architecture_retail from '@/public/design-d-espaces/architecture_retail.json';
-import architecture_tertiaire from '@/public/design-d-espaces/architecture_tertiaire.json';
+import architecture from '@/lib/design-d-espaces/architecture.json';
+import architecture_interieurs from '@/lib/design-d-espaces/architecture_interieurs.json';
+import architecture_retail from '@/lib/design-d-espaces/architecture_retail.json';
+import architecture_tertiaire from '@/lib/design-d-espaces/architecture_tertiaire.json';
 import { AnimatePresence } from 'framer-motion';
 import CategoryCard from './category-card';
 

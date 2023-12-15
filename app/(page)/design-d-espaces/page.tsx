@@ -14,7 +14,7 @@ export default function Page() {
     <main className="relative flex h-full w-full flex-col px-[1px]">
       <DesignMenu></DesignMenu>
       <ContentSection></ContentSection>
-      <Footer className="-bottom-sub-large"></Footer>
+      <Footer className="-bottom-[2rem] z-10"></Footer>
     </main>
   );
 }

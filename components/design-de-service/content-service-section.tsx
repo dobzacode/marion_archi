@@ -3,8 +3,8 @@
 import { usePathname, useSearchParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
-import projets from '@/public/design-de-service/projets.json';
-import recherches from '@/public/design-de-service/recherches.json';
+import projets from '@/lib/design-de-service/projets.json';
+import recherches from '@/lib/design-de-service/recherches.json';
 import { AnimatePresence } from 'framer-motion';
 import CategoryCard from './category-service-card';
 

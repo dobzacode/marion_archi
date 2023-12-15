@@ -9,13 +9,13 @@ export const metadata: Metadata = {
     "Explorez le portfolio exceptionnel de Marion Deleersnyder dédié au design de service. Plongez dans son univers créatif où l'architecture rencontre l'innovation pour offrir des solutions uniques. Découvrez ses projets variés et trouvez l'inspiration pour intégrer le design de service à votre environnement avec élégance et fonctionnalité."
 };
 
-export default function Page() {
+export default async function Page() {
   return (
     <>
       <main className="relative flex h-full w-full flex-col px-[1px]">
         <DesignServiceMenu />
         <ContentServiceSection />
-        <Footer className="-bottom-sub-large"></Footer>
+        <Footer className="-bottom-[2rem] z-10"></Footer>
       </main>
     </>
   );

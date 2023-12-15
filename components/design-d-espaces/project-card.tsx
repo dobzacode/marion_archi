@@ -204,7 +204,7 @@ export default function ProjectCard({
                 {information.description}
                 {information.description}
               </P>
-              <div className="relative h-[40rem] w-full overflow-hidden tablet:w-[50rem] ">
+              <div className="relative h-[40rem] w-full overflow-hidden tablet:w-[55rem] ">
                 <Image
                   src={'/assets/architecture_interieurs/INTERIEUR/schema.jpg'}
                   alt={`${project_name} schéma`}

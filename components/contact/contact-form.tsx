@@ -33,7 +33,7 @@ export default function ContactForm({}: {
   const [state, formAction] = useFormState(updateStatus, '');
 
   return (
-    <section className="flex items-center justify-center">
+    <section className="mx-extra-small flex items-center justify-center">
       <div className="slideInFromRight glassmorphism-bg flex  w-full flex-col gap-small rounded-small border border-primary10 border-opacity-80 p-medium text-primary90 opacity-0 animation-delay-1000   mobile-large:mx-0 mobile-large:max-w-[90vw] tablet:w-fit">
         <form action={formAction} className="flex w-full flex-col gap-small">
           <H1 textType={'sub-heading'} className="">

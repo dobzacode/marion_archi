@@ -5,7 +5,7 @@ import { VariantProps } from 'class-variance-authority';
 import Image from 'next/image';
 import { FC } from 'react';
 import { textVariants } from '../text/h1';
-import H3 from '../text/h3';
+import P from '../text/p';
 
 interface LogoProps extends LinkProps, VariantProps<typeof textVariants> {
   className?: string;
@@ -43,7 +43,7 @@ const Logo: FC<LogoProps> = ({
 
   return (
     <Link href={href} {...props}>
-      <H3
+      <P
         className={cn(
           textVariants({
             className,
@@ -54,7 +54,7 @@ const Logo: FC<LogoProps> = ({
         )}
       >
         {children}
-      </H3>
+      </P>
     </Link>
   );
 };

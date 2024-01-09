@@ -1,7 +1,7 @@
 import { cn, encodeUrl } from '@/lib/utils';
 import { mdiEyeOffOutline } from '@mdi/js';
 import Icon from '@mdi/react';
-import { Variants } from 'framer-motion';
+import { Variants, motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
@@ -30,6 +30,8 @@ export default function ProjectCard({
   project_name,
   id,
 
+  variants,
+  index,
   // eslint-disable-next-line no-unused-vars
   src
 }: ProjectProps) {
@@ -57,7 +59,12 @@ export default function ProjectCard({
           showMore && 'z-[25]'
         )}
       >
-        <div
+        <motion.button
+          exit="exit"
+          custom={index}
+          initial="hidden"
+          animate="visible"
+          variants={variants}
           className={cn(
             'group relative flex h-full w-full  cursor-pointer items-center justify-center overflow-hidden border-y border-l border-primary90 border-opacity-10 grayscale duration-slow hover:grayscale-0',
             showMore && 'grayscale-0'
@@ -93,7 +100,7 @@ export default function ProjectCard({
             alt={`${project_name} picture`}
             src={'/assets/architecture_interieurs/INTERIEUR/gallery/picture2.jpg'}
           ></Image>
-        </div>
+        </motion.button>
       </Link>
     </li>
   );

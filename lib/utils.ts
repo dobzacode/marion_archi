@@ -44,5 +44,7 @@ export function encodeUrl(name: string) {
 
   name = name.replace(/ /g, '_');
 
+  name = name.replace(/&/g, '%26');
+
   return name;
 }

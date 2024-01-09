@@ -44,6 +44,8 @@ export default async function Page({
 }) {
   let project: Project | undefined;
 
+  console.log(params.project_name);
+
   switch (params.type) {
     case 'architecture':
       project = architecture.find(
@@ -80,7 +82,7 @@ export default async function Page({
     <div className="relative flex flex-col gap-medium">
       <nav
         aria-label="Fil d'ariane"
-        className="caption -mt-sub-large flex items-center gap-1 px-extra-small text-primary90 mobile-large:gap-extra-small tablet:-mt-0 tablet:px-medium"
+        className="slideInFromLeft caption -mt-sub-large flex items-center gap-1 px-extra-small text-primary90 mobile-large:gap-extra-small tablet:-mt-0 tablet:px-medium"
       >
         <Link href="/design-d-espaces">Design d&apos;espaces</Link>
         <Icon path={mdiChevronRight} size={'16px'}></Icon>
@@ -90,7 +92,9 @@ export default async function Page({
         <Icon path={mdiChevronRight} size={'16px'}></Icon>
         <P className="truncate">{project.project_name}</P>
       </nav>
-      <DetailCard project={project}></DetailCard>
+      <div className="duration-75">
+        <DetailCard project={project}></DetailCard>
+      </div>
       <Footer className="relative mt-medium"></Footer>
     </div>
   );

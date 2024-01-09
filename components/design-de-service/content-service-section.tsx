@@ -11,11 +11,11 @@ import CategoryCard from './category-service-card';
 export default function ContentServiceSection() {
   const searchParams = useSearchParams();
   const pathname = usePathname();
-  const [actualType, setActualType] = useState<string>('projets');
+  const [actualType, setActualType] = useState<string>('recherches');
 
   useEffect(() => {
     const typeFromParams = searchParams.get('type');
-    setActualType(typeFromParams ? typeFromParams : 'projets');
+    setActualType(typeFromParams ? typeFromParams : 'recherches');
   }, [pathname, searchParams]);
 
   return (

@@ -70,7 +70,7 @@ const Nav: FC<NavProps> = ({ className, linkSize, intent }) => {
             xmlns="http://www.w3.org/2000/svg"
             className={cn(
               'absolute -z-20   -translate-y-1/2 overflow-visible fill-primary1 transition-all duration-slow group-hover:fill-primary20',
-              pathname === '/design-d-espaces' && '-z-10 fill-primary20'
+              pathname.includes('/design-d-espaces') && '-z-10 fill-primary20'
             )}
           >
             <path
@@ -89,7 +89,7 @@ const Nav: FC<NavProps> = ({ className, linkSize, intent }) => {
             xmlns="http://www.w3.org/2000/svg"
             className={cn(
               'absolute -z-20 -translate-y-1/2 overflow-visible fill-secondary1 transition-all duration-slow group-hover:fill-secondary20',
-              pathname === '/design-de-service' && '-z-10 fill-secondary20'
+              pathname.includes('/design-de-service') && '-z-10 fill-secondary20'
             )}
           >
             <path

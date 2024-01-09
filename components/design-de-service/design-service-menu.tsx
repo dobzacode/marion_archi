@@ -13,11 +13,11 @@ export default function DesignServiceMenu({}) {
   useEffect(() => {
     searchParams.get('type')
       ? setActualType(searchParams.get('type') as string)
-      : setActualType('projets');
+      : setActualType('recherches');
   }, [pathname, searchParams]);
 
   return (
-    <div className="bg-secondary99 relative left-0    z-40   h-[20rem] overflow-hidden border-opacity-10    max-tablet:-mt-large">
+    <div className="relative left-0 z-40    h-[20rem]   overflow-hidden border-opacity-10 bg-secondary99    max-tablet:-mt-large">
       <nav className="slideInFromLeft h-full">
         <ul className="flex h-full flex-col  tablet:block">
           <li className="h-full">

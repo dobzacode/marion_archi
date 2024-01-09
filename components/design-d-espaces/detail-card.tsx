@@ -44,7 +44,7 @@ export default function DetailCard({ project }: DetailCardProps) {
         </div>
         <div className="absolute -z-10 h-full w-full bg-primary10 bg-opacity-10"></div>
       </div>
-      <div className="flex w-full flex-col gap-sub-large bg-primary1 py-sub-large tablet:px-medium">
+      <div className=" flex w-full flex-col gap-sub-large bg-primary1 py-sub-large tablet:px-medium">
         <P
           textType={'heading'}
           className="relative flex flex-wrap justify-between gap-small px-small tablet:px-0 laptop:px-medium"
@@ -96,7 +96,7 @@ export default function DetailCard({ project }: DetailCardProps) {
           </div>
         </div>
       </div>
-      <div className="flex w-full bg-primary1">
+      <div className=" flex w-full bg-primary1">
         <div className="w-full">
           <EmblaCarousel
             imageArr={[

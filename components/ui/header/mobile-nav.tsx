@@ -75,13 +75,13 @@ const MobileNav: FC<NavProps> = ({ className, linkSize, intent, size }: NavProps
               viewBox="0 0 200 200"
               xmlns="http://www.w3.org/2000/svg"
               className={cn(
-                'absolute -z-20   -translate-y-1/2 overflow-visible fill-tertiary1 transition-all duration-slow group-hover:fill-tertiary20',
+                'absolute -z-20 -translate-y-1/2 rotate-[150deg] overflow-visible fill-primary1 transition-all duration-slow group-hover:fill-tertiary20',
                 pathname === '/a-propos' && '-z-10 fill-tertiary20'
               )}
             >
               <path
-                d="M19.5,-27.7C24.4,-27.3,26.8,-20.3,33.5,-13.1C40.3,-5.9,51.4,1.6,56.9,12.7C62.4,23.9,62.2,38.8,53.5,43.3C44.9,47.8,27.7,41.9,16.6,35.5C5.5,29.1,0.5,22.2,-12.4,25.9C-25.3,29.6,-46.2,43.8,-57.2,43C-68.3,42.1,-69.5,26.1,-66.4,12.8C-63.3,-0.6,-55.8,-11.3,-46,-16C-36.1,-20.7,-23.8,-19.4,-15.8,-18.4C-7.7,-17.3,-3.9,-16.7,1.7,-19.4C7.3,-22.1,14.7,-28.2,19.5,-27.7Z"
-                transform="translate(100 115) scale(1.65, 1.7)"
+                d="M16.6,-33.7C21.7,-19.2,25.9,-14.5,35.1,-6.6C44.4,1.4,58.7,12.5,62.3,26.1C66,39.7,59,55.6,46.8,63.5C34.7,71.3,17.3,71,-0.2,71.3C-17.8,71.6,-35.5,72.5,-43.5,63.3C-51.4,54.1,-49.5,34.8,-56.2,17.5C-63,0.2,-78.3,-15.1,-78,-28.1C-77.6,-41.1,-61.5,-51.8,-45.9,-62.9C-30.3,-73.9,-15.1,-85.3,-4.7,-78.9C5.8,-72.5,11.6,-48.2,16.6,-33.7Z"
+                transform="translate(120 75) scale(1.8, 0.9)"
               />
             </svg>
             <NavLink

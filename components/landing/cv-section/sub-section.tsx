@@ -26,7 +26,7 @@ export default function SubSection({
     <motion.li
       initial={{ opacity: 0, translateX: direction === 'left' ? '-10%' : '10%' }}
       whileInView={{ opacity: 1, translateX: 0, transition: { type: 'spring' } }}
-      viewport={{ margin: !isProject ? '-20% 0px -20% 0px' : '0px', once: true }}
+      viewport={{ margin: !isProject ? '-18% 0px -18% 0px' : '0px', once: true }}
       custom={custom}
       className={`sub-heading   text-primary90 ${className} gap-sub-medium`}
     >

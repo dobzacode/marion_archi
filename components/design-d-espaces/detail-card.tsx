@@ -9,7 +9,6 @@ import { Project } from './project-card';
 
 interface DetailCardProps {
   project: Project;
-  
 }
 
 export default function DetailCard({ project }: DetailCardProps) {
@@ -45,7 +44,7 @@ export default function DetailCard({ project }: DetailCardProps) {
         </div>
         <div className="absolute -z-10 h-full w-full bg-primary10 bg-opacity-10"></div>
       </div>
-      <div className="flex w-full flex-col gap-sub-large bg-primary1 px-medium py-sub-large">
+      <div className="flex w-full flex-col gap-sub-large bg-primary1 py-sub-large tablet:px-medium">
         <P
           textType={'heading'}
           className="relative flex flex-wrap justify-between gap-small px-small tablet:px-0 laptop:px-medium"
@@ -87,7 +86,7 @@ export default function DetailCard({ project }: DetailCardProps) {
             {project.information.description}
             {project.information.description}
           </P>
-          <div className="relative h-[40rem] w-full overflow-hidden rounded-small tablet:w-[55rem]">
+          <div className="relative h-[40rem] w-full overflow-hidden tablet:w-[55rem] tablet:rounded-small">
             <Image
               src={'/assets/architecture_interieurs/INTERIEUR/schema.jpg'}
               alt={`${project.project_name} schéma`}

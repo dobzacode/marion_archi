@@ -9,8 +9,16 @@ import architecture_tertiaire from '@/lib/design-d-espaces/architecture_tertiair
 import { encodeUrl } from '@/lib/utils';
 import { mdiChevronRight } from '@mdi/js';
 import Icon from '@mdi/react';
+import { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+
+export const generateMetadata = ({ params }: { params: { project_name: string } }): Metadata => {
+  return {
+    title: `Design d'espaces | ${params.project_name}`,
+    description: `Découvrez le projet ${params.project_name} de Marion Deleersnyder.`
+  };
+};
 
 export async function generateStaticParams() {
   const result1 = architecture.map((item) => ({ project_name: item.project_name }));

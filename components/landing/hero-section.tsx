@@ -4,8 +4,8 @@ import H2 from '../ui/text/h2';
 
 export default function HeroSection() {
   return (
-    <section className="flex w-full justify-between py-large max-[1298px]:flex-row-reverse max-[700px]:pt-extra-large tablet:h-[68rem] tablet:px-small laptop:gap-extra-large">
-      <div className="absolute right-0 top-[22%] z-10 w-[100rem] scale-90 max-[1298px]:w-[80rem] max-[1298px]:-translate-y-[10%] max-[1298px]:translate-x-[10%] max-laptop:translate-x-[20%] max-laptop:scale-90 max-tablet:-translate-y-[20%] max-tablet:scale-[83%] max-[700px]:mt-large max-[680px]:-translate-y-[25%] max-mobile-large:-left-[230px] max-[500px]:w-[70rem] min-[1298px]:right-[35vw]">
+    <section className="flex w-full justify-between py-large max-[1298px]:flex-row-reverse max-[700px]:pt-extra-large tablet:h-[68rem] tablet:px-small laptop:gap-extra-large min-[1298px]:-translate-x-[5%]">
+      <div className=" absolute right-0 top-[22%] z-10 w-[100rem] -translate-y-[10%] scale-90 max-[1298px]:w-[80rem] max-[1298px]:translate-x-[10%] max-laptop:translate-x-[20%] max-laptop:scale-90 max-tablet:-translate-y-[20%] max-tablet:scale-[83%] max-[700px]:mt-large max-[680px]:-translate-y-[25%] max-mobile-large:-left-[230px] max-[500px]:w-[70rem] min-[1298px]:right-[35vw]">
         <svg
           className=" fade  lapto relative z-10 w-fit  overflow-visible    fill-primary10 transition-all  duration-slow group-hover:fill-primary20"
           viewBox="-10 0 130 100"

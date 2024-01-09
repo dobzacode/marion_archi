@@ -25,6 +25,7 @@ interface NavProps extends HTMLProps<HTMLElement> {
 }
 
 export const navLinks = [
+  { href: '/a-propos', name: 'À PROPOS' },
   { href: '/design-d-espaces', name: 'DESIGN D`ESPACES' },
   { href: '/design-de-service', name: 'DESIGN DE SERVICE' },
   { href: '/contact', name: 'CONTACT' }
@@ -50,7 +51,7 @@ const Nav: FC<NavProps> = ({ className, linkSize, intent }) => {
             xmlns="http://www.w3.org/2000/svg"
             className={cn(
               'absolute -z-20   -translate-y-1/2 overflow-visible fill-primary1 transition-all duration-slow group-hover:fill-primary20',
-              pathname === '/design-d-espaces' && '-z-10 fill-primary20'
+              pathname === '/a-propos' && '-z-10 fill-primary20'
             )}
           >
             <path
@@ -60,6 +61,25 @@ const Nav: FC<NavProps> = ({ className, linkSize, intent }) => {
           </svg>
           <NavLink rounded="small" size={linkSize} href={navLinks[0].href} intent={intent}>
             {navLinks[0].name}
+          </NavLink>
+        </div>
+
+        <div className="group relative duration-slow" key={v4()}>
+          <svg
+            viewBox="0 0 200 200"
+            xmlns="http://www.w3.org/2000/svg"
+            className={cn(
+              'absolute -z-20   -translate-y-1/2 overflow-visible fill-primary1 transition-all duration-slow group-hover:fill-primary20',
+              pathname === '/design-d-espaces' && '-z-10 fill-primary20'
+            )}
+          >
+            <path
+              d="M34.2,-43.8C43.7,-40.3,50.1,-29.3,57.4,-16.4C64.7,-3.5,72.7,11.4,68.6,21.7C64.4,32.1,48.1,37.9,34.6,40.3C21.2,42.8,10.6,41.9,0.5,41.1C-9.5,40.4,-19.1,39.9,-33.3,37.7C-47.6,35.5,-66.5,31.6,-68.1,23C-69.7,14.4,-53.9,1,-47.4,-14.3C-40.9,-29.5,-43.6,-46.7,-37.3,-51.3C-30.9,-55.9,-15.5,-47.9,-1.5,-45.7C12.4,-43.6,24.8,-47.4,34.2,-43.8Z"
+              transform="translate(90 115) scale(1.65, 0.8)"
+            />
+          </svg>
+          <NavLink rounded="small" size={linkSize} href={navLinks[0].href} intent={intent}>
+            {navLinks[1].name}
           </NavLink>
         </div>
 
@@ -79,7 +99,7 @@ const Nav: FC<NavProps> = ({ className, linkSize, intent }) => {
             />
           </svg>
           <NavLink rounded="small" size={linkSize} href={navLinks[1].href} intent={intent}>
-            {navLinks[1].name}
+            {navLinks[2].name}
           </NavLink>
         </div>
 
@@ -98,7 +118,7 @@ const Nav: FC<NavProps> = ({ className, linkSize, intent }) => {
             />
           </svg>
           <NavLink rounded="small" size={linkSize} href={navLinks[2].href} intent={intent}>
-            {navLinks[2].name}
+            {navLinks[3].name}
           </NavLink>
         </div>
       </ul>

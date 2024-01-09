@@ -1,9 +1,10 @@
-import { cn } from '@/lib/utils';
+import { cn, encodeUrl } from '@/lib/utils';
 import { mdiEyeOffOutline } from '@mdi/js';
 import Icon from '@mdi/react';
 import { EmblaOptionsType } from 'embla-carousel';
 import { Variants, motion } from 'framer-motion';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
 import { useEffect, useRef, useState } from 'react';
 import { CSSTransition } from 'react-transition-group';
@@ -66,7 +67,10 @@ export default function ProjectCard({
     <li
       className={cn('relative flex w-full flex-col mobile-large:w-1/3 tablet:w-1/4 laptop:w-1/5')}
     >
-      <div
+      <Link
+        href={`/design-d-espaces/${
+          searchParams.get('type') ? searchParams.get('type') : 'architecture_interieurs'
+        }/${encodeUrl(project_name)}`}
         className={cn(
           'relative z-30 aspect-[3/1] overflow-hidden  mobile-large:aspect-square mobile-large:h-full ',
           showMore && 'z-[25]'
@@ -118,7 +122,7 @@ export default function ProjectCard({
             src={'/assets/architecture_interieurs/INTERIEUR/gallery/picture2.jpg'}
           ></Image>
         </motion.button>
-      </div>
+      </Link>
 
       <CSSTransition
         unmountOnExit

@@ -36,3 +36,13 @@ export async function dynamicBlurDataUrl(url: string) {
 export function imageByIndex(images: string[], index: number) {
   return images[index % images.length];
 }
+
+export function encodeUrl(name: string) {
+  name = name.replace(/'/g, '-');
+
+  name = name.replace(/\./g, '-');
+
+  name = name.replace(/ /g, '_');
+
+  return name;
+}

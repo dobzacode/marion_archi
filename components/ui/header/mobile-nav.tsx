@@ -65,7 +65,7 @@ const MobileNav: FC<NavProps> = ({ className, linkSize, intent, size }: NavProps
         className={cn(
           '-ml-medium h-screen   w-[106vw] bg-primary1 pl-small duration-700',
           'absolute z-[90]',
-          showMenu ? 'left-0' : '-left-[1024px] ',
+          showMenu ? 'left-0' : '-left-[1070px] ',
           modalOffset()
         )}
       >

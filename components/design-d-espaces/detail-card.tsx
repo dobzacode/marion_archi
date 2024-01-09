@@ -9,6 +9,7 @@ import { Project } from './project-card';
 
 interface DetailCardProps {
   project: Project;
+  
 }
 
 export default function DetailCard({ project }: DetailCardProps) {

@@ -1,11 +1,15 @@
 import DetailCard from '@/components/design-d-espaces/detail-card';
 import { Project } from '@/components/design-d-espaces/project-card';
 import Footer from '@/components/ui/footer/footer';
+import P from '@/components/ui/text/p';
 import architecture from '@/lib/design-d-espaces/architecture.json';
 import architecture_interieurs from '@/lib/design-d-espaces/architecture_interieurs.json';
 import architecture_retail from '@/lib/design-d-espaces/architecture_retail.json';
 import architecture_tertiaire from '@/lib/design-d-espaces/architecture_tertiaire.json';
 import { encodeUrl } from '@/lib/utils';
+import { mdiChevronRight } from '@mdi/js';
+import Icon from '@mdi/react';
+import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
 export async function generateStaticParams() {
@@ -18,7 +22,18 @@ export async function generateStaticParams() {
     project_name: post.project_name
   }));
 }
-export default async function Page({ params }: { params: { type: string; project_name: string } }) {
+export default async function Page({
+  params
+}: {
+  params: {
+    type:
+      | 'architecture'
+      | 'architecture_interieurs'
+      | 'architecture_retail'
+      | 'architecture_tertiaire';
+    project_name: string;
+  };
+}) {
   let project: Project | undefined;
 
   switch (params.type) {
@@ -54,9 +69,21 @@ export default async function Page({ params }: { params: { type: string; project
   }
 
   return (
-    <div className="relative flex flex-col">
+    <div className="relative flex flex-col gap-medium">
+      <nav
+        aria-label="Fil d'ariane"
+        className="caption -mt-sub-large flex items-center gap-1 px-extra-small text-primary90 mobile-large:gap-extra-small tablet:-mt-0 tablet:px-medium"
+      >
+        <Link href="/design-d-espaces">Design d&apos;espaces</Link>
+        <Icon path={mdiChevronRight} size={'16px'}></Icon>
+        <Link href={`/design-d-espaces?type=${params.type}`} className="truncate">
+          {params.type.charAt(0).toUpperCase() + params.type.slice(1).replace('_', ' ')}
+        </Link>
+        <Icon path={mdiChevronRight} size={'16px'}></Icon>
+        <P className="truncate">{project.project_name}</P>
+      </nav>
       <DetailCard project={project}></DetailCard>
-      <Footer className="relative mt-large"></Footer>
+      <Footer className="relative mt-medium"></Footer>
     </div>
   );
 }

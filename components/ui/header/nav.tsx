@@ -44,19 +44,19 @@ const Nav: FC<NavProps> = ({ className, linkSize, intent }) => {
       >
         MD
       </Logo>
-      <ul className="laptopL:gap-large flex justify-center overflow-visible whitespace-nowrap tablet:gap-small  laptop:gap-sub-large">
+      <ul className="flex justify-center overflow-visible whitespace-nowrap tablet:gap-small laptop:gap-small  laptop-large:gap-large">
         <div className="group relative duration-slow" key={v4()}>
           <svg
             viewBox="0 0 200 200"
             xmlns="http://www.w3.org/2000/svg"
             className={cn(
-              'absolute -z-20   -translate-y-1/2 overflow-visible fill-primary1 transition-all duration-slow group-hover:fill-primary20',
-              pathname === '/a-propos' && '-z-10 fill-primary20'
+              'absolute -z-20   -translate-y-1/2 overflow-visible fill-tertiary1 transition-all duration-slow group-hover:fill-tertiary20',
+              pathname === '/a-propos' && '-z-10 fill-tertiary20'
             )}
           >
             <path
-              d="M34.2,-43.8C43.7,-40.3,50.1,-29.3,57.4,-16.4C64.7,-3.5,72.7,11.4,68.6,21.7C64.4,32.1,48.1,37.9,34.6,40.3C21.2,42.8,10.6,41.9,0.5,41.1C-9.5,40.4,-19.1,39.9,-33.3,37.7C-47.6,35.5,-66.5,31.6,-68.1,23C-69.7,14.4,-53.9,1,-47.4,-14.3C-40.9,-29.5,-43.6,-46.7,-37.3,-51.3C-30.9,-55.9,-15.5,-47.9,-1.5,-45.7C12.4,-43.6,24.8,-47.4,34.2,-43.8Z"
-              transform="translate(90 115) scale(1.65, 0.8)"
+              d="M19.5,-27.7C24.4,-27.3,26.8,-20.3,33.5,-13.1C40.3,-5.9,51.4,1.6,56.9,12.7C62.4,23.9,62.2,38.8,53.5,43.3C44.9,47.8,27.7,41.9,16.6,35.5C5.5,29.1,0.5,22.2,-12.4,25.9C-25.3,29.6,-46.2,43.8,-57.2,43C-68.3,42.1,-69.5,26.1,-66.4,12.8C-63.3,-0.6,-55.8,-11.3,-46,-16C-36.1,-20.7,-23.8,-19.4,-15.8,-18.4C-7.7,-17.3,-3.9,-16.7,1.7,-19.4C7.3,-22.1,14.7,-28.2,19.5,-27.7Z"
+              transform="translate(100 115) scale(1.65, 1.7)"
             />
           </svg>
           <NavLink rounded="small" size={linkSize} href={navLinks[0].href} intent={intent}>
@@ -78,7 +78,7 @@ const Nav: FC<NavProps> = ({ className, linkSize, intent }) => {
               transform="translate(90 115) scale(1.65, 0.8)"
             />
           </svg>
-          <NavLink rounded="small" size={linkSize} href={navLinks[0].href} intent={intent}>
+          <NavLink rounded="small" size={linkSize} href={navLinks[1].href} intent={intent}>
             {navLinks[1].name}
           </NavLink>
         </div>
@@ -98,7 +98,7 @@ const Nav: FC<NavProps> = ({ className, linkSize, intent }) => {
               d="M32,-60.3C39.3,-51.1,41.6,-38.2,44.5,-27.5C47.5,-16.9,51.2,-8.4,56.2,2.9C61.3,14.2,67.6,28.5,61.9,34.4C56.2,40.4,38.4,38,26.1,36.2C13.7,34.4,6.9,33,-3.3,38.8C-13.6,44.6,-27.1,57.5,-40.4,59.9C-53.7,62.3,-66.7,54.2,-66.8,42.4C-66.9,30.7,-54,15.3,-48.5,3.2C-42.9,-8.9,-44.6,-17.8,-40.1,-21.9C-35.6,-26,-24.9,-25.2,-17.1,-34.2C-9.4,-43.2,-4.7,-61.9,3.8,-68.5C12.3,-75.1,24.6,-69.6,32,-60.3Z"
             />
           </svg>
-          <NavLink rounded="small" size={linkSize} href={navLinks[1].href} intent={intent}>
+          <NavLink rounded="small" size={linkSize} href={navLinks[2].href} intent={intent}>
             {navLinks[2].name}
           </NavLink>
         </div>
@@ -117,7 +117,7 @@ const Nav: FC<NavProps> = ({ className, linkSize, intent }) => {
               transform="translate(110 115) scale(1.8, 0.9)"
             />
           </svg>
-          <NavLink rounded="small" size={linkSize} href={navLinks[2].href} intent={intent}>
+          <NavLink rounded="small" size={linkSize} href={navLinks[3].href} intent={intent}>
             {navLinks[3].name}
           </NavLink>
         </div>

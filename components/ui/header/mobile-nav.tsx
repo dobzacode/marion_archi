@@ -65,11 +65,36 @@ const MobileNav: FC<NavProps> = ({ className, linkSize, intent, size }: NavProps
         className={cn(
           '-ml-medium h-screen   w-[106vw] bg-primary1 pl-small duration-700',
           'absolute z-[90]',
-          showMenu ? 'left-0' : '-left-[768px] ',
+          showMenu ? 'left-0' : '-left-[1024px] ',
           modalOffset()
         )}
       >
-        <ul className={'mt-medium flex flex-col justify-center  gap-large'}>
+        <ul className={'mt-large flex flex-col justify-center  gap-large'}>
+          <div className="group relative w-fit duration-slow" key={v4()}>
+            <svg
+              viewBox="0 0 200 200"
+              xmlns="http://www.w3.org/2000/svg"
+              className={cn(
+                'absolute -z-20   -translate-y-1/2 overflow-visible fill-tertiary1 transition-all duration-slow group-hover:fill-tertiary20',
+                pathname === '/a-propos' && '-z-10 fill-tertiary20'
+              )}
+            >
+              <path
+                d="M19.5,-27.7C24.4,-27.3,26.8,-20.3,33.5,-13.1C40.3,-5.9,51.4,1.6,56.9,12.7C62.4,23.9,62.2,38.8,53.5,43.3C44.9,47.8,27.7,41.9,16.6,35.5C5.5,29.1,0.5,22.2,-12.4,25.9C-25.3,29.6,-46.2,43.8,-57.2,43C-68.3,42.1,-69.5,26.1,-66.4,12.8C-63.3,-0.6,-55.8,-11.3,-46,-16C-36.1,-20.7,-23.8,-19.4,-15.8,-18.4C-7.7,-17.3,-3.9,-16.7,1.7,-19.4C7.3,-22.1,14.7,-28.2,19.5,-27.7Z"
+                transform="translate(100 115) scale(1.65, 1.7)"
+              />
+            </svg>
+            <NavLink
+              rounded="small"
+              size={linkSize}
+              href={navLinks[0].href}
+              intent={intent}
+              className="px-0"
+            >
+              {navLinks[0].name}
+            </NavLink>
+          </div>
+
           <div className="group relative w-fit duration-slow" key={v4()}>
             <svg
               viewBox="0 0 200 200"
@@ -89,11 +114,11 @@ const MobileNav: FC<NavProps> = ({ className, linkSize, intent, size }: NavProps
             <NavLink
               rounded="small"
               size={linkSize}
-              href={navLinks[0].href}
+              href={navLinks[1].href}
               intent={intent}
               className="px-0"
             >
-              {navLinks[0].name}
+              {navLinks[1].name}
             </NavLink>
           </div>
 
@@ -116,10 +141,10 @@ const MobileNav: FC<NavProps> = ({ className, linkSize, intent, size }: NavProps
               className="px-0"
               rounded="small"
               size={linkSize}
-              href={navLinks[1].href}
+              href={navLinks[2].href}
               intent={intent}
             >
-              {navLinks[1].name}
+              {navLinks[2].name}
             </NavLink>
           </div>
 
@@ -141,10 +166,10 @@ const MobileNav: FC<NavProps> = ({ className, linkSize, intent, size }: NavProps
               rounded="small"
               className="px-0"
               size={linkSize}
-              href={navLinks[2].href}
+              href={navLinks[3].href}
               intent={intent}
             >
-              {navLinks[2].name}
+              {navLinks[3].name}
             </NavLink>
           </div>
         </ul>

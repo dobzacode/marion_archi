@@ -1,5 +1,4 @@
 import CvSection from '@/components/landing/cv-section/cv-section';
-import Footer from '@/components/ui/footer/footer';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -12,7 +11,6 @@ export default function Page() {
   return (
     <main className="relative flex h-full w-full flex-col px-[1px]">
       <CvSection></CvSection>
-      <Footer className="-bottom-[2rem] z-10"></Footer>
     </main>
   );
 }

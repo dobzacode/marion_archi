@@ -9,7 +9,7 @@ import { useRef } from 'react';
 
 export default function DesignDeServiceTitleBlock({ className }: { className: string }) {
   const ref = useRef<HTMLDivElement>(null);
-  const isInView = useInView(ref, { once: true });
+  const isInView = useInView(ref, { once: true, margin: '-50% 0px -50% 0px' });
 
   const isTablet = useBetterMediaQuery('(max-width:768px)');
 

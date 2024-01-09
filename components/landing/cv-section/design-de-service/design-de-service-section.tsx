@@ -6,7 +6,7 @@ import DesignDeServiceTitleBlock from './design-de-service-title-block';
 export default function DesignDeServiceSection() {
   return (
     <section className="flex w-full translate-x-20 flex-row-reverse flex-wrap-reverse justify-center gap-extra-large px-[10px] py-extra-large max-laptop:mt-large max-tablet:-mt-large max-tablet:gap-extra-large tablet:gap-small">
-      <ol className="-mt-sub-large flex w-[80rem] flex-col items-center  max-[1298px]:mt-extra-large max-laptop:-translate-x-20 tablet:px-large laptop:gap-extra-large  min-[1298px]:translate-x-[15%]">
+      <ol className="-mt-sub-large flex w-[80rem] flex-col items-center gap-large  max-[1298px]:mt-extra-large max-laptop:-translate-x-20 tablet:px-large laptop:gap-extra-large  min-[1298px]:translate-x-[15%]">
         <SubSection
           direction={'right'}
           custom={0}

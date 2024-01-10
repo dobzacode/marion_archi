@@ -21,7 +21,14 @@ export default function DesignEspaceTitleBlock({ className }: { className: strin
           transition: { duration: 2, ease: 'easeOut', delay: 0.5 }
         }
       }
-    : { initial: { pathLength: 1, pathOffset: 0 } };
+    : {
+        initial: { pathLength: 0, pathOffset: 0.3 },
+        animate: {
+          pathLength: isInView ? 1 : 0,
+          pathOffset: isInView ? 0 : 0.3,
+          transition: { duration: 2, ease: 'easeOut', delay: 0.5 }
+        }
+      };
 
   const secondStrokeVariants = !isTablet
     ? {
@@ -32,21 +39,34 @@ export default function DesignEspaceTitleBlock({ className }: { className: strin
           transition: { duration: 2, ease: 'easeOut', delay: 0.5 }
         }
       }
-    : { initial: { pathLength: 1, pathOffset: 0 } };
+    : {
+        initial: { pathLength: 0, pathOffset: 0.9 },
+        animate: {
+          pathLength: isInView ? 1 : 0,
+          pathOffset: isInView ? 0 : 0.9,
+          transition: { duration: 2, ease: 'easeOut', delay: 0.5 }
+        }
+      };
 
   const textVariants = !isTablet
     ? {
         initial: { opacity: 0 },
         animate: { opacity: isInView ? 1 : 0, transition: { duration: 1, delay: 2.5 } }
       }
-    : { initial: { opacity: 1 } };
+    : {
+        initial: { opacity: 0 },
+        animate: { opacity: isInView ? 1 : 0, transition: { duration: 1, delay: 2.5 } }
+      };
 
   const mainDivVariants = !isTablet
     ? {
         initial: { x: '-50%' },
         animate: { x: isInView ? 0 : '-50%', transition: { duration: 0.5 } }
       }
-    : { initial: { x: 0 } };
+    : {
+        initial: { x: '-50%' },
+        animate: { x: isInView ? 0 : '-50%', transition: { duration: 0.5 } }
+      };
 
   return (
     <div ref={ref} className={className}>

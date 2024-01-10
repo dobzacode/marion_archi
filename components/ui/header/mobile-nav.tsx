@@ -51,12 +51,32 @@ const MobileNav: FC<NavProps> = ({ className, linkSize, intent, size }: NavProps
   return (
     <nav className={className}>
       <Logo
+        linkVisibility="max-mobile-large:hidden"
         href="/"
-        className="font-['Distortion_Dos_Analogue'] font-bold tracking-widest "
+        className="flex items-start  pt-[44px] text-heading-sub-extra-large font-thin leading-[60px] "
         intent={intent}
         textType="heading--large"
       >
-        MD
+        <span>m</span>
+        <span className="flex origin-top-left scale-[44%] flex-col gap-[-2px] pt-8 font-light">
+          ton
+          <br />
+          archi
+        </span>
+      </Logo>
+      <Logo
+        linkVisibility="mobile-large:hidden"
+        href="/"
+        className="flex items-start  pt-[80px] text-heading-large font-light leading-[60px] "
+        intent={intent}
+        textType="heading--large"
+      >
+        <span>m</span>
+        <span className="flex origin-top-left scale-[33%] flex-col gap-[-2px] pt-[4.6rem] font-normal">
+          ton
+          <br />
+          archi
+        </span>
       </Logo>
       <button onClick={() => setShowMenu(!showMenu)}>
         <Icon path={mdiMenu} size={3.5}></Icon>

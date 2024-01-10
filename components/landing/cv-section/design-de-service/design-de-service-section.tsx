@@ -18,7 +18,7 @@ export default function DesignDeServiceSection() {
             viewBox="0 0 200 200"
             xmlns="http://www.w3.org/2000/svg"
             className={cn(
-              'pointer-events-none absolute z-10 w-[70rem] -translate-y-1/2 overflow-visible fill-primary1  duration-slow peer-hover:translate-x-0 peer-hover:fill-primary10 max-laptop:hidden max-laptop:fill-primary10 tablet:w-auto laptop:-translate-x-[-150%]'
+              'pointer-events-none absolute z-10 w-[70rem] -translate-y-1/2 overflow-visible fill-tertiary1  duration-slow peer-hover:translate-x-0 peer-hover:fill-tertiary10 max-laptop:hidden max-laptop:fill-tertiary10 tablet:w-auto laptop:-translate-x-[-150%]'
             )}
           >
             <path
@@ -32,7 +32,7 @@ export default function DesignDeServiceSection() {
             className="relative z-20 ml-small duration-slowest peer-hover:max-h-[40rem] peer-hover:opacity-100 laptop:max-h-0 laptop:opacity-0 peer-hover:[&>strong:before]:scale-x-100 peer-hover:[&>strong:before]:delay-500"
             textType="body"
           >
-            <strong className="before:duration-medium max-laptop:before:bg-primary20 laptop:before:scale-x-0 laptop:before:bg-primary20 ">
+            <strong className="before:duration-medium max-laptop:before:bg-tertiary20 laptop:before:scale-x-0 laptop:before:bg-tertiary20 ">
               2020
             </strong>{' '}
             -<span className="underline underline-offset-2">Workshop</span> - PIB <br />- Projet
@@ -41,7 +41,7 @@ export default function DesignDeServiceSection() {
             prototypes, test Insitu, dialogue avec les habitant, réponse design.
             <br />
             <br />
-            <strong className="before:duration-medium max-laptop:before:bg-primary20 laptop:before:scale-x-0 laptop:before:bg-primary20 ">
+            <strong className="before:duration-medium max-laptop:before:bg-tertiary20 laptop:before:scale-x-0 laptop:before:bg-tertiary20 ">
               2021
             </strong>{' '}
             -<span className="underline underline-offset-2">Résidence design</span> - S&apos;BOKAL -
@@ -51,7 +51,7 @@ export default function DesignDeServiceSection() {
             simuler, federer, ont été mes missions lors de cette résidence.
             <br />
             <br />
-            <strong className="before:duration-medium max-laptop:before:bg-primary20 laptop:before:scale-x-0 laptop:before:bg-primary20 ">
+            <strong className="before:duration-medium max-laptop:before:bg-tertiary20 laptop:before:scale-x-0 laptop:before:bg-tertiary20 ">
               2021
             </strong>{' '}
             -<span className="underline underline-offset-2">Projet de diplôme DSAA</span> - La
@@ -71,7 +71,7 @@ export default function DesignDeServiceSection() {
             viewBox="0 0 200 200"
             xmlns="http://www.w3.org/2000/svg"
             className={cn(
-              'pointer-events-none absolute  z-10 w-[70rem] -translate-y-1/2 overflow-visible fill-primary1 transition-all duration-slow peer-hover:translate-x-0 peer-hover:fill-primary10 max-laptop:hidden max-laptop:fill-primary10 tablet:w-auto laptop:-translate-x-[-150%]'
+              'pointer-events-none absolute  z-10 w-[70rem] -translate-y-1/2 overflow-visible fill-tertiary1 transition-all duration-slow peer-hover:translate-x-0 peer-hover:fill-tertiary10 max-laptop:hidden max-laptop:fill-tertiary10 tablet:w-auto laptop:-translate-x-[-150%]'
             )}
           >
             <path
@@ -85,7 +85,7 @@ export default function DesignDeServiceSection() {
             className="relative  z-20 ml-small duration-slowest  peer-hover:max-h-[40rem] peer-hover:opacity-100 laptop:max-h-0 laptop:opacity-0 peer-hover:[&>strong:before]:scale-x-100 peer-hover:[&>strong:before]:delay-500"
             textType="body"
           >
-            <strong className="before:duration-medium max-laptop:before:bg-primary20 laptop:before:scale-x-0 laptop:before:bg-primary20 ">
+            <strong className="before:duration-medium max-laptop:before:bg-tertiary20 laptop:before:scale-x-0 laptop:before:bg-tertiary20 ">
               2019
             </strong>{' '}
             -<span className="underline underline-offset-2">Oeuvre plastique</span> - Ou IN Po{' '}
@@ -94,14 +94,14 @@ export default function DesignDeServiceSection() {
             de maquettes, prototypes, prise de vues
             <br />
             <br />
-            <strong className="before:duration-medium max-laptop:before:bg-primary20 laptop:before:scale-x-0 laptop:before:bg-primary20 ">
+            <strong className="before:duration-medium max-laptop:before:bg-tertiary20 laptop:before:scale-x-0 laptop:before:bg-tertiary20 ">
               2022
             </strong>{' '}
             -<span className="underline underline-offset-2">Stage</span> - Laurent Callot - <br />{' '}
             Pratique photographie - projet, recherche autour du cyanotype
             <br />
             <br />
-            <strong className="before:duration-medium max-laptop:before:bg-primary20 laptop:before:scale-x-0 laptop:before:bg-primary20 ">
+            <strong className="before:duration-medium max-laptop:before:bg-tertiary20 laptop:before:scale-x-0 laptop:before:bg-tertiary20 ">
               2019
             </strong>{' '}
             -<span className="underline underline-offset-2">Stage</span> - Lisa Débat - Pratique de
@@ -110,16 +110,16 @@ export default function DesignDeServiceSection() {
             architecture intérieure
             <br />
             <br />
-            <strong className="before:duration-medium max-laptop:before:bg-primary20 laptop:before:scale-x-0 laptop:before:bg-primary20 ">
+            <strong className="before:duration-medium max-laptop:before:bg-tertiary20 laptop:before:scale-x-0 laptop:before:bg-tertiary20 ">
               2021
             </strong>{' '}
             -
             <span className="underline underline-offset-2">
               Rédaction d&apos;un mémoire de recherche
             </span>{' '}
-            - Faire disparaître les tâches, pratiques, partages et espacesDocumenter, questionner,
-            analyser, par l&apos;expérimentation, le test inSitu, la co-pratique du desgin.
-            architecture intérieure
+            - Faire disparaître les tâches, pratiques, partages et espaces - Documenter,
+            questionner, analyser, par l&apos;expérimentation, le test inSitu, la co-pratique du
+            desgin. architecture intérieure
           </P>
         </SubSection>
       </ol>

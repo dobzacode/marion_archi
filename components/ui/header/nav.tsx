@@ -38,11 +38,16 @@ const Nav: FC<NavProps> = ({ className, linkSize, intent }) => {
     <nav className={className}>
       <Logo
         href="/"
-        className="font-['Distortion_Dos_Analogue'] font-bold tracking-widest "
+        className="flex items-start  pt-medium text-heading-sub-extra-large font-thin leading-[60px]"
         intent={intent}
         textType="heading--large"
       >
-        MD
+        <span>m</span>
+        <span className="flex origin-top-left scale-[44%] flex-col gap-[-2px] pt-8 font-light">
+          ton
+          <br />
+          archi
+        </span>
       </Logo>
       <ul className="flex justify-center overflow-visible whitespace-nowrap tablet:gap-small laptop:gap-small  laptop-large:gap-large">
         <div className="group relative duration-slow" key={v4()}>

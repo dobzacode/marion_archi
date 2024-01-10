@@ -17,7 +17,7 @@ export default function DesignEspaceSection() {
             viewBox="0 0 200 200"
             xmlns="http://www.w3.org/2000/svg"
             className={cn(
-              'pointer-events-none absolute z-10 w-[70rem] -translate-y-1/2 overflow-visible fill-primary1  duration-slow peer-hover:translate-x-0 peer-hover:fill-primary10 max-laptop:hidden max-laptop:fill-primary10 tablet:w-auto laptop:-translate-x-[150%]'
+              'pointer-events-none absolute z-10 w-[70rem] -translate-y-1/2 overflow-visible fill-tertiary1  duration-slow peer-hover:translate-x-0 peer-hover:fill-tertiary10 max-laptop:hidden max-laptop:fill-tertiary10 tablet:w-auto laptop:-translate-x-[150%]'
             )}
           >
             <path
@@ -31,11 +31,11 @@ export default function DesignEspaceSection() {
             className="relative z-20 ml-small duration-slowest peer-hover:max-h-[40rem] peer-hover:opacity-100 laptop:max-h-0 laptop:opacity-0 peer-hover:[&>strong:before]:scale-x-100 peer-hover:[&>strong:before]:delay-500"
             textType="body"
           >
-            <strong className="before:duration-medium max-laptop:before:bg-primary20 laptop:before:scale-x-0 laptop:before:bg-primary20 ">
+            <strong className="before:duration-medium max-laptop:before:bg-tertiary20 laptop:before:scale-x-0 laptop:before:bg-tertiary20 ">
               2021/2023
             </strong>{' '}
             -<span className="underline underline-offset-2">Entreprenariat</span> <br />
-            <strong className="before:rotate-[3deg] before:duration-medium max-laptop:before:bg-primary20 laptop:before:scale-x-0 laptop:before:bg-primary20 ">
+            <strong className="before:rotate-[3deg] before:duration-medium max-laptop:before:bg-tertiary20 laptop:before:scale-x-0 laptop:before:bg-tertiary20 ">
               MD architecture
             </strong>
             , 25 chantiers (10K à 500K) <br />
@@ -56,7 +56,7 @@ export default function DesignEspaceSection() {
             viewBox="0 0 200 200"
             xmlns="http://www.w3.org/2000/svg"
             className={cn(
-              'pointer-events-none absolute  z-10 w-[70rem] -translate-y-1/2 overflow-visible fill-primary1 transition-all duration-slow peer-hover:translate-x-0 peer-hover:fill-primary10 max-laptop:hidden max-laptop:fill-primary10 tablet:w-auto laptop:-translate-x-[150%]'
+              'pointer-events-none absolute  z-10 w-[70rem] -translate-y-1/2 overflow-visible fill-tertiary1 transition-all duration-slow peer-hover:translate-x-0 peer-hover:fill-tertiary10 max-laptop:hidden max-laptop:fill-tertiary10 tablet:w-auto laptop:-translate-x-[150%]'
             )}
           >
             <path
@@ -70,11 +70,11 @@ export default function DesignEspaceSection() {
             className="relative  z-20 ml-small duration-slowest  peer-hover:max-h-[40rem] peer-hover:opacity-100 laptop:max-h-0 laptop:opacity-0 peer-hover:[&>strong:before]:scale-x-100 peer-hover:[&>strong:before]:delay-500"
             textType="body"
           >
-            <strong className="before:rotate-[3deg] before:duration-medium max-laptop:before:bg-primary20 laptop:before:scale-x-0 laptop:before:bg-primary20 ">
+            <strong className="before:rotate-[3deg] before:duration-medium max-laptop:before:bg-tertiary20 laptop:before:scale-x-0 laptop:before:bg-tertiary20 ">
               2018
             </strong>{' '}
             - <span className="underline underline-offset-2">Stage</span> <br />
-            <strong className="before:duration-medium max-laptop:before:bg-primary20 laptop:before:scale-x-0 laptop:before:bg-primary20 ">
+            <strong className="before:duration-medium max-laptop:before:bg-tertiary20 laptop:before:scale-x-0 laptop:before:bg-tertiary20 ">
               ARTEK&apos;IN
             </strong>{' '}
             agence architecture intérieur spécialisé en retail. <br />
@@ -95,7 +95,7 @@ export default function DesignEspaceSection() {
             viewBox="0 0 200 200"
             xmlns="http://www.w3.org/2000/svg"
             className={cn(
-              'pointer-events-none absolute z-10 w-[70rem] -translate-y-1/2 overflow-visible fill-primary1 transition-all duration-slow peer-hover:translate-x-0 peer-hover:fill-primary10 max-laptop:hidden max-laptop:fill-primary10 tablet:w-auto laptop:-translate-x-[150%]'
+              'pointer-events-none absolute z-10 w-[70rem] -translate-y-1/2 overflow-visible fill-tertiary1 transition-all duration-slow peer-hover:translate-x-0 peer-hover:fill-tertiary10 max-laptop:hidden max-laptop:fill-tertiary10 tablet:w-auto laptop:-translate-x-[150%]'
             )}
           >
             <path
@@ -107,11 +107,11 @@ export default function DesignEspaceSection() {
             className="relative z-20 ml-small duration-slowest  peer-hover:max-h-[40rem] peer-hover:opacity-100 laptop:max-h-0 laptop:opacity-0 peer-hover:[&>strong:before]:scale-x-100 peer-hover:[&>strong:before]:delay-500"
             textType="body"
           >
-            <strong className="before:duration-medium max-laptop:before:bg-primary20 laptop:before:scale-x-0 laptop:before:bg-primary20 ">
+            <strong className="before:duration-medium max-laptop:before:bg-tertiary20 laptop:before:scale-x-0 laptop:before:bg-tertiary20 ">
               2020
             </strong>{' '}
             - <span className="underline underline-offset-2">Stage</span> <br />
-            <strong className="before:duration-medium max-laptop:before:bg-primary20 laptop:before:scale-x-0 laptop:before:bg-primary20 ">
+            <strong className="before:duration-medium max-laptop:before:bg-tertiary20 laptop:before:scale-x-0 laptop:before:bg-tertiary20 ">
               Anne Lecou Architecture
             </strong>
             , agence architecture.
@@ -135,7 +135,7 @@ export default function DesignEspaceSection() {
             viewBox="0 0 200 200"
             xmlns="http://www.w3.org/2000/svg"
             className={cn(
-              'pointer-events-none absolute z-10 w-[70rem] -translate-y-1/2 overflow-visible  fill-primary1 transition-all duration-slow peer-hover:translate-x-0 peer-hover:fill-primary10 max-laptop:hidden max-laptop:fill-primary10 tablet:w-auto laptop:-translate-x-[150%]'
+              'pointer-events-none absolute z-10 w-[70rem] -translate-y-1/2 overflow-visible  fill-tertiary1 transition-all duration-slow peer-hover:translate-x-0 peer-hover:fill-tertiary10 max-laptop:hidden max-laptop:fill-tertiary10 tablet:w-auto laptop:-translate-x-[150%]'
             )}
           >
             <path
@@ -149,11 +149,11 @@ export default function DesignEspaceSection() {
             className="relative z-20 ml-small  duration-slowest  peer-hover:max-h-[40rem] peer-hover:opacity-100 laptop:max-h-0 laptop:opacity-0 peer-hover:[&>strong:before]:scale-x-100 peer-hover:[&>strong:before]:delay-500"
             textType="body"
           >
-            <strong className="before:duration-medium max-laptop:before:bg-primary20 laptop:before:scale-x-0 laptop:before:bg-primary20 ">
+            <strong className="before:duration-medium max-laptop:before:bg-tertiary20 laptop:before:scale-x-0 laptop:before:bg-tertiary20 ">
               2017
             </strong>{' '}
             - <span className="underline underline-offset-2">Concours</span> <br />
-            <strong className="before:rotate-3 before:duration-medium max-laptop:before:bg-primary20 laptop:before:scale-x-0 laptop:before:bg-primary20 ">
+            <strong className="before:rotate-3 before:duration-medium max-laptop:before:bg-tertiary20 laptop:before:scale-x-0 laptop:before:bg-tertiary20 ">
               AIRBUS
             </strong>{' '}
             lance un appel à projet pour la réhabilitation du batiment B42. Vainqueur.
@@ -162,12 +162,12 @@ export default function DesignEspaceSection() {
             tertiaire et des ateliers de montage d&apos;avion au sein du même batiment. Etude macro,
             micro des employes, étude des flux, esquisse, maquette, 3D, plans, étude matériaux,
             grand oral. <br />
-            <strong className="before:duration-medium max-laptop:before:bg-primary20 laptop:before:scale-x-0 laptop:before:bg-primary20 ">
+            <strong className="before:duration-medium max-laptop:before:bg-tertiary20 laptop:before:scale-x-0 laptop:before:bg-tertiary20 ">
               2018
             </strong>{' '}
             - <span className="underline underline-offset-2">Projet diplôme BTS</span> -{' '}
             <span className="block px-2 mobile-large:hidden"></span>
-            <strong className=" max- before:rotate-3 before:duration-medium max-laptop:before:bg-primary20 laptop:before:scale-x-0 laptop:before:bg-primary20 ">
+            <strong className=" max- before:rotate-3 before:duration-medium max-laptop:before:bg-tertiary20 laptop:before:scale-x-0 laptop:before:bg-tertiary20 ">
               AIRBUS
             </strong>
             <br />- Aménagement d&apos;espaces patagés pour les employes AIRBUS. Maquette, esquisse,

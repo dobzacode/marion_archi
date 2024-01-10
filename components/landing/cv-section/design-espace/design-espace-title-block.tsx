@@ -75,7 +75,7 @@ export default function DesignEspaceTitleBlock({ className }: { className: strin
           viewBox="0 0 200 200"
           xmlns="http://www.w3.org/2000/svg"
           className={cn(
-            'pointer-events-none absolute top-0 -z-10 -translate-y-1/2  -rotate-12 scale-150 overflow-visible fill-none stroke-primary80 stroke-[0.5px] transition-all duration-slow'
+            'pointer-events-none absolute top-0 -z-10 -translate-y-1/2  -rotate-12 scale-150 overflow-visible fill-none stroke-tertiary80 stroke-[0.5px] transition-all duration-slow'
           )}
         >
           <motion.path
@@ -87,49 +87,49 @@ export default function DesignEspaceTitleBlock({ className }: { className: strin
 
         <motion.div {...textVariants}>
           <P
-            className="absolute -top-[220px] right-[145px] z-20 rotate-[12deg]  text-primary80  duration-slowest "
+            className="absolute -top-[220px] right-[145px] z-20 rotate-[12deg]  text-tertiary80  duration-slowest "
             textType="body"
           >
             Rhinocéros
           </P>
           <P
-            className="absolute -bottom-small -top-[170px] right-[170px] z-20 rotate-[17deg]    text-primary80  duration-slowest "
+            className="absolute -bottom-small -top-[170px] right-[170px] z-20 rotate-[17deg]    text-tertiary80  duration-slowest "
             textType="body"
           >
-            <strong className="before:bg-primary20">AutoCAD</strong>
+            <strong className="before:bg-tertiary20">AutoCAD</strong>
           </P>
           <P
-            className="absolute -bottom-small  -top-[120px] right-[190px] z-20 rotate-[4deg]  text-primary80  duration-slowest "
+            className="absolute -bottom-small  -top-[120px] right-[190px] z-20 rotate-[4deg]  text-tertiary80  duration-slowest "
             textType="body"
           >
-            <strong className="before:bg-primary20">Sketchup</strong>
+            <strong className="before:bg-tertiary20">Sketchup</strong>
           </P>
           <P
-            className="absolute -bottom-small  -top-[120px] right-[300px] z-20 -rotate-[12deg]  text-primary80  duration-slowest "
+            className="absolute -bottom-small  -top-[120px] right-[300px] z-20 -rotate-[12deg]  text-tertiary80  duration-slowest "
             textType="body"
           >
-            <strong className="before:bg-primary20">Indesign</strong>
+            <strong className="before:bg-tertiary20">Indesign</strong>
           </P>
           <P
-            className="absolute -bottom-small -top-[68px]  right-[350px] z-20 -rotate-[12deg] text-primary80 duration-slowest  max-mobile-medium:-top-[70px]  max-mobile-medium:right-[320px] max-mobile-medium:rotate-[10deg]"
+            className="absolute -bottom-small -top-[68px]  right-[350px] z-20 -rotate-[12deg] text-tertiary80 duration-slowest  max-mobile-medium:-top-[70px]  max-mobile-medium:right-[320px] max-mobile-medium:rotate-[10deg]"
             textType="body"
           >
-            <strong className="before:bg-primary20">Photoshop</strong>
+            <strong className="before:bg-tertiary20">Photoshop</strong>
           </P>
           <P
-            className="absolute -bottom-small  -top-[75px] right-[250px] z-20 rotate-[12deg]  text-primary80  duration-slowest "
+            className="absolute -bottom-small  -top-[75px] right-[250px] z-20 rotate-[12deg]  text-tertiary80  duration-slowest "
             textType="body"
           >
             Mac Os
           </P>
           <P
-            className="absolute -bottom-small   -top-[75px] right-[140px] z-20 rotate-[7deg]  text-primary80  duration-slowest "
+            className="absolute -bottom-small   -top-[75px] right-[140px] z-20 rotate-[7deg]  text-tertiary80  duration-slowest "
             textType="body"
           >
             Flamingo
           </P>
           <P
-            className="absolute -bottom-small -top-[30px] right-[80px] z-20 -rotate-[7deg]   text-primary80  duration-slowest  max-[1298px]:right-[190px] "
+            className="absolute -bottom-small -top-[30px] right-[80px] z-20 -rotate-[7deg]   text-tertiary80  duration-slowest  max-[1298px]:right-[190px] "
             textType="body"
           >
             Microsoft
@@ -141,7 +141,7 @@ export default function DesignEspaceTitleBlock({ className }: { className: strin
         className="relative h-[25rem] max-mobile-large:-mt-medium max-mobile-large:mb-small"
       >
         <H3
-          className=" relative z-50 -rotate-12 font-['Distortion_Dos_Analogue']  text-primary1 max-mobile-large:translate-x-28 max-mobile-large:translate-y-28 max-mobile-large:rotate-2"
+          className=" relative z-50 -rotate-12 font-['Distortion_Dos_Analogue']  text-tertiary1 max-mobile-large:translate-x-28 max-mobile-large:translate-y-28 max-mobile-large:rotate-2"
           textType={'heading'}
         >
           ARCHITECTE D&apos;INTERIEUR ET DESIGNER <br className="mobile-large:hidden"></br>
@@ -156,7 +156,7 @@ export default function DesignEspaceTitleBlock({ className }: { className: strin
           viewBox="0 0 200 200"
           xmlns="http://www.w3.org/2000/svg"
           className={cn(
-            'pointer-events-none absolute  z-10  -translate-y-1/2 overflow-visible fill-primary80 '
+            'pointer-events-none absolute  z-10  -translate-y-1/2 overflow-visible fill-tertiary80 '
           )}
         >
           <path
@@ -170,7 +170,7 @@ export default function DesignEspaceTitleBlock({ className }: { className: strin
           viewBox="0 0 200 200"
           xmlns="http://www.w3.org/2000/svg"
           className={cn(
-            'pointer-events-none absolute  top-0 z-10  -translate-y-1/2 scale-150 overflow-visible fill-none stroke-primary80 stroke-[0.5px] transition-all duration-slow'
+            'pointer-events-none absolute  top-0 z-10  -translate-y-1/2 scale-150 overflow-visible fill-none stroke-tertiary80 stroke-[0.5px] transition-all duration-slow'
           )}
         >
           <motion.path
@@ -181,7 +181,7 @@ export default function DesignEspaceTitleBlock({ className }: { className: strin
         </svg>
         <motion.div {...textVariants}>
           <P
-            className="absolute -bottom-small right-0 z-20 font-normal text-primary80 duration-slowest  max-mobile-large:-bottom-sub-large max-mobile-large:right-16"
+            className="absolute -bottom-small right-0 z-20 font-normal text-tertiary80 duration-slowest  max-mobile-large:-bottom-sub-large max-mobile-large:right-16"
             textType="sub-heading"
           >
             2018 <br className="p-small mobile-large:hidden"></br>{' '}

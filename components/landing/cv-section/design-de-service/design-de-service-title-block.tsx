@@ -80,7 +80,7 @@ export default function DesignDeServiceTitleBlock({ className }: { className: st
           viewBox="0 0 200 200"
           xmlns="http://www.w3.org/2000/svg"
           className={cn(
-            'pointer-events-none absolute top-0 -z-10 -translate-y-1/2  -rotate-12 scale-150 overflow-visible fill-none stroke-primary80 stroke-[0.5px] transition-all duration-slow'
+            'pointer-events-none absolute top-0 -z-10 -translate-y-1/2  -rotate-12 scale-150 overflow-visible fill-none stroke-tertiary80 stroke-[0.5px] transition-all duration-slow'
           )}
         >
           <motion.path
@@ -92,64 +92,64 @@ export default function DesignDeServiceTitleBlock({ className }: { className: st
 
         <motion.div {...textVariants}>
           <P
-            className="absolute -top-[270px] right-[145px] z-20 rotate-[12deg]  text-primary80  duration-slowest "
+            className="absolute -top-[270px] right-[145px] z-20 rotate-[12deg]  text-tertiary80  duration-slowest "
             textType="body"
           >
             Scénographie
           </P>
           <P
-            className="absolute -bottom-small -top-[220px] right-[80px] z-20 rotate-[17deg]    text-primary80  duration-slowest "
+            className="absolute -bottom-small -top-[220px] right-[80px] z-20 rotate-[17deg]    text-tertiary80  duration-slowest "
             textType="body"
           >
-            <strong className="before:bg-primary20">Prototypes</strong>
+            <strong className="before:bg-tertiary20">Prototypes</strong>
           </P>
           <P
-            className="absolute -bottom-small  -top-[220px] right-[190px] z-20 rotate-[4deg]  text-primary80  duration-slowest "
+            className="absolute -bottom-small  -top-[220px] right-[190px] z-20 rotate-[4deg]  text-tertiary80  duration-slowest "
             textType="body"
           >
-            <strong className="before:bg-primary20">Résidence design</strong>
+            <strong className="before:bg-tertiary20">Résidence design</strong>
           </P>
           <P
-            className="absolute -bottom-small -top-[170px] right-[300px] z-20 -rotate-[12deg] text-primary80 duration-slowest max-mobile-medium:-top-[170px] max-mobile-medium:right-[320px]  max-mobile-medium:w-[10rem] mobile-medium:whitespace-nowrap"
+            className="absolute -bottom-small -top-[170px] right-[300px] z-20 -rotate-[12deg] text-tertiary80 duration-slowest max-mobile-medium:-top-[170px] max-mobile-medium:right-[320px]  max-mobile-medium:w-[10rem] mobile-medium:whitespace-nowrap"
             textType="body"
           >
-            <strong className="before:bg-primary20">Co-construction</strong>
+            <strong className="before:bg-tertiary20">Co-construction</strong>
           </P>
           <P
-            className="absolute -bottom-small -top-[68px]  right-[300px] z-20 -rotate-[12deg] text-primary80 duration-slowest  "
+            className="absolute -bottom-small -top-[68px]  right-[300px] z-20 -rotate-[12deg] text-tertiary80 duration-slowest  "
             textType="body"
           >
-            <strong className="before:bg-primary20">Médiation</strong>
+            <strong className="before:bg-tertiary20">Médiation</strong>
           </P>
           <P
-            className="absolute -bottom-small  -top-[160px] right-[180px] z-20 -rotate-[2deg]  text-primary80  duration-slowest "
+            className="absolute -bottom-small  -top-[160px] right-[180px] z-20 -rotate-[2deg]  text-tertiary80  duration-slowest "
             textType="body"
           >
             Cartographie
           </P>
           <P
-            className="absolute -bottom-small   -top-[150px] right-[50px] z-20 -rotate-[7deg]  text-primary80  duration-slowest "
+            className="absolute -bottom-small   -top-[150px] right-[50px] z-20 -rotate-[7deg]  text-tertiary80  duration-slowest "
             textType="body"
           >
             Cyanotypes
           </P>
           <P
-            className="absolute -bottom-small -top-[90px] right-[80px] z-20 -rotate-[14deg]   text-primary80  duration-slowest   "
+            className="absolute -bottom-small -top-[90px] right-[80px] z-20 -rotate-[14deg]   text-tertiary80  duration-slowest   "
             textType="body"
           >
             Découpe laser/vinyle
           </P>
           <P
-            className="absolute -bottom-small -top-[120px]  right-[200px] z-20 rotate-[8deg] text-primary80 duration-slowest "
+            className="absolute -bottom-small -top-[120px]  right-[200px] z-20 rotate-[8deg] text-tertiary80 duration-slowest "
             textType="body"
           >
-            <strong className="before:bg-primary20">Pédagogie</strong>
+            <strong className="before:bg-tertiary20">Pédagogie</strong>
           </P>
           <P
-            className="absolute -bottom-small -top-[108px]  right-[350px] z-20 -rotate-[12deg] text-primary80 duration-slowest  max-mobile-medium:-top-[30px] max-mobile-medium:right-[170px] max-mobile-medium:rotate-6"
+            className="absolute -bottom-small -top-[108px]  right-[350px] z-20 -rotate-[12deg] text-tertiary80 duration-slowest  max-mobile-medium:-top-[30px] max-mobile-medium:right-[170px] max-mobile-medium:rotate-6"
             textType="body"
           >
-            <strong className="before:bg-primary20">Lightroom</strong>
+            <strong className="before:bg-tertiary20">Lightroom</strong>
           </P>
         </motion.div>
       </div>
@@ -159,7 +159,7 @@ export default function DesignDeServiceTitleBlock({ className }: { className: st
           className="relative h-[25rem] max-mobile-large:-mt-medium max-mobile-large:mb-small"
         >
           <H3
-            className=" relative z-50 -rotate-12 font-['Distortion_Dos_Analogue']  text-primary1 max-mobile-large:translate-x-10 max-mobile-large:translate-y-12 "
+            className=" relative z-50 -rotate-12 font-['Distortion_Dos_Analogue']  text-tertiary1 max-mobile-large:translate-x-10 max-mobile-large:translate-y-12 "
             textType={'heading'}
           >
             DESIGNER DE <br className="mobile-large:hidden"></br> SERVICE &{' '}
@@ -176,7 +176,7 @@ export default function DesignDeServiceTitleBlock({ className }: { className: st
             viewBox="0 0 200 200"
             xmlns="http://www.w3.org/2000/svg"
             className={cn(
-              'pointer-events-none absolute  z-10  -translate-y-1/2 overflow-visible fill-primary80 '
+              'pointer-events-none absolute  z-10  -translate-y-1/2 overflow-visible fill-tertiary80 '
             )}
           >
             <path
@@ -190,7 +190,7 @@ export default function DesignDeServiceTitleBlock({ className }: { className: st
             viewBox="0 0 200 200"
             xmlns="http://www.w3.org/2000/svg"
             className={cn(
-              'pointer-events-none absolute  top-0 z-10  -translate-y-1/2 scale-150 overflow-visible fill-none stroke-primary80 stroke-[0.5px] transition-all duration-slow'
+              'pointer-events-none absolute  top-0 z-10  -translate-y-1/2 scale-150 overflow-visible fill-none stroke-tertiary80 stroke-[0.5px] transition-all duration-slow'
             )}
           >
             <motion.path
@@ -201,7 +201,7 @@ export default function DesignDeServiceTitleBlock({ className }: { className: st
           </svg>
           <motion.div {...textVariants}>
             <P
-              className="absolute -bottom-small -right-14 z-20 font-normal text-primary80 duration-slowest  max-mobile-large:-bottom-sub-large max-mobile-large:right-16"
+              className="absolute -bottom-small -right-14 z-20 font-normal text-tertiary80 duration-slowest  max-mobile-large:-bottom-sub-large max-mobile-large:right-16"
               textType="sub-heading"
             >
               2021 <br className="p-small mobile-large:hidden"></br>{' '}

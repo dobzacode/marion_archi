@@ -1,6 +1,6 @@
 import Avatar from '../ui/branding/avatar';
-import { H1 } from '../ui/text/h1';
 import H2 from '../ui/text/h2';
+import H3 from '../ui/text/h3';
 
 export default function HeroSection() {
   return (
@@ -21,18 +21,18 @@ export default function HeroSection() {
       </div>
       <div className="laptop:w-[100rem]"></div>
       <div className="relative z-10 flex flex-col gap-small pt-extra-large max-[1298px]:translate-x-[20%] max-[1298px]:translate-y-[30%] max-[1150px]:translate-x-[10%] max-laptop:translate-x-0 tablet:pt-extra-large">
-        <H1
+        <H2
           className="slideInFromRight  relative leading-[10rem]  opacity-0 animation-delay-[3s] max-[860px]:leading-[6rem] max-[651px]:leading-[6.6rem] max-[600px]:leading-[5.6rem] max-mobile-large:leading-[4rem]"
           textType="heading--extra-large"
         >
           MARION DELEERSNYDER
-        </H1>
-        <H2
+        </H2>
+        <H3
           className="slideInFromRight relative opacity-0  animation-delay-[3s] max-[600px]:text-sub-heading max-[600px]:leading-sub-heading"
           textType="heading"
         >
           DESIGNER D&apos;ESPACE & DESIGNER DE SERVICE
-        </H2>
+        </H3>
       </div>
     </section>
   );

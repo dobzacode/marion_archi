@@ -13,7 +13,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <body
         className={
-          ' flex flex-col gap-large overflow-x-hidden bg-primary1 py-small tablet:gap-medium tablet:py-medium'
+          ' relative flex min-h-screen flex-col gap-large overflow-x-hidden bg-primary1 py-small tablet:gap-medium tablet:py-medium'
         }
       >
         <Header className=" flex items-center" size="medium" textColor="primary"></Header>

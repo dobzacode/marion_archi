@@ -165,7 +165,7 @@ export default function DesignEspaceTitleBlock({ className }: { className: strin
           />
         </motion.svg>
       </motion.div>
-      <div className="relative h-fit -rotate-12 max-[1298px]:-translate-y-48 max-[1298px]:translate-x-[79%] max-laptop:-translate-y-[2vw] max-laptop:translate-x-[15vw] max-tablet:translate-x-10 max-tablet:translate-y-5 max-mobile-large:-translate-x-10">
+      <div className="relative h-fit -rotate-12 max-[1298px]:-translate-y-48 max-[1298px]:translate-x-[79%] max-laptop:-translate-y-[2vw] max-laptop:translate-x-[15vw] max-tablet:translate-x-10 max-tablet:translate-y-5 max-mobile-large:translate-x-7">
         <svg
           viewBox="0 0 200 200"
           xmlns="http://www.w3.org/2000/svg"

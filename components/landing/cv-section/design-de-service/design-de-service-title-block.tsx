@@ -14,7 +14,7 @@ export default function DesignDeServiceTitleBlock({ className }: { className: st
 
   const isInView = useInView(ref, {
     once: true,
-    margin: isTablet ? '-50% 0px -50% 0px' : '-20% 0px -20% 0px'
+    margin: !isTablet ? '-50% 0px -50% 0px' : '-20% 0px -20% 0px'
   });
 
   const strokeVariants = !isTablet

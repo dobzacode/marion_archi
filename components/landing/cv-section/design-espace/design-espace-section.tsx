@@ -166,7 +166,8 @@ export default function DesignEspaceSection() {
               2018
             </strong>{' '}
             - <span className="underline underline-offset-2">Projet diplôme BTS</span> -{' '}
-            <strong className=" before:rotate-3 before:duration-medium max-laptop:before:bg-primary20 laptop:before:scale-x-0 laptop:before:bg-primary20 ">
+            <span className="block px-2 mobile-large:hidden"></span>
+            <strong className=" max- before:rotate-3 before:duration-medium max-laptop:before:bg-primary20 laptop:before:scale-x-0 laptop:before:bg-primary20 ">
               AIRBUS
             </strong>
             <br />- Aménagement d&apos;espaces patagés pour les employes AIRBUS. Maquette, esquisse,

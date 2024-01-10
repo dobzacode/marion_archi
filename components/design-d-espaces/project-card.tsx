@@ -46,16 +46,20 @@ export default function ProjectCard({
     }
   }, [searchParams, id]);
 
+  console.log(variants);
+
   return (
     <li
-      className={cn('relative flex w-full flex-col mobile-large:w-1/3 tablet:w-1/4 laptop:w-1/5')}
+      className={cn(
+        'relative flex h-full w-full flex-col mobile-large:w-1/3 tablet:w-1/4 laptop:w-1/5'
+      )}
     >
       <Link
         href={`/design-d-espaces/${
           searchParams.get('type') ? searchParams.get('type') : 'architecture_interieurs'
         }/${encodeUrl(project_name)}`}
         className={cn(
-          'relative z-30 aspect-[3/1] overflow-hidden  mobile-large:aspect-square mobile-large:h-full ',
+          'relative z-30 aspect-[3/1] h-full  overflow-hidden mobile-large:aspect-square ',
           showMore && 'z-[25]'
         )}
       >

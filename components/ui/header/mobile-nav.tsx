@@ -51,9 +51,9 @@ const MobileNav: FC<NavProps> = ({ className, linkSize, intent, size }: NavProps
   return (
     <nav className={className}>
       <Logo
-        linkVisibility="max-mobile-large:hidden"
+        linkVisibility="max-mobile-large:hidden h-[80px] mb-medium overflow-hidden"
         href="/"
-        className="flex items-start  pt-[44px] text-heading-sub-extra-large font-thin leading-[60px] "
+        className="flex items-start   text-heading-sub-extra-large font-thin leading-[60px] "
         intent={intent}
         textType="heading--large"
       >
@@ -65,9 +65,9 @@ const MobileNav: FC<NavProps> = ({ className, linkSize, intent, size }: NavProps
         </span>
       </Logo>
       <Logo
-        linkVisibility="mobile-large:hidden"
+        linkVisibility="mobile-large:hidden h-[55px] mb-medium overflow-hidden"
         href="/"
-        className="flex items-start  pt-[80px] text-heading-large font-light leading-[60px] "
+        className="flex items-start  text-heading-large font-light leading-[60px] "
         intent={intent}
         textType="heading--large"
       >

@@ -10,11 +10,14 @@ export default function Footer({ className }: { className?: string }) {
         className
       )}
     >
-      <P>© 2023 Marion Deleersnyder</P>
+      <P>© 2023 MTONARCHI</P>
       <nav>
-        <ul className="flex gap-extra-small mobile-large:gap-medium [&>li]:backdrop-blur-lg ">
+        <ul className="flex w-full justify-around gap-extra-small mobile-large:justify-normal mobile-large:gap-medium [&>li]:backdrop-blur-lg">
           <li>
-            <Link href="/legal/confidentialite">Politique de confidentialité</Link>
+            <Link href="/legal/confidentialite">
+              <span className="hidden mobile-large:block">Politique de confidentialité</span>
+              <span className="block mobile-large:hidden">Confidentialité</span>
+            </Link>
           </li>
           <li>
             <Link href="/legal/informations">Mentions légales</Link>

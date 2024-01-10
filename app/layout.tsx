@@ -3,9 +3,9 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: "Marion Deleersnyder | Architecte en Design d'Espace et de Service",
+  title: "MTONARCHI | Marion Deleersnyder - Architecte de l'Espace et du Service",
   description:
-    "Découvrez le portfolio exceptionnel de Marion Deleersnyder, architecte passionnée, experte en design d'espace et de service. Explorez ses réalisations inspirantes et son parcours professionnel diversifié dans le domaine de l'architecture contemporaine et du design. Contactez-nous pour donner vie à vos espaces avec une créativité exceptionnelle."
+    "Découvrez l'univers créatif de Marion Deleersnyder, architecte passionnée chez MTONARCHI. Explorez son expertise en design d'espace et de service à travers une collection inspirante. Contactez-nous pour insuffler une créativité exceptionnelle à vos projets."
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

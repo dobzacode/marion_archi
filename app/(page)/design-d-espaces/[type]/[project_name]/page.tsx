@@ -79,7 +79,7 @@ export default async function Page({
   }
 
   return (
-    <div className="relative flex flex-col gap-medium">
+    <div className="relative z-[70] flex flex-col gap-medium">
       <nav
         aria-label="Fil d'ariane"
         className="slideInFromLeft caption -mt-sub-large flex items-center gap-1 px-extra-small text-primary90 mobile-large:gap-extra-small tablet:-mt-0 tablet:px-medium"

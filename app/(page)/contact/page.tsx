@@ -6,9 +6,9 @@ import Footer from '@/components/ui/footer/footer';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "Contactez Marion Deleersnyder | Architecte du Design d'Espace et de Service",
+  title: "Contactez MTONARCHI | Marion Deleersnyder, Architecte d'Espace et de Service",
   description:
-    "Contactez Marion Deleersnyder pour discuter de vos projets de design d'espace et de service. Utilisez notre formulaire de contact pour exprimer vos idées, demandes et besoins. Collaborons pour transformer votre vision en réalité architecturale. Nous sommes impatients de donner vie à vos projets."
+    "Contactez MTONARCHI et Marion Deleersnyder pour discuter de vos projets de design d'espace et de service. Utilisez notre formulaire de contact pour exprimer vos idées, demandes et besoins. Collaborons pour transformer votre vision en réalité architecturale. Nous sommes impatients de donner vie à vos projets."
 };
 
 export default function Page() {

@@ -22,7 +22,14 @@ export default function DesignDeServiceTitleBlock({ className }: { className: st
           transition: { duration: 2, ease: 'easeOut', delay: 0.5 }
         }
       }
-    : { initial: { pathLength: 1, pathOffset: 0 } };
+    : {
+        initial: { pathLength: 0, pathOffset: 0.3 },
+        animate: {
+          pathLength: isInView ? 1 : 0,
+          pathOffset: isInView ? 0 : 0.3,
+          transition: { duration: 2, ease: 'easeOut', delay: 0.5 }
+        }
+      };
 
   const secondStrokeVariants = !isTablet
     ? {
@@ -33,21 +40,34 @@ export default function DesignDeServiceTitleBlock({ className }: { className: st
           transition: { duration: 2, ease: 'easeOut', delay: 0.5 }
         }
       }
-    : { initial: { pathLength: 1, pathOffset: 0 } };
+    : {
+        initial: { pathLength: 0, pathOffset: 0.9 },
+        animate: {
+          pathLength: isInView ? 1 : 0,
+          pathOffset: isInView ? 0 : 0.9,
+          transition: { duration: 2, ease: 'easeOut', delay: 0.5 }
+        }
+      };
 
   const textVariants = !isTablet
     ? {
         initial: { opacity: 0 },
         animate: { opacity: isInView ? 1 : 0, transition: { duration: 1, delay: 2.5 } }
       }
-    : { initial: { opacity: 1 } };
+    : {
+        initial: { opacity: 0 },
+        animate: { opacity: isInView ? 1 : 0, transition: { duration: 1, delay: 2.5 } }
+      };
 
   const mainDivVariants = !isTablet
     ? {
         initial: { x: '-50%' },
         animate: { x: isInView ? 0 : '-50%', transition: { duration: 0.5 } }
       }
-    : { initial: { x: 0 } };
+    : {
+        initial: { x: '-50%' },
+        animate: { x: isInView ? 0 : '-50%', transition: { duration: 0.5 } }
+      };
 
   return (
     <div ref={ref} className={className}>
@@ -129,7 +149,7 @@ export default function DesignDeServiceTitleBlock({ className }: { className: st
           </P>
         </motion.div>
       </div>
-      <div className="max-mobile-large:-translate-y-10 max-mobile-medium:-translate-y-2">
+      <div className="relative z-50 max-mobile-large:-translate-y-10 max-mobile-medium:-translate-y-2">
         <motion.div
           {...mainDivVariants}
           className="relative h-[25rem] max-mobile-large:-mt-medium max-mobile-large:mb-small"
@@ -161,7 +181,7 @@ export default function DesignDeServiceTitleBlock({ className }: { className: st
             />
           </motion.svg>
         </motion.div>
-        <div className="relative h-fit -rotate-12 max-[1298px]:-translate-y-48 max-[1298px]:translate-x-[79%] max-laptop:-translate-y-[5vw] max-laptop:translate-x-[15vw] max-tablet:-translate-x-10 max-tablet:-translate-y-2 max-mobile-large:-translate-x-10">
+        <div className="relative h-fit -rotate-12 max-[1298px]:-translate-y-48 max-[1298px]:translate-x-[79%] max-laptop:-translate-y-[5vw] max-laptop:translate-x-[15vw] max-tablet:-translate-x-10 max-tablet:translate-y-8 max-mobile-large:-translate-x-10 max-mobile-large:translate-y-20">
           <svg
             viewBox="0 0 200 200"
             xmlns="http://www.w3.org/2000/svg"

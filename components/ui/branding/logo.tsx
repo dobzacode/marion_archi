@@ -55,7 +55,8 @@ const Logo: FC<LogoProps> = ({
               intent,
               textType,
               hover,
-              className
+              className,
+              
             })
           )}
         >

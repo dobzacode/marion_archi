@@ -71,7 +71,6 @@ const CategoryCard: React.FC<CategoryCardProps> = React.memo(
     };
 
     if (isMobile) {
-      console.log('mobile');
       return (
         <>
           {projectsToShow.map((project, index) => {

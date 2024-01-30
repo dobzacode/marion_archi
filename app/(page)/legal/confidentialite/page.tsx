@@ -260,7 +260,7 @@ export default async function HomePage() {
           :
         </P>
         <ul className=" body flex flex-col gap-extra-small pl-small">
-          {['ipsum', 'ipsum', 'ipsum'].map((item) => {
+          {['- Kittel Corentin', '- corentin.kittel@gmail.com', '- 0672357606'].map((item) => {
             return <li key={item}>{item}</li>;
           })}
         </ul>
@@ -288,11 +288,10 @@ export default async function HomePage() {
           utilisant ce qui suit :
           <br />
           <br />
-          -ipsum
+          - Marion Deleersnyder
           <br />
-          -ipsum
-          <br />
-          -ipsum
+          - mtonarchi.contact@gmail.com
+          <br />- 0635336011
         </P>
       </div>
       <Footer className="-bottom-sub-large"></Footer>

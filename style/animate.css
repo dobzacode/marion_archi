@@ -46,6 +46,22 @@
   }
 }
 
+.slideInFromBottom {
+  transform: translateY(50%);
+  animation: slideInFromBottom 1s ease-in-out forwards;
+}
+
+@keyframes slideInFromBottom {
+  from {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .animate-draw {
   stroke-dasharray: 1000;
   stroke-dashoffset: 1000;
@@ -73,7 +89,7 @@
   }
   to {
     opacity: 1;
-    fill: hsl(25, 21%, 10%);
+    fill: hsl(26, 22%, 20%);
   }
 }
 

@@ -6,7 +6,7 @@ export default function Footer({ className }: { className?: string }) {
   return (
     <footer
       className={cn(
-        'caption absolute  bottom-small  z-50 flex w-full items-center justify-center gap-extra-small  mobile-large:gap-medium',
+        'caption slideInFromBottom  absolute bottom-small z-50  flex w-full items-center justify-center gap-extra-small opacity-0 animation-delay-[4s]  mobile-large:gap-medium',
         className
       )}
     >

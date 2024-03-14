@@ -49,7 +49,7 @@
 .animate-draw {
   stroke-dasharray: 1000;
   stroke-dashoffset: 1000;
-  animation: draw 4s ease-in 1s forwards;
+  animation: draw 6s ease-in-out 1s forwards;
 }
 
 @keyframes draw {
@@ -58,10 +58,12 @@
   }
 }
 
-.st1 {
+.cls-5,
+.cls-4 {
   opacity: 0;
   fill: hsl(26 22% 99%);
-  animation: filling 1s ease-in-out 3s forwards;
+
+  animation: filling 1s ease-in-out 2s forwards;
 }
 
 @keyframes filling {

@@ -18,7 +18,7 @@ export default function DesignDeServiceSection() {
             viewBox="0 0 200 200"
             xmlns="http://www.w3.org/2000/svg"
             className={cn(
-              'pointer-events-none absolute z-10 w-[70rem] -translate-y-1/2 overflow-visible fill-tertiary1  duration-slow peer-hover:translate-x-0 peer-hover:fill-tertiary10 max-laptop:hidden max-laptop:fill-tertiary10 tablet:w-auto laptop:-translate-x-[-150%]'
+              'pointer-events-none absolute z-10 w-[70rem] -translate-y-1/2 overflow-visible fill-tertiary1  duration-slow group-hover:translate-x-0 group-hover:fill-tertiary10 max-laptop:hidden max-laptop:fill-tertiary10 tablet:w-auto laptop:-translate-x-[-150%]'
             )}
           >
             <path
@@ -29,7 +29,7 @@ export default function DesignDeServiceSection() {
             />
           </svg>
           <P
-            className="relative z-20 ml-small duration-slowest peer-hover:max-h-[40rem] peer-hover:opacity-100 laptop:max-h-0 laptop:opacity-0 peer-hover:[&>strong:before]:scale-x-100 peer-hover:[&>strong:before]:delay-500"
+            className="relative z-20 ml-small duration-slowest group-hover:max-h-[40rem] group-hover:opacity-100 laptop:max-h-0 laptop:opacity-0 group-hover:[&>strong:before]:scale-x-100 group-hover:[&>strong:before]:delay-500"
             textType="body"
           >
             <strong className="before:duration-medium max-laptop:before:bg-tertiary20 laptop:before:scale-x-0 laptop:before:bg-tertiary20 ">
@@ -71,7 +71,7 @@ export default function DesignDeServiceSection() {
             viewBox="0 0 200 200"
             xmlns="http://www.w3.org/2000/svg"
             className={cn(
-              'pointer-events-none absolute  z-10 w-[70rem] -translate-y-1/2 overflow-visible fill-tertiary1 transition-all duration-slow peer-hover:translate-x-0 peer-hover:fill-tertiary10 max-laptop:hidden max-laptop:fill-tertiary10 tablet:w-auto laptop:-translate-x-[-150%]'
+              'pointer-events-none absolute  z-10 w-[70rem] -translate-y-1/2 overflow-visible fill-tertiary1 transition-all duration-slow group-hover:translate-x-0 group-hover:fill-tertiary10 max-laptop:hidden max-laptop:fill-tertiary10 tablet:w-auto laptop:-translate-x-[-150%]'
             )}
           >
             <path
@@ -82,7 +82,7 @@ export default function DesignDeServiceSection() {
             />
           </svg>
           <P
-            className="relative  z-20 ml-small duration-slowest  peer-hover:max-h-[40rem] peer-hover:opacity-100 laptop:max-h-0 laptop:opacity-0 peer-hover:[&>strong:before]:scale-x-100 peer-hover:[&>strong:before]:delay-500"
+            className="relative  z-20 ml-small duration-slowest  group-hover:max-h-[40rem] group-hover:opacity-100 laptop:max-h-0 laptop:opacity-0 group-hover:[&>strong:before]:scale-x-100 group-hover:[&>strong:before]:delay-500"
             textType="body"
           >
             <strong className="before:duration-medium max-laptop:before:bg-tertiary20 laptop:before:scale-x-0 laptop:before:bg-tertiary20 ">

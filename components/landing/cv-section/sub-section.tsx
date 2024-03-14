@@ -28,10 +28,10 @@ export default function SubSection({
       whileInView={{ opacity: 1, translateX: 0, transition: { type: 'spring' } }}
       viewport={{ margin: !isProject ? '-18% 0px -18% 0px' : '0px', once: true }}
       custom={custom}
-      className={`sub-heading   text-primary90 ${className} gap-sub-medium`}
+      className={`sub-heading group  text-primary90 ${className} gap-sub-medium`}
     >
       {href ? (
-        <Link className="peer w-fit " href={href}>
+        <Link className=" w-fit " href={href}>
           <h4 className="relative z-20  font-['Distortion_Dos_Analogue'] text-primary80 duration-0 group-hover:z-20">
             {title}
           </h4>
@@ -39,7 +39,7 @@ export default function SubSection({
       ) : (
         <h4
           className={cn(
-            "peer relative z-20 w-fit cursor-pointer font-['Distortion_Dos_Analogue'] text-primary80 duration-0 group-hover:z-20"
+            " relative z-20 w-fit cursor-pointer font-['Distortion_Dos_Analogue'] text-primary80 duration-0 group-hover:z-20"
           )}
         >
           {title}

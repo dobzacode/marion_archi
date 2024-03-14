@@ -17,7 +17,7 @@ export default function HeroSection() {
           />
         </svg>
 
-        <Avatar className="animate-draw absolute top-0 z-40 w-full  overflow-visible [&>*]:stroke-primary80  [&>.sto]:fill-none"></Avatar>
+        <Avatar className="animate-draw absolute top-0 z-40 w-full  overflow-visible [&>*]:stroke-primary80  [&>.cls-3]:fill-none"></Avatar>
       </div>
       <div className="laptop:w-[100rem]"></div>
       <div className="relative z-10 flex flex-col gap-small pt-extra-large max-[1298px]:translate-x-[20%] max-[1298px]:translate-y-[30%] max-[1150px]:translate-x-[10%] max-laptop:translate-x-0 tablet:pt-extra-large">

@@ -23,7 +23,7 @@
   }
 
   .heading {
-    @apply text-heading leading-heading tracking-[0.15em];
+    @apply text-heading leading-heading tracking-[0.12em];
   }
 
   .sub-heading {
@@ -31,7 +31,7 @@
   }
 
   .body {
-    @apply text-body font-normal leading-[2rem] tracking-[0.15em];
+    @apply text-body font-normal leading-[2rem] tracking-[0.10em];
   }
 
   .caption {

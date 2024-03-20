@@ -50,7 +50,7 @@ export default function ContactForm({}: {
               {state}
             </P>
           )}
-          <div className="flex w-full flex-col justify-between  gap-small mobile-large:flex-row">
+          <div className="flex w-full flex-col justify-between  gap-small mobile-large:flex-row  [&>*]:tracking-wide [&>*]:placeholder:tracking-wide">
             <Input
               intent="tertiary"
               className="mobile-large:w-1/2"
@@ -81,6 +81,7 @@ export default function ContactForm({}: {
             id={'email'}
             placeholder={'Email'}
             hiddenlabel="true"
+            className="tracking-wide placeholder:tracking-wide"
           ></Input>
           <Input
             intent="tertiary"
@@ -91,6 +92,7 @@ export default function ContactForm({}: {
             id={'phone'}
             placeholder={'Téléphone'}
             hiddenlabel="true"
+            className="tracking-wide placeholder:tracking-wide"
           ></Input>
 
           <Input
@@ -104,6 +106,7 @@ export default function ContactForm({}: {
             rows={5}
             cols={3}
             hiddenlabel="true"
+            className="tracking-wide placeholder:tracking-wide"
           ></Input>
           <SubmitButton></SubmitButton>
         </form>

@@ -50,64 +50,65 @@ export default function ContactForm({}: {
               {state}
             </P>
           )}
-          <div className="flex w-full flex-col justify-between  gap-small mobile-large:flex-row  [&>*]:tracking-wide [&>*]:placeholder:tracking-wide">
+          <div className="flex flex-col gap-extra-small">
+            <div className="flex w-full flex-col justify-between  gap-extra-small mobile-large:flex-row  [&>*]:tracking-wide [&>*]:placeholder:tracking-wide">
+              <Input
+                intent="tertiary"
+                className="mobile-large:w-1/2"
+                minLength={2}
+                maxLength={30}
+                required
+                type="text"
+                id={'firstname'}
+                placeholder={'Nom'}
+                hiddenlabel="true"
+              ></Input>
+              <Input
+                intent="tertiary"
+                className="mobile-large:w-1/2"
+                minLength={2}
+                maxLength={30}
+                required
+                type="text"
+                id={'lastname'}
+                placeholder={'Prénom'}
+                hiddenlabel="true"
+              ></Input>
+            </div>
             <Input
               intent="tertiary"
-              className="mobile-large:w-1/2"
-              minLength={2}
-              maxLength={30}
               required
-              type="text"
-              id={'firstname'}
-              placeholder={'Nom'}
+              type="email"
+              id={'email'}
+              placeholder={'Email'}
               hiddenlabel="true"
+              className="tracking-wide placeholder:tracking-wide"
             ></Input>
             <Input
               intent="tertiary"
-              className="mobile-large:w-1/2"
               minLength={2}
               maxLength={30}
               required
-              type="text"
-              id={'lastname'}
-              placeholder={'Prénom'}
+              type="number"
+              id={'phone'}
+              placeholder={'Téléphone'}
               hiddenlabel="true"
+              className="tracking-wide placeholder:tracking-wide"
+            ></Input>
+            <Input
+              intent="tertiary"
+              minLength={10}
+              maxLength={500}
+              required
+              type="textarea"
+              id={'demande'}
+              placeholder={'Demande'}
+              rows={5}
+              cols={3}
+              hiddenlabel="true"
+              className="tracking-wide placeholder:tracking-wide"
             ></Input>
           </div>
-          <Input
-            intent="tertiary"
-            required
-            type="email"
-            id={'email'}
-            placeholder={'Email'}
-            hiddenlabel="true"
-            className="tracking-wide placeholder:tracking-wide"
-          ></Input>
-          <Input
-            intent="tertiary"
-            minLength={2}
-            maxLength={30}
-            required
-            type="number"
-            id={'phone'}
-            placeholder={'Téléphone'}
-            hiddenlabel="true"
-            className="tracking-wide placeholder:tracking-wide"
-          ></Input>
-
-          <Input
-            intent="tertiary"
-            minLength={10}
-            maxLength={500}
-            required
-            type="textarea"
-            id={'demande'}
-            placeholder={'Demande'}
-            rows={5}
-            cols={3}
-            hiddenlabel="true"
-            className="tracking-wide placeholder:tracking-wide"
-          ></Input>
           <SubmitButton></SubmitButton>
         </form>
         <P className={`caption  text-center`}>

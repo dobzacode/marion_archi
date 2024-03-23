@@ -51,7 +51,7 @@ export default function MenuButton({
         className
       )}
     >
-      <div className="sub-heading  peer relative z-20 px-small text-primary80 duration-medium group-hover:z-50 group-hover:scale-110">
+      <div className="  sub-heading  peer relative z-20 px-small text-primary80 duration-medium group-hover:z-50 group-hover:scale-110">
         <strong
           className={cn(
             'text-white duration-[2s] before:rotate-1 before:scale-x-0 before:bg-primary20 before:bg-blend-difference before:duration-slow ',

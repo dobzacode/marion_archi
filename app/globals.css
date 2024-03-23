@@ -422,6 +422,10 @@ strong::before {
   visibility: hidden;
 }
 
+div:has(.grecaptcha-badge) {
+  display: none;
+}
+
 .glassmorphism-bg {
   box-shadow: 0 4px 32px 0 hsla(26 22% 85%);
   backdrop-filter: blur(3px);

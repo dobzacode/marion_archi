@@ -2,7 +2,6 @@ import BlobBg from '@/components/contact/blob-bg';
 import Character from '@/components/contact/character';
 import ContactForm from '@/components/contact/contact-form';
 import RecaptchaProvider from '@/components/providers/recaptcha-provider';
-import Footer from '@/components/ui/footer/footer';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -21,7 +20,6 @@ export default function Page() {
         <Character></Character>
         <BlobBg></BlobBg>
       </main>
-      <Footer></Footer>
     </>
   );
 }

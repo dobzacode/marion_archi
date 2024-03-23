@@ -1,5 +1,4 @@
 import BlobBg from '@/components/contact/blob-bg';
-import Character from '@/components/contact/character';
 import ContactForm from '@/components/contact/contact-form';
 import RecaptchaProvider from '@/components/providers/recaptcha-provider';
 import { Metadata } from 'next';
@@ -17,7 +16,7 @@ export default function Page() {
         <RecaptchaProvider>
           <ContactForm></ContactForm>
         </RecaptchaProvider>
-        <Character></Character>
+
         <BlobBg></BlobBg>
       </main>
     </>

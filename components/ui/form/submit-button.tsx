@@ -21,7 +21,7 @@ export function SubmitButton() {
       intent="pastelTertiary"
       aria-disabled={pending}
     >
-      <p className="tracking-wide text-tertiary90">ENVOYER</p>
+      <p className="tracking-wide text-tertiary90">Envoyer</p>
       {pending && (
         <BarLoader
           className="bg-tertiary50 text-tertiary40"

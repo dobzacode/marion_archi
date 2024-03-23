@@ -79,7 +79,7 @@ const MobileNav: FC<NavProps> = ({ className, linkSize, intent, size }: NavProps
         </span>
       </Logo>
       <button onClick={() => setShowMenu(!showMenu)}>
-        <Icon path={mdiMenu} size={3.5}></Icon>
+        <Icon className="[&>*]:path-stroke-1" path={mdiMenu} size={2.6}></Icon>
       </button>
       <div
         className={cn(

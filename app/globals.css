@@ -427,7 +427,7 @@ div:has(.grecaptcha-badge) {
 }
 
 .glassmorphism-bg {
-  box-shadow: 0 4px 32px 0 hsla(26 22% 85%);
+  box-shadow: 0 2px 20px 0 hsla(26 22% 85%);
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(4.5px);
   border-radius: 10px;

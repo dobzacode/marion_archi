@@ -35,7 +35,7 @@ export default function ContactForm({}: {
   return (
     <section className="mx-extra-small flex items-center justify-center pt-small">
       <div className="slideInFromRight glassmorphism-bg flex  w-full flex-col gap-small rounded-small border border-tertiary10 border-opacity-80 p-medium text-tertiary90 opacity-0 animation-delay-1000   mobile-large:mx-0 mobile-large:max-w-[90vw] tablet:w-fit">
-        <form action={formAction} className="flex w-full flex-col gap-small">
+        <form action={formAction} className="flex w-full flex-col gap-sub-medium">
           <H1 textType={'sub-heading'} className="">
             Formulaire de contact
           </H1>
@@ -50,8 +50,8 @@ export default function ContactForm({}: {
               {state}
             </P>
           )}
-          <div className="flex flex-col gap-extra-small">
-            <div className="flex w-full flex-col justify-between  gap-extra-small mobile-large:flex-row  [&>*]:tracking-wide [&>*]:placeholder:tracking-wide">
+          <div className="flex flex-col gap-small">
+            <div className="flex w-full flex-col justify-between  gap-small mobile-large:flex-row  [&>*]:tracking-wide [&>*]:placeholder:tracking-wide">
               <Input
                 intent="tertiary"
                 className="mobile-large:w-1/2"

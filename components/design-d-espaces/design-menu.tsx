@@ -62,7 +62,7 @@ export default function DesignMenu({}) {
           </li>
           <li className="h-full">
             <MenuButton
-              customHighlight=" before:h-[90%] before:w-[90vw] min-[480px]:before:w-[90vw] min-[400px]:before:w-[78vw] before:min-[645px]:w-[100%] tablet:before:w-[42vw] min-[1300px]:before:w-[40vw] before:rotate-[-2deg] max-[1300px]:before:left-[10px] min-[1300px]:before:left-[16px]"
+              customHighlight=" before:h-[90%] before:w-[90vw] min-[480px]:before:w-[90vw] min-[400px]:before:w-[78vw] before:min-[645px]:w-[100%] tablet:before:w-[42vw] min-[1300px]:before:w-[30vw] before:rotate-[-2deg] max-[1300px]:before:left-[10px] min-[1300px]:before:left-[16px]"
               className="border-r  border-primary10 border-opacity-10"
               svgCss="left-[-50%] -bottom-[200%]   origin-[0%_0%] "
               placement="left-0 bottom-0"

@@ -1,7 +1,7 @@
 'use client';
 
 import { imageByIndex } from '@/lib/utils';
-import useEmblaCarousel, { EmblaOptionsType } from 'embla-carousel-react';
+import useEmblaCarousel from 'embla-carousel-react';
 import Image from 'next/image';
 import React, { useCallback, useEffect, useState } from 'react';
 import { DotButton, NextButton, PrevButton } from './embla-carousel-arrows-dot-button';
@@ -10,7 +10,7 @@ import Lightbox from 'yet-another-react-lightbox';
 import Zoom from 'yet-another-react-lightbox/plugins/zoom';
 import 'yet-another-react-lightbox/styles.css';
 
-import { EmblaCarouselType } from 'embla-carousel';
+import { EmblaCarouselType, EmblaOptionsType } from 'embla-carousel';
 import NextJsImage from './nextjs-image';
 
 type PropType = {

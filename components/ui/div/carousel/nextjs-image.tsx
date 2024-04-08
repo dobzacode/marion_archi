@@ -19,8 +19,6 @@ export default function NextJsImage({ slide, rect }: { slide: any; rect: any }) 
     ? Math.round(Math.min(rect.height, (rect.width / slide.width) * slide.height))
     : rect.height;
 
-  console.log(slide);
-
   return (
     <div style={{ position: 'relative', width, height }}>
       <Image

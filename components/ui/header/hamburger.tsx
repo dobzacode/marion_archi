@@ -10,8 +10,6 @@ export default function Hamburger({
   setShowMenu: (showMenu: boolean) => void;
   className?: string;
 }) {
-  console.log(showMenu);
-
   return (
     <button
       onClick={() => setShowMenu(!showMenu)}

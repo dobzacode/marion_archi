@@ -37,8 +37,6 @@ export default function MenuServiceButton({
 
   const isTablet = useBetterMediaQuery('(max-width: 768px)');
 
-  console.log(isActive);
-
   return !isTablet ? (
     <button
       onClick={handleButtonClick}

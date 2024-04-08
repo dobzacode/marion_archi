@@ -43,8 +43,6 @@ export default async function Page({
 }) {
   let project: Project | undefined;
 
-  console.log(params.project_name);
-
   switch (params.type) {
     case 'architecture':
       project = architecture.find(
@@ -70,8 +68,6 @@ export default async function Page({
       // Gérer le cas où le type n'est pas reconnu
       break;
   }
-
-  console.log(project);
 
   if (!project) {
     return notFound();

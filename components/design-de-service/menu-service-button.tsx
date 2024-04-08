@@ -94,7 +94,7 @@ export default function MenuServiceButton({
         className
       )}
     >
-      <div className="min-[1100px]:heading sub-heading  peer relative z-20 px-small text-secondary80 duration-medium group-hover:scale-110">
+      <div className="mobile-large:sub-heading body peer  relative z-20 px-small text-secondary80 duration-medium group-hover:scale-110 ">
         <strong
           className={cn(
             'text-white duration-[2s] before:rotate-1 before:scale-x-0  before:bg-blend-difference before:duration-slow ',

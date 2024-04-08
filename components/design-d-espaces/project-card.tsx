@@ -59,7 +59,7 @@ export default function ProjectCard({
           searchParams.get('type') ? searchParams.get('type') : 'architecture_interieurs'
         }/${encodeUrl(project_name)}`}
         className={cn(
-          'relative z-30 aspect-[3/1] h-full  overflow-hidden mobile-large:aspect-square ',
+          'relative z-30 aspect-[4/1] h-full  overflow-hidden mobile-large:aspect-square ',
           showMore && 'z-[25]'
         )}
       >
@@ -85,7 +85,7 @@ export default function ProjectCard({
           <H3
             textType={'body'}
             className={cn(
-              'relative z-10 px-small text-center text-primary1 duration-[2s]  group-hover:scale-105',
+              'max-tablet:caption relative z-10 px-small text-center text-primary1 duration-[2s] group-hover:scale-105  max-tablet:leading-body',
               showMore && 'translate-x-[150%] opacity-0'
             )}
           >

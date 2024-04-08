@@ -70,7 +70,7 @@ export default function ProjectServiceCard({
           searchParams.get('type') ? searchParams.get('type') : 'recherches'
         }/${encodeUrl(project_name)}`}
         className={cn(
-          'relative z-30 aspect-[3/1] overflow-hidden  mobile-large:aspect-square mobile-large:h-full ',
+          'relative z-30 aspect-[4/1] overflow-hidden  mobile-large:aspect-square mobile-large:h-full ',
           showMore && 'z-[25]'
         )}
       >
@@ -96,11 +96,11 @@ export default function ProjectServiceCard({
           <H3
             textType={'body'}
             className={cn(
-              'relative z-10 px-small text-center text-secondary1 duration-[2s]  group-hover:scale-105',
+              'max-tablet:caption relative z-10 px-small text-center text-secondary1 duration-[2s] group-hover:scale-105  max-tablet:leading-body ',
               showMore && 'translate-x-[150%] opacity-0'
             )}
           >
-            <strong className="">{project_name}</strong>
+            {project_name}
           </H3>
 
           <div

@@ -1,4 +1,3 @@
-import Footer from '@/components/ui/footer/footer';
 import { H1 } from '@/components/ui/text/h1';
 import H2 from '@/components/ui/text/h2';
 import P from '@/components/ui/text/p';
@@ -143,7 +142,6 @@ export default function Home() {
           <br></br>Le site web mtonarchi.fr est en conformité avec le RGPD
         </P>
       </div>
-      <Footer className="-bottom-[5rem]"></Footer>
     </main>
   );
 }

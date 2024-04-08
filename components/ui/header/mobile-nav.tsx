@@ -38,7 +38,7 @@ const MobileNav: FC<NavProps> = ({ className, linkSize, intent, size }: NavProps
       case 'small':
         return 'top-large';
       case 'medium':
-        return 'top-large';
+        return 'top-sub-large';
       case 'large':
         return 'top-extra-large';
     }
@@ -47,6 +47,17 @@ const MobileNav: FC<NavProps> = ({ className, linkSize, intent, size }: NavProps
   useEffect(() => {
     setShowMenu(false);
   }, [pathname]);
+
+  useEffect(() => {
+    const body = document.querySelector('body');
+    if (body) {
+      if (showMenu) {
+        body.classList.add('no-scroll');
+      } else {
+        body.classList.remove('no-scroll');
+      }
+    }
+  }, [showMenu]);
 
   return (
     <nav className={className}>
@@ -83,8 +94,8 @@ const MobileNav: FC<NavProps> = ({ className, linkSize, intent, size }: NavProps
       </button>
       <div
         className={cn(
-          '-ml-medium h-screen   w-[106vw] bg-primary1 pl-small duration-700',
-          'absolute z-[90]',
+          'top-0 -ml-medium h-screen  w-[106vw] bg-primary1 pl-small duration-700',
+          'absolute z-[999]',
           showMenu ? 'left-0' : '-left-[1070px] ',
           modalOffset()
         )}

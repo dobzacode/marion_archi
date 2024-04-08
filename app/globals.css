@@ -464,3 +464,7 @@ div:has(.grecaptcha-badge) {
   margin-left: var(--t);
   place-self: end;
 }
+
+.no-scroll {
+  overflow: hidden;
+}

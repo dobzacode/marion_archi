@@ -1,6 +1,5 @@
 import ContentServiceSection from '@/components/design-de-service/content-service-section';
 import DesignServiceMenu from '@/components/design-de-service/design-service-menu';
-import Footer from '@/components/ui/footer/footer';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -15,7 +14,6 @@ export default async function Page() {
       <main className="relative flex h-full w-full flex-col px-[1px]">
         <DesignServiceMenu />
         <ContentServiceSection />
-        <Footer className="-bottom-[2rem] z-10"></Footer>
       </main>
     </>
   );

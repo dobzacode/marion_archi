@@ -16,7 +16,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           ' max-w-screen relative flex  flex-col gap-large overflow-x-hidden bg-primary1 py-small tablet:gap-medium tablet:py-medium'
         }
       >
-        <Header className=" flex items-center" size="medium" textColor="primary"></Header>
+        <Header
+          className=" flex max-h-screen items-center"
+          size="medium"
+          textColor="primary"
+        ></Header>
         {children}
       </body>
     </html>

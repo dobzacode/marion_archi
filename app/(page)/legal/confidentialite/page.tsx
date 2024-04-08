@@ -1,4 +1,3 @@
-import Footer from '@/components/ui/footer/footer';
 import { H1 } from '@/components/ui/text/h1';
 import H2 from '@/components/ui/text/h2';
 import P from '@/components/ui/text/p';
@@ -294,7 +293,6 @@ export default async function HomePage() {
           <br />- 0635336011
         </P>
       </div>
-      <Footer className="-bottom-sub-large"></Footer>
     </main>
   );
 }

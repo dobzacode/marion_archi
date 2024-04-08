@@ -1,15 +1,15 @@
 'use client';
 
 import { cn } from '@/lib/utils';
+import Image from 'next/image';
+import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import React, { FC, useEffect, useState } from 'react';
 import { v4 } from 'uuid';
-import Logo from '../branding/logo';
 import Footer from '../footer/footer';
 import Hamburger from './hamburger';
 import { navLinks } from './nav';
 import NavLink from './nav-link';
-
 interface NavProps {
   children?: React.ReactNode;
   className?: string;
@@ -61,34 +61,15 @@ const MobileNav: FC<NavProps> = ({ className, linkSize, intent, size }: NavProps
 
   return (
     <nav className={className}>
-      <Logo
-        linkVisibility="max-tablet:hidden h-[80px] mb-medium overflow-hidden"
-        href="/"
-        className="flex items-start   text-heading-sub-extra-large font-thin leading-[60px] "
-        intent={intent}
-        textType="heading--large"
-      >
-        <span>m</span>
-        <span className="flex origin-top-left scale-[44%] flex-col gap-[-2px] pt-8 font-light">
-          ton
-          <br />
-          archi
-        </span>
-      </Logo>
-      <Logo
-        linkVisibility="tablet:hidden h-[65px] mb-medium overflow-hidden"
-        href="/"
-        className="flex items-start  text-heading-large font-thin leading-[50px] "
-        intent={intent}
-        textType="heading--large"
-      >
-        <span>m</span>
-        <span className="flex origin-top-left scale-[33%] flex-col gap-[-2px] pt-[4.6rem] font-normal">
-          ton
-          <br />
-          archi
-        </span>
-      </Logo>
+      <Link href="/" className="relative mb-[3.5rem] h-[10rem] w-[10rem] ">
+        <Image
+          src="/assets/mtonarchi_logo.png"
+          className="object-cover"
+          fill
+          alt="mtonarchi logo"
+        ></Image>
+      </Link>
+
       <Hamburger
         className={cn(
           'w-medium pb-small duration-fast hover:scale-105',

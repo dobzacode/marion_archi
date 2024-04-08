@@ -1,10 +1,11 @@
 'use client';
 
 import { cn } from '@/lib/utils';
+import Image from 'next/image';
+import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import React, { FC, HTMLProps } from 'react';
 import { v4 } from 'uuid';
-import Logo from '../branding/logo';
 import NavLink from './nav-link';
 
 interface NavProps extends HTMLProps<HTMLElement> {
@@ -36,19 +37,17 @@ const Nav: FC<NavProps> = ({ className, linkSize, intent }) => {
 
   return (
     <nav className={className}>
-      <Logo
+      <Link
         href="/"
-        className="flex items-start  pt-medium text-heading-sub-extra-large font-thin leading-[60px]"
-        intent={intent}
-        textType="heading--large"
+        className="relative mb-[4.4rem] h-[13rem] w-[13rem] laptop-large:mb-[5.6rem] laptop-large:h-[18rem] laptop-large:w-[18rem] "
       >
-        <span>m</span>
-        <span className="flex origin-top-left scale-[44%] flex-col gap-[-2px] pt-8 font-light">
-          ton
-          <br />
-          archi
-        </span>
-      </Logo>
+        <Image
+          src="/assets/mtonarchi_logo.png"
+          className="object-cover"
+          fill
+          alt="mtonarchi logo"
+        ></Image>
+      </Link>
       <ul className="-mt-medium flex justify-center overflow-visible whitespace-nowrap tablet:gap-small  laptop:gap-small laptop-large:gap-sub-medium">
         <div className="group relative duration-slow" key={v4()}>
           <svg

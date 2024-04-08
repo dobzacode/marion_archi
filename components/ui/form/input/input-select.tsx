@@ -1,6 +1,6 @@
 'use client';
-import { VariantProps } from 'class-variance-authority';
 import { cn } from '@/lib/utils';
+import { VariantProps } from 'class-variance-authority';
 import { FC, SelectHTMLAttributes, forwardRef } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import { inputVariants } from '../input';
@@ -13,6 +13,7 @@ interface SelectProps
 }
 
 const InputSelect: FC<SelectProps> = forwardRef<HTMLInputElement, SelectProps>(
+  //@ts-ignore
   ({ className, choices, loader, placeholder, ...props }, ref) => {
     return (
       <>
@@ -51,6 +52,7 @@ const InputSelect: FC<SelectProps> = forwardRef<HTMLInputElement, SelectProps>(
             <select
               className={cn(`body placeholder:body w-full p-extra-small `, className)}
               name={props.id}
+              //@ts-ignore
               placeholder={placeholder ? placeholder : ''}
               aria-label={props.id}
               disabled={choices[0] === '' || choices[0] === 'No community is matching'}

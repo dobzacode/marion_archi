@@ -64,6 +64,7 @@ interface InputProps
   cols?: number;
 }
 
+//@ts-ignore
 const Input: FC<InputProps> = forwardRef<HTMLInputElement, InputProps>(
   (
     {

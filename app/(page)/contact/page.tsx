@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <>
-      <main className="relative h-[100vh] w-full mobile-large:h-[80vh]  mobile-large:overflow-hidden">
+      <main className="relative h-[100vh] max-h-[80vh] w-full overflow-hidden  mobile-large:h-[80vh]">
         <RecaptchaProvider>
           <ContactForm></ContactForm>
         </RecaptchaProvider>

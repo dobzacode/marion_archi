@@ -39,7 +39,7 @@ export default function ContactForm({}: {
           <H1 textType={'sub-heading'} className="">
             Formulaire de contact
           </H1>
-          <hr className="mb-1 border border-tertiary10"></hr>
+
           {state && (
             <P
               textType={'body'}

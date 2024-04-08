@@ -49,7 +49,7 @@ const Nav: FC<NavProps> = ({ className, linkSize, intent }) => {
           archi
         </span>
       </Logo>
-      <ul className="-mt-medium flex justify-center overflow-visible whitespace-nowrap tablet:gap-small  laptop:gap-small laptop-large:gap-large">
+      <ul className="-mt-medium flex justify-center overflow-visible whitespace-nowrap tablet:gap-small  laptop:gap-small laptop-large:gap-sub-medium">
         <div className="group relative duration-slow" key={v4()}>
           <svg
             viewBox="0 0 200 200"

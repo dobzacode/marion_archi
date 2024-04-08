@@ -468,3 +468,34 @@ div:has(.grecaptcha-badge) {
 .no-scroll {
   overflow: hidden;
 }
+
+.hamburger .line {
+  transition:
+    y 300ms ease-in 300ms,
+    rotate 300ms ease-in-out,
+    opacity 0ms 300ms;
+  transform-origin: center;
+}
+
+.hamburger[aria-expanded='true'] .line {
+  transition:
+    y 300ms ease-in-out,
+    rotate 300ms ease-in-out 300ms,
+    opacity 0ms 300ms;
+}
+
+.hamburger[aria-expanded='true'] :is(.top, .bottom) {
+  y: 45;
+}
+
+.hamburger[aria-expanded='true'] .top {
+  rotate: 45deg;
+}
+
+.hamburger[aria-expanded='true'] .middle {
+  opacity: 0;
+}
+
+.hamburger[aria-expanded='true'] .bottom {
+  rotate: -45deg;
+}

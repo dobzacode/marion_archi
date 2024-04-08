@@ -1,12 +1,12 @@
 'use client';
 
 import { cn } from '@/lib/utils';
-import { mdiMenu } from '@mdi/js';
-import Icon from '@mdi/react';
 import { usePathname } from 'next/navigation';
 import React, { FC, useEffect, useState } from 'react';
 import { v4 } from 'uuid';
 import Logo from '../branding/logo';
+import Footer from '../footer/footer';
+import Hamburger from './hamburger';
 import { navLinks } from './nav';
 import NavLink from './nav-link';
 
@@ -62,7 +62,7 @@ const MobileNav: FC<NavProps> = ({ className, linkSize, intent, size }: NavProps
   return (
     <nav className={className}>
       <Logo
-        linkVisibility="max-mobile-large:hidden h-[80px] mb-medium overflow-hidden"
+        linkVisibility="max-tablet:hidden h-[80px] mb-medium overflow-hidden"
         href="/"
         className="flex items-start   text-heading-sub-extra-large font-thin leading-[60px] "
         intent={intent}
@@ -76,9 +76,9 @@ const MobileNav: FC<NavProps> = ({ className, linkSize, intent, size }: NavProps
         </span>
       </Logo>
       <Logo
-        linkVisibility="mobile-large:hidden h-[55px] mb-medium overflow-hidden"
+        linkVisibility="tablet:hidden h-[65px] mb-medium overflow-hidden"
         href="/"
-        className="flex items-start  text-heading-large font-light leading-[60px] "
+        className="flex items-start  text-heading-large font-thin leading-[50px] "
         intent={intent}
         textType="heading--large"
       >
@@ -89,12 +89,17 @@ const MobileNav: FC<NavProps> = ({ className, linkSize, intent, size }: NavProps
           archi
         </span>
       </Logo>
-      <button onClick={() => setShowMenu(!showMenu)}>
-        <Icon className="[&>*]:path-stroke-1" path={mdiMenu} size={2.6}></Icon>
-      </button>
+      <Hamburger
+        className={cn(
+          'w-medium pb-small duration-fast hover:scale-105',
+          showMenu && 'e duration-medium '
+        )}
+        showMenu={showMenu}
+        setShowMenu={setShowMenu}
+      ></Hamburger>
       <div
         className={cn(
-          'top-0 -ml-medium h-screen  w-[106vw] bg-primary1 pl-small duration-700',
+          'top-0 -ml-medium h-[90vh]  w-[106vw] bg-primary1 pl-small duration-700',
           'absolute z-[999]',
           showMenu ? 'left-0' : '-left-[1070px] ',
           modalOffset()
@@ -204,6 +209,7 @@ const MobileNav: FC<NavProps> = ({ className, linkSize, intent, size }: NavProps
             </NavLink>
           </div>
         </ul>
+        <Footer></Footer>
       </div>
     </nav>
   );

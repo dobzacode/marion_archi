@@ -100,7 +100,7 @@ export default function ProjectServiceCard({
               showMore && 'translate-x-[150%] opacity-0'
             )}
           >
-            <strong className="">{project_name.toUpperCase()}</strong>
+            <strong className="">{project_name}</strong>
           </H3>
 
           <div

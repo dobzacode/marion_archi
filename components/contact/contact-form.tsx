@@ -34,9 +34,9 @@ export default function ContactForm({}: {
 
   return (
     <section className="mx-extra-small flex items-center justify-center pt-small">
-      <div className="slideInFromRight glassmorphism-bg flex  w-full flex-col gap-small rounded-small border border-tertiary10 border-opacity-80 p-medium text-tertiary90 opacity-0 animation-delay-1000   mobile-large:mx-0 mobile-large:max-w-[90vw] tablet:w-fit">
+      <div className="slideInFromRight glassmorphism-bg flex  w-full flex-col gap-small rounded-small border border-tertiary10 border-opacity-80 p-small text-tertiary90 opacity-0 animation-delay-1000 mobile-large:mx-0   mobile-large:max-w-[90vw] tablet:w-fit tablet:p-medium">
         <form action={formAction} className="flex w-full flex-col gap-sub-medium">
-          <H1 textType={'sub-heading'} className="">
+          <H1 textType={'sub-heading'} className="font-normal">
             Formulaire de contact
           </H1>
 
@@ -54,7 +54,7 @@ export default function ContactForm({}: {
             <div className="flex w-full flex-col justify-between  gap-extra-small mobile-large:flex-row  [&>*]:tracking-wide [&>*]:placeholder:tracking-wide">
               <Input
                 intent="tertiary"
-                className="mobile-large:w-1/2"
+                className="max-tablet:py-2 max-tablet:text-caption max-tablet:placeholder:text-caption mobile-large:w-1/2"
                 minLength={2}
                 maxLength={30}
                 required
@@ -65,7 +65,7 @@ export default function ContactForm({}: {
               ></Input>
               <Input
                 intent="tertiary"
-                className="mobile-large:w-1/2"
+                className="max-tablet:py-2 max-tablet:text-caption max-tablet:placeholder:text-caption mobile-large:w-1/2"
                 minLength={2}
                 maxLength={30}
                 required
@@ -82,7 +82,7 @@ export default function ContactForm({}: {
               id={'email'}
               placeholder={'Email'}
               hiddenlabel="true"
-              className="tracking-wide placeholder:tracking-wide"
+              className="tracking-wide placeholder:tracking-wide max-tablet:py-2 max-tablet:text-caption max-tablet:placeholder:text-caption "
             ></Input>
             <Input
               intent="tertiary"
@@ -93,7 +93,7 @@ export default function ContactForm({}: {
               id={'phone'}
               placeholder={'Téléphone'}
               hiddenlabel="true"
-              className="tracking-wide placeholder:tracking-wide"
+              className="tracking-wide placeholder:tracking-wide max-tablet:py-2 max-tablet:text-caption max-tablet:placeholder:text-caption"
             ></Input>
             <Input
               intent="tertiary"
@@ -106,7 +106,7 @@ export default function ContactForm({}: {
               rows={5}
               cols={3}
               hiddenlabel="true"
-              className="tracking-wide placeholder:tracking-wide"
+              className="tracking-wide placeholder:tracking-wide max-tablet:py-2 max-tablet:text-caption max-tablet:placeholder:text-caption"
             ></Input>
           </div>
           <SubmitButton></SubmitButton>

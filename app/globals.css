@@ -27,7 +27,7 @@
   }
 
   .sub-heading {
-    @apply text-sub-heading font-normal leading-sub-heading tracking-wider;
+    @apply text-sub-heading font-normal leading-sub-heading tracking-wide;
   }
 
   .body {

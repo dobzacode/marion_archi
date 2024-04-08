@@ -1,6 +1,5 @@
 import DetailCard from '@/components/design-d-espaces/detail-card';
 import { Project } from '@/components/design-d-espaces/project-card';
-import Footer from '@/components/ui/footer/footer';
 import P from '@/components/ui/text/p';
 import architecture from '@/lib/design-d-espaces/architecture.json';
 import architecture_interieurs from '@/lib/design-d-espaces/architecture_interieurs.json';
@@ -79,10 +78,10 @@ export default async function Page({
   }
 
   return (
-    <div className="relative z-[70] flex flex-col gap-medium">
+    <div className="relative flex flex-col gap-medium">
       <nav
         aria-label="Fil d'ariane"
-        className="slideInFromLeft caption -mt-sub-large flex items-center gap-1 px-extra-small text-primary90 mobile-large:gap-extra-small tablet:-mt-0 tablet:px-medium"
+        className="slideInFromLeft caption -mt-large flex items-center gap-1 px-extra-small text-primary90 mobile-large:gap-extra-small tablet:-mt-small tablet:px-medium"
       >
         <Link href="/design-d-espaces">Design d&apos;espaces</Link>
         <Icon path={mdiChevronRight} size={'16px'}></Icon>
@@ -95,7 +94,6 @@ export default async function Page({
       <div className="duration-75">
         <DetailCard project={project}></DetailCard>
       </div>
-      <Footer className="relative mt-medium"></Footer>
     </div>
   );
 }

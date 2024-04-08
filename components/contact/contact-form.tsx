@@ -36,7 +36,7 @@ export default function ContactForm({}: {
     <section className="mx-extra-small flex items-center justify-center pt-small">
       <div className="slideInFromRight glassmorphism-bg flex  w-full flex-col gap-small rounded-small border border-tertiary10 border-opacity-80 p-small text-tertiary90 opacity-0 animation-delay-1000 mobile-large:mx-0   mobile-large:max-w-[90vw] tablet:w-fit tablet:p-medium">
         <form action={formAction} className="flex w-full flex-col gap-sub-medium">
-          <H1 textType={'sub-heading'} className="font-normal">
+          <H1 textType={'sub-heading'} className="">
             Formulaire de contact
           </H1>
 

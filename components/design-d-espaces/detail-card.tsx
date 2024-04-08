@@ -19,7 +19,7 @@ export default function DetailCard({ project }: DetailCardProps) {
   return (
     <section
       className={cn(
-        'relative z-40   w-screen overflow-hidden border-y border-primary90 border-opacity-10 bg-primary1 text-primary99 '
+        'relative z-20   -mb-medium w-screen overflow-hidden border-y border-primary90 border-opacity-10 bg-primary1 text-primary99'
       )}
     >
       <ParallaxBackground
@@ -35,7 +35,7 @@ export default function DetailCard({ project }: DetailCardProps) {
         >
           <div className="relative">
             <H3
-              className=" max-mobile-large:sub-heading relative  left-small top-large font-['Distortion_Dos_Analogue'] text-primary90   "
+              className=" max-mobile-large:sub-heading relative left-small  top-large font-['Distortion_Dos_Analogue'] text-primary90 mobile-large:leading-[2.6rem]   "
               textType={'heading'}
             >
               {project.project_name}
@@ -45,18 +45,15 @@ export default function DetailCard({ project }: DetailCardProps) {
         <div className="absolute -z-10 h-full w-full bg-primary10 bg-opacity-10"></div>
       </div>
       <div className=" flex w-full flex-col gap-sub-large bg-primary1 py-sub-large tablet:px-medium">
-        <P
-          textType={'heading'}
-          className="relative flex flex-wrap justify-between gap-small px-small tablet:px-0 laptop:px-medium"
-        >
-          <span>BUDGET</span>
-          <span className="flex w-full flex-wrap justify-between gap-extra-small mobile-large:gap-medium tablet:w-4/6 tablet:gap-medium tablet:pr-small laptop:w-3/5 laptop:pr-medium">
+        <P className="relative flex flex-wrap justify-between gap-small px-small tablet:px-0 laptop:px-medium">
+          <span className="heading tracking-normal">BUDGET</span>
+          <span className="flex w-full flex-wrap items-center justify-between gap-extra-small pr-small mobile-large:gap-medium tablet:w-4/6 tablet:gap-medium laptop:w-3/5 laptop:pr-medium">
             <strong
               className={cn(
                 ' before:z-20 before:bg-primary10 before:delay-[2s] before:duration-medium '
               )}
             >
-              <span className="sub-heading relative z-30 leading-sub-heading">
+              <span className="body relative z-30 leading-body">
                 RENOVATION {project.information.renovation}K
               </span>
             </strong>
@@ -65,7 +62,7 @@ export default function DetailCard({ project }: DetailCardProps) {
                 ' relative before:z-20 before:rotate-[-1deg] before:bg-primary10 before:delay-[2.2s] before:duration-medium'
               )}
             >
-              <span className="sub-heading relative z-30 leading-sub-heading">
+              <span className="body  relative z-30 leading-body ">
                 HONORAIRES {project.information.honoraires}K
               </span>
             </strong>
@@ -74,14 +71,14 @@ export default function DetailCard({ project }: DetailCardProps) {
                 ' relative before:z-20 before:rotate-[3deg] before:bg-primary10 before:delay-[2.4s] before:duration-medium'
               )}
             >
-              <span className="sub-heading relative z-30 leading-sub-heading">
+              <span className="body relative z-30 leading-body">
                 {project.information.dimension} M²{' '}
               </span>
             </strong>
           </span>
         </P>
         <div className=" flex flex-wrap-reverse justify-around gap-medium tablet:flex-nowrap tablet:gap-small">
-          <P textType={'body'} className="px-small tablet:w-2/3 tablet:px-0 ">
+          <P textType={'body'} className="px-small tracking-normal tablet:w-2/3 tablet:px-0">
             {project.information.description}
             {project.information.description}
             {project.information.description}

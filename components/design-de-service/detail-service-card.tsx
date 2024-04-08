@@ -1,7 +1,6 @@
 import { cn } from '@/lib/utils';
 import SubSection from '../landing/cv-section/sub-section';
 import ParallaxBackground from '../ui/div/parallax-background';
-import Footer from '../ui/footer/footer';
 import H3 from '../ui/text/h3';
 import P from '../ui/text/p';
 import { Project } from './project-service-card';
@@ -14,7 +13,7 @@ export default function DetailServiceCard({ project }: DetailServiceCardProps) {
   return (
     <div
       className={cn(
-        'absolute  top-full z-40   w-screen overflow-hidden border-y border-secondary90 border-opacity-10 bg-secondary1 text-secondary99 '
+        'relative  z-40  -mb-medium  w-screen overflow-hidden border-y border-secondary90 border-opacity-10 bg-secondary1 text-secondary99 '
       )}
     >
       <ParallaxBackground
@@ -30,7 +29,7 @@ export default function DetailServiceCard({ project }: DetailServiceCardProps) {
         >
           <div className="relative">
             <H3
-              className=" max-mobile-large:sub-heading relative  left-small top-large font-['Distortion_Dos_Analogue'] text-secondary90   "
+              className=" max-mobile-large:sub-heading relative left-small  top-large font-['Distortion_Dos_Analogue'] text-primary90 mobile-large:leading-[2.6rem]   "
               textType={'heading'}
             >
               {project.project_name}
@@ -80,7 +79,6 @@ export default function DetailServiceCard({ project }: DetailServiceCardProps) {
               className="relative z-20 ml-small max-h-[40rem] opacity-100 duration-slowest   [&>strong:before]:scale-x-100 [&>strong:before]:delay-500"
               textType="body"
             >
-              {project.information.first}
               {project.information.first}
             </P>
           </SubSection>
@@ -156,7 +154,6 @@ export default function DetailServiceCard({ project }: DetailServiceCardProps) {
           </SubSection>
         </ul>
       </div>
-      <Footer className="relative mt-large"></Footer>
     </div>
   );
 }

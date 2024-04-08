@@ -57,12 +57,12 @@ export default async function Page({
   }
 
   return (
-    <div className=" relative z-[70] flex flex-col gap-medium">
+    <div className=" relative  flex flex-col gap-medium">
       <nav
         aria-label="Fil d'ariane"
-        className="slideInFromLeft caption -mt-sub-large flex items-center gap-1 px-extra-small text-primary90 mobile-large:gap-extra-small tablet:-mt-0 tablet:px-medium"
+        className="slideInFromLeft caption -mt-large flex items-center gap-1 px-extra-small text-primary90 mobile-large:gap-extra-small tablet:-mt-small tablet:px-medium"
       >
-        <Link href="/design-de-service">Design d&apos;espaces</Link>
+        <Link href="/design-de-service">Design de service</Link>
         <Icon path={mdiChevronRight} size={'16px'}></Icon>
         <Link href={`/design-de-service?type=${params.type}`} className="truncate">
           {params.type.charAt(0).toUpperCase() + params.type.slice(1).replace('_', ' ')}

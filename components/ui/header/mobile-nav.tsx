@@ -99,7 +99,7 @@ const MobileNav: FC<NavProps> = ({ className, linkSize, intent, size }: NavProps
       ></Hamburger>
       <div
         className={cn(
-          'top-0 -ml-medium h-[90vh]  w-[106vw] bg-primary1 pl-small duration-700',
+          'top-0 -ml-medium h-[90vh]  w-[107vw] bg-primary1 pl-small duration-700 ',
           'absolute z-[999]',
           showMenu ? 'left-0' : '-left-[1070px] ',
           modalOffset()

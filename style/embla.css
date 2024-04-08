@@ -87,7 +87,7 @@
 .embla__button {
   outline: 0;
   cursor: pointer;
-  background-color: white;
+  
   touch-action: manipulation;
   position: absolute;
   z-index: 1;

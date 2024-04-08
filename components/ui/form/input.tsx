@@ -16,7 +16,6 @@ import { cn } from '@/lib/utils';
 import { VariantProps, cva } from 'class-variance-authority';
 import InputCheckbox from './input/input-checkbox';
 import InputRadio from './input/input-radio';
-import InputSearch from './input/input-search';
 import Select from './input/input-select';
 import InputText from './input/input-text';
 import InputTextArea from './input/input-textarea';
@@ -162,20 +161,6 @@ const Input: FC<InputProps> = forwardRef<HTMLInputElement, InputProps>(
               onChange={onChange as ChangeEventHandler<HTMLInputElement>}
               {...props}
             ></InputCheckbox>
-          );
-        case 'search':
-          return (
-            <InputSearch
-              onChange={onChange as ChangeEventHandler<HTMLInputElement>}
-              className={cn(
-                inputVariants({
-                  className,
-                  intent
-                })
-              )}
-              ref={ref}
-              {...props}
-            ></InputSearch>
           );
       }
     };

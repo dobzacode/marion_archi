@@ -45,7 +45,7 @@ export default function ContactForm({}: {
   });
 
   return (
-    <section className=" mx-extra-small flex h-fit items-center justify-center pt-small ">
+    <section className="mx-extra-small flex h-fit items-center justify-center pt-small max-laptop-large:px-small ">
       <div
         className={cn(
           'slideInFromRight glassmorphism-bg relative flex  w-full flex-col gap-small rounded-small border border-tertiary10 border-opacity-80 p-small text-tertiary90 opacity-0 animation-delay-1000 mobile-large:mx-0   mobile-large:max-w-[90vw] tablet:w-fit tablet:p-medium'

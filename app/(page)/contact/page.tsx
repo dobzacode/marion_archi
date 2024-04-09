@@ -1,6 +1,7 @@
 import BlobBg from '@/components/contact/blob-bg';
 import ContactForm from '@/components/contact/contact-form';
 import RecaptchaProvider from '@/components/providers/recaptcha-provider';
+import Footer from '@/components/ui/footer/footer';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -12,13 +13,14 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <>
-      <main className="relative h-[100vh] max-h-[80vh] w-full  max-tablet:-mt-large  mobile-large:h-[80vh]">
+      <main className="no-scroll relative h-[100vh] max-h-[80vh]  w-full  max-tablet:-mt-large mobile-large:h-[80vh]">
         <RecaptchaProvider>
           <ContactForm></ContactForm>
         </RecaptchaProvider>
 
         <BlobBg></BlobBg>
       </main>
+      <Footer></Footer>
     </>
   );
 }

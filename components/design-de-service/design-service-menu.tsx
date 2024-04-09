@@ -13,7 +13,7 @@ export default function DesignServiceMenu({}) {
   useEffect(() => {
     searchParams.get('type')
       ? setActualType(searchParams.get('type') as string)
-      : setActualType('recherches');
+      : setActualType('projets');
   }, [pathname, searchParams]);
 
   return (

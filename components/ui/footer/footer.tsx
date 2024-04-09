@@ -12,7 +12,7 @@ export default function Footer({ className }: { className?: string }) {
     >
       <P>© 2023 MTONARCHI</P>
       <nav>
-        <ul className="flex w-full justify-around gap-extra-small mobile-large:justify-normal mobile-large:gap-medium [&>li]:backdrop-blur-lg">
+        <ul className="flex w-full justify-around gap-extra-small mobile-large:justify-normal mobile-large:gap-medium ">
           <li>
             <Link href="/legal/confidentialite">
               <span className="hidden mobile-large:block">Politique de confidentialité</span>

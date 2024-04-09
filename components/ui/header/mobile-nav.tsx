@@ -6,7 +6,6 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import React, { FC, useEffect, useState } from 'react';
 import { v4 } from 'uuid';
-import Footer from '../footer/footer';
 import Hamburger from './hamburger';
 import { navLinks } from './nav';
 import NavLink from './nav-link';
@@ -60,7 +59,7 @@ const MobileNav: FC<NavProps> = ({ className, linkSize, intent, size }: NavProps
   }, [showMenu]);
 
   return (
-    <nav className={className}>
+    <nav className={cn(className, showMenu && 'overflo')}>
       <Link href="/" className="relative mb-[3.5rem] h-[10rem] w-[10rem] ">
         <Image
           src="/assets/mtonarchi_logo.png"
@@ -80,13 +79,13 @@ const MobileNav: FC<NavProps> = ({ className, linkSize, intent, size }: NavProps
       ></Hamburger>
       <div
         className={cn(
-          'top-0 -ml-medium h-[90vh]  w-[107vw] bg-primary1 pl-small duration-700 ',
+          'top-0 -ml-medium flex  h-[calc(100vh-52px)] w-[107vw] flex-col bg-primary1 pl-small pt-large duration-700',
           'absolute z-[999]',
           showMenu ? 'left-0' : '-left-[1070px] ',
           modalOffset()
         )}
       >
-        <ul className={'mt-large flex flex-col justify-center  gap-large'}>
+        <ul className={' flex flex-col justify-center  gap-large'}>
           <div className="group relative w-fit duration-slow" key={v4()}>
             <svg
               viewBox="0 0 200 200"
@@ -190,7 +189,6 @@ const MobileNav: FC<NavProps> = ({ className, linkSize, intent, size }: NavProps
             </NavLink>
           </div>
         </ul>
-        <Footer></Footer>
       </div>
     </nav>
   );

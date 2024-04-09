@@ -35,9 +35,9 @@ export default function MenuServiceButton({
     router.push(`${path}?type=${type}`);
   };
 
-  const isTablet = useBetterMediaQuery('(max-width: 768px)');
+  const isTablet = useBetterMediaQuery('(min-width: 768px)');
 
-  return !isTablet ? (
+  return isTablet ? (
     <button
       onClick={handleButtonClick}
       className={cn(

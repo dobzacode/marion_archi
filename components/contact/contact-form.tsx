@@ -58,9 +58,14 @@ export default function ContactForm({}: {
                 Formulaire de contact
               </H1>
               <Popover>
-                <PopoverTrigger onClick={() => setOpenInformation(!openInformation)}>
+                <PopoverTrigger
+                  onClick={() => {
+                    setOpenInformation(!openInformation);
+                  }}
+                >
                   <Icon
-                    className=" animate-bounce"
+                    id="informationButton"
+                    className="animate-bounce"
                     path={!openInformation ? mdiInformation : mdiCloseCircle}
                     size={1.6}
                   ></Icon>

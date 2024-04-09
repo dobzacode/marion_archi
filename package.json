@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "postbuild": "next-sitemap",
     "start": "next start",
     "lint": "next lint",
     "lint-staged": "lint-staged",
@@ -15,6 +16,8 @@
   "dependencies": {
     "@mdi/js": "^7.3.67",
     "@mdi/react": "^1.6.1",
+    "@radix-ui/react-popover": "^1.0.7",
+    "@radix-ui/react-tooltip": "^1.0.7",
     "@tailwindcss/container-queries": "^0.1.1",
     "@tailwindcss/typography": "^0.5.10",
     "class-variance-authority": "^0.7.0",
@@ -25,6 +28,7 @@
     "framer-motion": "^10.16.12",
     "googleapis": "^129.0.0",
     "next": "14.0.3",
+    "next-sitemap": "^4.2.3",
     "prettier": "^3.1.0",
     "react": "^18",
     "react-dom": "^18",
@@ -34,9 +38,7 @@
     "react-transition-group": "^4.4.5",
     "tailwind-merge": "^2.1.0",
     "uuid": "^9.0.1",
-    "yet-another-react-lightbox": "^3.15.6",
-    "@radix-ui/react-popover": "^1.0.7",
-    "@radix-ui/react-tooltip": "^1.0.7"
+    "yet-another-react-lightbox": "^3.15.6"
   },
   "git": {
     "pre-commit": "lint-staged"

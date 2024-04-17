@@ -59,8 +59,8 @@ const MobileNav: FC<NavProps> = ({ className, linkSize, intent, size }: NavProps
   }, [showMenu]);
 
   return (
-    <nav className={cn(className, showMenu && 'overflo')}>
-      <Link href="/" className="relative mb-[3.5rem] h-[10rem] w-[10rem] ">
+    <nav className={cn(className, !showMenu && 'pb-medium')}>
+      <Link href="/" className="relative  h-[10rem] w-[10rem] ">
         <Image
           src="/assets/mtonarchi_logo.png"
           className="object-cover"
@@ -70,10 +70,7 @@ const MobileNav: FC<NavProps> = ({ className, linkSize, intent, size }: NavProps
       </Link>
 
       <Hamburger
-        className={cn(
-          'w-medium pb-small duration-fast hover:scale-105',
-          showMenu && 'e duration-medium '
-        )}
+        className={cn('w-medium duration-fast hover:scale-105', showMenu && 'e duration-medium ')}
         showMenu={showMenu}
         setShowMenu={setShowMenu}
       ></Hamburger>

@@ -6,7 +6,7 @@ import { FC } from 'react';
 const linkVariants = cva('flex items-center text-center', {
   variants: {
     size: {
-      small: 'py-small px-sub-large body leading-body font-medium',
+      small: 'py-small px-sub-large body leading-body font-medium tracking-[0.015em]',
       medium: 'py-small px-medium sub-heading',
       large: 'py-small px-sub-large heading'
     },

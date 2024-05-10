@@ -1,6 +1,6 @@
 import { DesignEspaceWithUrl } from '@/app/(page)/design-d-espaces/page';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
-import React, { useMemo } from 'react';
+import React, { Suspense, useMemo } from 'react';
 import useBetterMediaQuery from '../hooks/use-better-media-query';
 import ProjectCard from './project-card';
 
@@ -78,13 +78,15 @@ const CategoryCard: React.FC<CategoryCardProps> = React.memo(
         <>
           {projectsToShow.map((project, index) => {
             return (
-              <ProjectCard
-                src={project.url}
-                variants={!searchParams.get('project') ? mobileVariants : secondVariants}
-                index={index}
-                key={project._id}
-                {...project}
-              ></ProjectCard>
+              <Suspense>
+                <ProjectCard
+                  src={project.url}
+                  variants={!searchParams.get('project') ? mobileVariants : secondVariants}
+                  index={index}
+                  key={project._id}
+                  {...project}
+                ></ProjectCard>
+              </Suspense>
             );
           })}
         </>
@@ -95,13 +97,15 @@ const CategoryCard: React.FC<CategoryCardProps> = React.memo(
       <>
         {projectsToShow.map((project, index) => {
           return (
-            <ProjectCard
-              src={project.url}
-              variants={!searchParams.get('project') ? variants : secondVariants}
-              index={index}
-              key={project._id}
-              {...project}
-            ></ProjectCard>
+            <Suspense>
+              <ProjectCard
+                src={project.url}
+                variants={!searchParams.get('project') ? variants : secondVariants}
+                index={index}
+                key={project._id}
+                {...project}
+              ></ProjectCard>
+            </Suspense>
           );
         })}
       </>

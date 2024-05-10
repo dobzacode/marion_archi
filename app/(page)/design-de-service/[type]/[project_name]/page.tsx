@@ -1,13 +1,15 @@
 import DetailServiceCard from '@/components/design-de-service/detail-service-card';
-import { Project } from '@/components/design-de-service/project-service-card';
 import P from '@/components/ui/text/p';
 import projets from '@/lib/design-de-service/projets.json';
 import recherches from '@/lib/design-de-service/recherches.json';
 
-import { encodeUrl } from '@/lib/utils';
+import { sanityFetch } from '@/sanity/lib/fetch';
+import { DesignServiceUnitQueryResponse } from '@/sanity/lib/queries';
 import { mdiChevronRight } from '@mdi/js';
 import Icon from '@mdi/react';
 import { Metadata } from 'next';
+import { groq } from 'next-sanity';
+import { draftMode } from 'next/headers';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
@@ -35,22 +37,11 @@ export default async function Page({
     project_name: string;
   };
 }) {
-  let project: Project | undefined;
-
-  console.log(params.project_name);
-
-  switch (params.type) {
-    case 'projets':
-      project = projets.find((project) => params.project_name === encodeUrl(project.project_name));
-      break;
-    case 'recherches':
-      project = recherches.find(
-        (project) => params.project_name === encodeUrl(project.project_name)
-      );
-      break;
-  }
-
-  console.log(project);
+  const project = await sanityFetch<DesignServiceUnitQueryResponse>({
+    query: groq`*[_type == "designService" && (titre === ${params.project_name})]`,
+    stega: draftMode().isEnabled,
+    perspective: draftMode().isEnabled ? 'previewDrafts' : 'published'
+  });
 
   if (!project) {
     return notFound();
@@ -68,7 +59,7 @@ export default async function Page({
           {params.type.charAt(0).toUpperCase() + params.type.slice(1).replace('_', ' ')}
         </Link>
         <Icon path={mdiChevronRight} size={'16px'}></Icon>
-        <P className="truncate">{project.project_name}</P>
+        <P className="truncate">{project.titre}</P>
       </nav>
       <div className="duration-75">
         <DetailServiceCard project={project}></DetailServiceCard>

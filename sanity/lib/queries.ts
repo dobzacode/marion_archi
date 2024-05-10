@@ -55,3 +55,5 @@ export const DESIGNSERVICE_QUERY = groq`*[_type == "designService"]`;
 export type DesignEspaceQueryResponse = DesignEspace[] | null;
 
 export type DesignServiceQueryResponse = DesignService[] | null;
+
+export type DesignServiceUnitQueryResponse = DesignService | null;

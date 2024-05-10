@@ -1,14 +1,17 @@
 import DetailCard from '@/components/design-d-espaces/detail-card';
-import { Project } from '@/components/design-d-espaces/project-card';
+
 import P from '@/components/ui/text/p';
 import architecture from '@/lib/design-d-espaces/architecture.json';
 import architecture_interieurs from '@/lib/design-d-espaces/architecture_interieurs.json';
 import architecture_retail from '@/lib/design-d-espaces/architecture_retail.json';
 import architecture_tertiaire from '@/lib/design-d-espaces/architecture_tertiaire.json';
-import { encodeUrl } from '@/lib/utils';
+import { sanityFetch } from '@/sanity/lib/fetch';
+import { DesignServiceUnitQueryResponse } from '@/sanity/lib/queries';
 import { mdiChevronRight } from '@mdi/js';
 import Icon from '@mdi/react';
 import { Metadata } from 'next';
+import { groq } from 'next-sanity';
+import { draftMode } from 'next/headers';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
@@ -41,33 +44,11 @@ export default async function Page({
     project_name: string;
   };
 }) {
-  let project: Project | undefined;
-
-  switch (params.type) {
-    case 'architecture':
-      project = architecture.find(
-        (project) => params.project_name === encodeUrl(project.project_name)
-      );
-      break;
-    case 'architecture_interieurs':
-      project = architecture_interieurs.find(
-        (project) => params.project_name === encodeUrl(project.project_name)
-      );
-      break;
-    case 'architecture_retail':
-      project = architecture_retail.find(
-        (project) => params.project_name === encodeUrl(project.project_name)
-      );
-      break;
-    case 'architecture_tertiaire':
-      project = architecture_tertiaire.find(
-        (project) => params.project_name === encodeUrl(project.project_name)
-      );
-      break;
-    default:
-      // Gérer le cas où le type n'est pas reconnu
-      break;
-  }
+  const project = await sanityFetch<DesignServiceUnitQueryResponse>({
+    query: groq`*[_type == "designService" && (titre === ${params.project_name})]`,
+    stega: draftMode().isEnabled,
+    perspective: draftMode().isEnabled ? 'previewDrafts' : 'published'
+  });
 
   if (!project) {
     return notFound();
@@ -85,7 +66,7 @@ export default async function Page({
           {params.type.charAt(0).toUpperCase() + params.type.slice(1).replace('_', ' ')}
         </Link>
         <Icon path={mdiChevronRight} size={'16px'}></Icon>
-        <P className="truncate">{project.project_name}</P>
+        <P className="truncate">{project.titre}</P>
       </nav>
       <div className="duration-75">
         <DetailCard project={project}></DetailCard>

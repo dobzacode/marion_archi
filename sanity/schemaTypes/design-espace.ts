@@ -17,8 +17,8 @@ export default defineType({
       validation: (Rule) => Rule.required().warning(`L'image est obligatoire`)
     }),
     defineField({
-      name: 'titre',
-      title: 'Titre',
+      name: 'category',
+      title: 'Catégorie',
       type: 'string',
       group: 'contenu',
       options: {

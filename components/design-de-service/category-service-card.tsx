@@ -1,3 +1,5 @@
+'use client';
+
 import { DesignServiceWithUrl } from '@/app/(page)/design-de-service/page';
 import React, { Suspense, useMemo } from 'react';
 import useBetterMediaQuery from '../hooks/use-better-media-query';

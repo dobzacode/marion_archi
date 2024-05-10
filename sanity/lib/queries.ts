@@ -1,4 +1,4 @@
-import { groq } from 'next-sanity';
+import { groq, PortableTextBlock } from 'next-sanity';
 
 export interface DesignEspace {
   _id: string;
@@ -13,7 +13,7 @@ export interface DesignEspace {
   renovation: string;
   honoraire: string;
   squareMeter: number;
-  description: string;
+  description: PortableTextBlock[];
   imageGallery: Image[];
 }
 
@@ -36,7 +36,7 @@ export interface DesignService {
   renovation: string;
   honoraire: string;
   squareMeter: number;
-  description: string;
+  description: PortableTextBlock[];
   imageGallery: Image[];
 }
 
@@ -58,4 +58,4 @@ export type DesignServiceQueryResponse = DesignService[] | null;
 
 export type DesignServiceUnitQueryResponse = DesignService | null;
 
-export type DesignEspaceUnitQueryResponse = DesignService | null;
+export type DesignEspaceUnitQueryResponse = DesignEspace | null;

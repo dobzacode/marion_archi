@@ -1,7 +1,7 @@
 'use client';
 
 import { usePathname, useSearchParams } from 'next/navigation';
-import { Suspense, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import { DesignServiceWithUrl } from '@/app/(page)/design-de-service/page';
 import { AnimatePresence } from 'framer-motion';
@@ -25,36 +25,34 @@ export default function ContentServiceSection({
     <section>
       <ul key="projectList" className="relative flex flex-wrap ">
         <AnimatePresence mode="wait">
-          <Suspense>
-            {actualType === 'projets' && (
-              <CategoryCard
-                key="projets"
-                projectsToShow={designServiceArr?.filter((item) => {
+          {actualType === 'projets' && (
+            <CategoryCard
+              key="projets"
+              projectsToShow={designServiceArr?.filter((item) => {
+                return item.category === 'projets';
+              })}
+              arrLength={
+                designServiceArr?.filter((item) => {
                   return item.category === 'projets';
-                })}
-                arrLength={
-                  designServiceArr?.filter((item) => {
-                    return item.category === 'projets';
-                  }).length ?? 0
-                }
-                actualType={actualType}
-              />
-            )}
-            {actualType === 'recherches' && (
-              <CategoryCard
-                key="recherches"
-                projectsToShow={designServiceArr?.filter((item) => {
+                }).length ?? 0
+              }
+              actualType={actualType}
+            />
+          )}
+          {actualType === 'recherches' && (
+            <CategoryCard
+              key="recherches"
+              projectsToShow={designServiceArr?.filter((item) => {
+                return item.category === 'recherches';
+              })}
+              arrLength={
+                designServiceArr?.filter((item) => {
                   return item.category === 'recherches';
-                })}
-                arrLength={
-                  designServiceArr?.filter((item) => {
-                    return item.category === 'recherches';
-                  }).length ?? 0
-                }
-                actualType={actualType}
-              />
-            )}
-          </Suspense>
+                }).length ?? 0
+              }
+              actualType={actualType}
+            />
+          )}
         </AnimatePresence>
       </ul>
     </section>

@@ -39,7 +39,7 @@ const Nav: FC<NavProps> = ({ className, linkSize, intent }) => {
     <nav className={className}>
       <Link
         href="/"
-        className="relative mb-[4.4rem] h-[13rem] w-[13rem] laptop-large:mb-[5.6rem] laptop-large:h-[18rem] laptop-large:w-[18rem] "
+        className="relative mb-[2.75rem] h-[8.125rem] w-[8.125rem] laptop-large:mb-[3.5rem] laptop-large:h-[11.25rem] laptop-large:w-[11.25rem] "
       >
         <Image
           src="/assets/mtonarchi_logo.png"

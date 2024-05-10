@@ -2,7 +2,6 @@ import { cn } from '@/lib/utils';
 import { EmblaOptionsType } from 'embla-carousel';
 import Image from 'next/image';
 import EmblaCarousel from '../ui/div/carousel/embla-carousel';
-import ParallaxBackground from '../ui/div/parallax-background';
 import H3 from '../ui/text/h3';
 import P from '../ui/text/p';
 import { Project } from './project-card';
@@ -19,31 +18,16 @@ export default function DetailCard({ project }: DetailCardProps) {
   return (
     <section
       className={cn(
-        'relative z-20   -mb-medium w-screen overflow-hidden border-y border-primary90 border-opacity-10 bg-primary1 text-primary99'
+        'relative z-20  mx-auto -mb-medium w-full overflow-hidden border-y border-primary90 border-opacity-10 bg-primary1 text-primary99 laptop:max-w-[1000px]'
       )}
     >
-      <ParallaxBackground
-        className="  -z-20 object-cover object-top tablet:h-1/4 laptop:h-1/2"
-        src="/assets/architecture_interieurs/INTERIEUR/banner-interieur.jpg"
-        alt={`${project.project_name} picture`}
-      ></ParallaxBackground>
-
-      <div className="relative h-[30rem] w-screen overflow-hidden laptop:h-[40rem]">
-        <div
-          className={`
-              absolute top-0 w-[30rem] -rotate-12 items-center justify-center mobile-large:w-[40rem]`}
-        >
-          <div className="relative">
-            <H3
-              className=" max-mobile-large:sub-heading relative left-small  top-large font-['Distortion_Dos_Analogue'] text-primary90 mobile-large:leading-[2.6rem]   "
-              textType={'heading'}
-            >
-              {project.project_name}
-            </H3>
-          </div>
-        </div>
-        <div className="absolute -z-10 h-full w-full bg-primary10 bg-opacity-10"></div>
-      </div>
+      <H3
+        className=" max-mobile-large:sub-heading relative left-small  top-large font-['Distortion_Dos_Analogue'] text-primary90 mobile-large:leading-[1.625rem]   "
+        textType={'heading'}
+      >
+        {project.project_name}
+      </H3>
+       x
       <div className=" flex w-full flex-col gap-sub-large bg-primary1 py-sub-large tablet:px-medium">
         <P className="relative flex flex-wrap justify-between gap-small px-small tablet:px-0 laptop:px-medium">
           <span className="heading tracking-normal">BUDGET</span>
@@ -83,7 +67,7 @@ export default function DetailCard({ project }: DetailCardProps) {
             {project.information.description}
             {project.information.description}
           </P>
-          <div className="relative h-[40rem] w-full overflow-hidden tablet:w-[55rem] tablet:rounded-small">
+          <div className="relative h-[25rem] w-full overflow-hidden tablet:w-[34.375rem] tablet:rounded-extra-small">
             <Image
               src={'/assets/architecture_interieurs/INTERIEUR/schema.jpg'}
               alt={`${project.project_name} schéma`}

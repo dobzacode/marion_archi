@@ -74,10 +74,10 @@ export default async function Page({
   }
 
   return (
-    <div className="relative flex flex-col gap-medium">
+    <div className="container relative mx-auto flex flex-col items-center gap-medium laptop:max-w-[1000px]">
       <nav
         aria-label="Fil d'ariane"
-        className="slideInFromLeft caption -mt-large flex items-center gap-1 px-extra-small text-primary90 mobile-large:gap-extra-small tablet:-mt-small tablet:px-medium"
+        className="slideInFromLeft caption -mt-large flex items-center gap-1 self-start px-extra-small text-primary90 mobile-large:gap-extra-small tablet:-mt-small tablet:px-medium"
       >
         <Link href="/design-d-espaces">Design d&apos;espaces</Link>
         <Icon path={mdiChevronRight} size={'16px'}></Icon>

@@ -6,4 +6,3 @@ import designService from './schemaTypes/design-service';
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [blockContent, designEspace, designService]
 };
-('');

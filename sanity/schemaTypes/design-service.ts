@@ -47,35 +47,35 @@ export default defineType({
     }),
 
     defineField({
-      name: 'problematiques_enjeux',
+      name: 'problematiquesEnjeux',
       title: 'Problématiques et enjeux',
       type: 'blockContent',
       group: 'contenu',
       validation: (Rule) => Rule.required().warning(`Le champ est obligatoire`)
     }),
     defineField({
-      name: 'mediations_comptages',
+      name: 'mediationsComptages',
       title: 'Médiations et comptages',
       type: 'blockContent',
       group: 'contenu',
       validation: (Rule) => Rule.required().warning(`Le champ est obligatoire`)
     }),
     defineField({
-      name: 'prototypes_actions',
+      name: 'prototypesActions',
       title: 'Prototypes et actions',
       type: 'blockContent',
       group: 'contenu',
       validation: (Rule) => Rule.required().warning(`Le champ est obligatoire`)
     }),
     defineField({
-      name: 'echanges_entretiens_dialogues',
+      name: 'echangesEntretiensDialogues',
       title: 'Echanges / entretiens et dialogues',
       type: 'blockContent',
       group: 'contenu',
       validation: (Rule) => Rule.required().warning(`Le champ est obligatoire`)
     }),
     defineField({
-      name: 'diffusion_restitution ',
+      name: 'diffusionRestitution ',
       title: 'Diffusion et restitution',
       type: 'blockContent',
       group: 'contenu',

@@ -27,11 +27,11 @@ export interface DesignService {
   category: 'projets' | 'recherches';
   titre: string;
   nom: string;
-  problematiques_enjeux: string;
-  mediations_comptages: string;
-  prototypes_actions: string;
-  echanges_entretiens_dialogues: string;
-  diffusion_restitution: string;
+  problematiquesEnjeux: string;
+  mediationsComptages: string;
+  prototypesActions: string;
+  echangesEntretiens_dialogues: string;
+  diffusionRestitution: string;
   mainImage: Image;
   renovation: string;
   honoraire: string;

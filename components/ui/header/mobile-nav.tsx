@@ -60,7 +60,7 @@ const MobileNav: FC<NavProps> = ({ className, linkSize, intent, size }: NavProps
 
   return (
     <nav className={cn(className, 'pb-medium')}>
-      <Link href="/" className="relative  h-[10rem] w-[10rem] ">
+      <Link href="/" className="relative  h-[6.25em] w-[6.25em] ">
         <Image
           src="/assets/mtonarchi_logo.png"
           className="object-cover"

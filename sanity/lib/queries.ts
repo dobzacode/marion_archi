@@ -7,6 +7,7 @@ export interface DesignEspace {
   _updatedAt: string;
   _rev: string;
   date?: string;
+  category: 'tertiaire' | 'retail' | 'interieur' | 'architecture';
   titre: string;
   mainImage: Image;
   renovation: string;
@@ -23,6 +24,7 @@ export interface DesignService {
   _updatedAt: string;
   _rev: string;
   date?: string;
+  category: 'projets' | 'recherches';
   titre: string;
   nom: string;
   problematiques_enjeux: string;

@@ -17,6 +17,19 @@ export default defineType({
       validation: (Rule) => Rule.required().warning(`L'image est obligatoire`)
     }),
     defineField({
+      name: 'category',
+      title: 'Catégorie',
+      type: 'string',
+      group: 'contenu',
+      options: {
+        list: [
+          { title: 'Projets', value: 'projets' },
+          { title: 'Recherches', value: 'recherches' }
+        ]
+      },
+      validation: (Rule) => Rule.required().warning(`La catégorie du projet est requise`)
+    }),
+    defineField({
       name: 'titre',
       title: 'Titre',
       type: 'string',

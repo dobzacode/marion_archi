@@ -21,6 +21,21 @@ export default defineType({
       title: 'Titre',
       type: 'string',
       group: 'contenu',
+      options: {
+        list: [
+          { title: "Architecture d'interieur", value: 'interieur' },
+          { title: 'Architecture retail', value: 'retail' },
+          { title: 'Architecture espaces de travail tertiaires', value: 'tertiaire' },
+          { title: 'Architecture', value: 'architecture' }
+        ]
+      },
+      validation: (Rule) => Rule.required().warning(`La catégorie est requise`)
+    }),
+    defineField({
+      name: 'titre',
+      title: 'Titre',
+      type: 'string',
+      group: 'contenu',
       validation: (Rule) =>
         Rule.max(100).required().warning(`Le titre du projet ne doit pas dépasser 100 caractères`)
     }),

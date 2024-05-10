@@ -7,7 +7,7 @@
 
 @layer components {
   .heading--extra-large {
-    @apply font-['Distortion_Dos_Analogue'] text-heading-sub-large font-normal  leading-heading-sub-extra-large mobile-large:text-[6.6rem] min-[600px]:text-[8rem] min-[860px]:text-heading-extra-large min-[860px]:leading-heading-extra-large;
+    @apply font-['Distortion_Dos_Analogue'] text-heading-sub-large font-normal  leading-heading-sub-extra-large mobile-large:text-[4.125rem] min-[600px]:text-[5rem] min-[860px]:text-heading-extra-large min-[860px]:leading-heading-extra-large;
   }
 
   .heading--sub-extra-large {
@@ -23,7 +23,7 @@
   }
 
   .heading {
-    @apply text-heading leading-heading tracking-[0.12em];
+    @apply text-heading leading-heading tracking-[0.075em];
   }
 
   .sub-heading {
@@ -31,7 +31,7 @@
   }
 
   .body {
-    @apply text-body font-normal leading-[2rem] tracking-[0.05em];
+    @apply text-body font-normal leading-[1.25rem] tracking-[0.03125em];
   }
 
   .caption {
@@ -267,7 +267,7 @@
 }
 
 html {
-  font-size: 62.5%;
+  font-size: 100%;
   font-family: Roboto;
 }
 

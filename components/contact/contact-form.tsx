@@ -67,11 +67,11 @@ export default function ContactForm({}: {
                     id="informationButton"
                     className="animate-bounce"
                     path={!openInformation ? mdiInformation : mdiCloseCircle}
-                    size={1.6}
+                    size={1}
                   ></Icon>
                 </PopoverTrigger>
                 <PopoverContent side="right">
-                  <p className="body w-[16rem] break-words">
+                  <p className="body w-[10rem] break-words">
                     Tu as aussi la possibilité de me contacter au 0635336011 ou à l&apos;adresse
                     mail mtonarchi.contact@gmail.com !
                   </p>

@@ -75,7 +75,7 @@ export default function DesignDeServiceTitleBlock({ className }: { className: st
 
   return (
     <div ref={ref} className={className}>
-      <div className="relative h-fit max-[1298px]:-translate-x-[50%] max-[1298px]:translate-y-10 max-laptop:-translate-y-[0vw] max-laptop:translate-x-[-15vw] max-tablet:-translate-y-16  max-tablet:translate-x-10 max-mobile-large:w-[40rem] max-mobile-large:-translate-y-20 max-mobile-large:translate-x-10">
+      <div className="relative h-fit max-[1298px]:-translate-x-[50%] max-[1298px]:translate-y-10 max-laptop:-translate-y-[0vw] max-laptop:translate-x-[-15vw] max-tablet:-translate-y-16  max-tablet:translate-x-10 max-mobile-large:w-[25rem] max-mobile-large:-translate-y-20 max-mobile-large:translate-x-10">
         <motion.svg
           viewBox="0 0 200 200"
           xmlns="http://www.w3.org/2000/svg"
@@ -110,7 +110,7 @@ export default function DesignDeServiceTitleBlock({ className }: { className: st
             <strong className="before:bg-tertiary20">Résidence design</strong>
           </P>
           <P
-            className="absolute -bottom-small -top-[170px] right-[300px] z-20 -rotate-[12deg] text-tertiary80 duration-slowest max-mobile-medium:-top-[170px] max-mobile-medium:right-[320px]  max-mobile-medium:w-[10rem] mobile-medium:whitespace-nowrap"
+            className="absolute -bottom-small -top-[170px] right-[300px] z-20 -rotate-[12deg] text-tertiary80 duration-slowest max-mobile-medium:-top-[170px] max-mobile-medium:right-[320px]  max-mobile-medium:w-[6.25rem] mobile-medium:whitespace-nowrap"
             textType="body"
           >
             <strong className="before:bg-tertiary20">Co-construction</strong>
@@ -156,7 +156,7 @@ export default function DesignDeServiceTitleBlock({ className }: { className: st
       <div className="relative z-50 max-mobile-large:-translate-y-10 max-mobile-medium:-translate-y-2">
         <motion.div
           {...mainDivVariants}
-          className="relative h-[25rem] max-mobile-large:-mt-medium max-mobile-large:mb-small"
+          className="relative h-[15.625rem] max-mobile-large:-mt-medium max-mobile-large:mb-small"
         >
           <H3
             className=" relative z-50 -rotate-12 font-['Distortion_Dos_Analogue']  text-tertiary1 max-mobile-large:translate-x-10 max-mobile-large:translate-y-12 "

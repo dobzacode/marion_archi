@@ -6,7 +6,7 @@ import DesignDeServiceTitleBlock from './design-de-service-title-block';
 export default function DesignDeServiceSection() {
   return (
     <section className="flex w-full translate-x-20 flex-row-reverse flex-wrap-reverse justify-center gap-extra-large px-[10px] py-extra-large max-laptop:mt-large max-tablet:-mt-large max-tablet:gap-extra-large tablet:gap-small">
-      <ol className="-mt-sub-large flex w-[80rem] flex-col items-center gap-large  max-[1298px]:mt-extra-large max-laptop:-translate-x-20 tablet:px-large laptop:gap-extra-large  min-[1298px]:translate-x-[15%]">
+      <ol className="-mt-sub-large flex w-[50rem] flex-col items-center gap-large  max-[1298px]:mt-extra-large max-laptop:-translate-x-20 tablet:px-large laptop:gap-extra-large  min-[1298px]:translate-x-[15%]">
         <SubSection
           direction={'right'}
           custom={0}
@@ -18,7 +18,7 @@ export default function DesignDeServiceSection() {
             viewBox="0 0 200 200"
             xmlns="http://www.w3.org/2000/svg"
             className={cn(
-              'pointer-events-none absolute z-10 w-[70rem] -translate-y-1/2 overflow-visible fill-tertiary1  duration-slow group-hover:translate-x-0 group-hover:fill-tertiary10 max-laptop:hidden max-laptop:fill-tertiary10 tablet:w-auto laptop:-translate-x-[-150%]'
+              'pointer-events-none absolute z-10 w-[43.75rem] -translate-y-1/2 overflow-visible fill-tertiary1  duration-slow group-hover:translate-x-0 group-hover:fill-tertiary10 max-laptop:hidden max-laptop:fill-tertiary10 tablet:w-auto laptop:-translate-x-[-150%]'
             )}
           >
             <path
@@ -29,7 +29,7 @@ export default function DesignDeServiceSection() {
             />
           </svg>
           <P
-            className="relative z-20 ml-small duration-slowest group-hover:max-h-[40rem] group-hover:opacity-100 laptop:max-h-0 laptop:opacity-0 group-hover:[&>strong:before]:scale-x-100 group-hover:[&>strong:before]:delay-500"
+            className="relative z-20 ml-small duration-slowest group-hover:max-h-[25rem] group-hover:opacity-100 laptop:max-h-0 laptop:opacity-0 group-hover:[&>strong:before]:scale-x-100 group-hover:[&>strong:before]:delay-500"
             textType="body"
           >
             <strong className="before:duration-medium max-laptop:before:bg-tertiary20 laptop:before:scale-x-0 laptop:before:bg-tertiary20 ">
@@ -71,7 +71,7 @@ export default function DesignDeServiceSection() {
             viewBox="0 0 200 200"
             xmlns="http://www.w3.org/2000/svg"
             className={cn(
-              'pointer-events-none absolute  z-10 w-[70rem] -translate-y-1/2 overflow-visible fill-tertiary1 transition-all duration-slow group-hover:translate-x-0 group-hover:fill-tertiary10 max-laptop:hidden max-laptop:fill-tertiary10 tablet:w-auto laptop:-translate-x-[-150%]'
+              'pointer-events-none absolute  z-10 w-[43.75rem] -translate-y-1/2 overflow-visible fill-tertiary1 transition-all duration-slow group-hover:translate-x-0 group-hover:fill-tertiary10 max-laptop:hidden max-laptop:fill-tertiary10 tablet:w-auto laptop:-translate-x-[-150%]'
             )}
           >
             <path
@@ -82,7 +82,7 @@ export default function DesignDeServiceSection() {
             />
           </svg>
           <P
-            className="relative  z-20 ml-small duration-slowest  group-hover:max-h-[40rem] group-hover:opacity-100 laptop:max-h-0 laptop:opacity-0 group-hover:[&>strong:before]:scale-x-100 group-hover:[&>strong:before]:delay-500"
+            className="relative  z-20 ml-small duration-slowest  group-hover:max-h-[25rem] group-hover:opacity-100 laptop:max-h-0 laptop:opacity-0 group-hover:[&>strong:before]:scale-x-100 group-hover:[&>strong:before]:delay-500"
             textType="body"
           >
             <strong className="before:duration-medium max-laptop:before:bg-tertiary20 laptop:before:scale-x-0 laptop:before:bg-tertiary20 ">
@@ -123,7 +123,7 @@ export default function DesignDeServiceSection() {
           </P>
         </SubSection>
       </ol>
-      <DesignDeServiceTitleBlock className="laptop relative flex w-[40rem] flex-col pt-[210px] max-[1298px]:-translate-x-[24%] max-laptop:-translate-x-10 max-tablet:-translate-x-10"></DesignDeServiceTitleBlock>
+      <DesignDeServiceTitleBlock className="laptop relative flex w-[25rem] flex-col pt-[210px] max-[1298px]:-translate-x-[24%] max-laptop:-translate-x-10 max-tablet:-translate-x-10"></DesignDeServiceTitleBlock>
     </section>
   );
 }

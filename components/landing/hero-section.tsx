@@ -4,8 +4,8 @@ import H3 from '../ui/text/h3';
 
 export default function HeroSection() {
   return (
-    <section className=" flex w-full justify-between pt-large max-[1298px]:flex-row-reverse max-[700px]:pt-extra-large tablet:h-[68rem] tablet:px-small laptop:gap-extra-large min-[1298px]:-translate-x-[5%]">
-      <div className=" absolute right-0 z-10 w-[100rem] -translate-y-[10%] scale-90 max-[1298px]:w-[80rem] max-[1298px]:translate-x-[10%] max-laptop:translate-x-[20%] max-laptop:scale-90 max-tablet:top-[6%] max-tablet:-translate-y-[12%] max-tablet:scale-[83%] max-[700px]:mt-large max-[680px]:-translate-y-[22%] max-mobile-large:-left-[230px] max-[500px]:w-[70rem] min-[1298px]:right-[35vw] min-[1298px]:top-[22%]">
+    <section className=" flex w-full justify-between pt-large max-[1298px]:flex-row-reverse max-[700px]:pt-extra-large tablet:h-[42.5rem] tablet:px-small laptop:gap-extra-large min-[1298px]:-translate-x-[5%]">
+      <div className=" absolute right-0 z-10 w-[62.5rem] -translate-y-[10%] scale-90 max-[1298px]:w-[50rem] max-[1298px]:translate-x-[10%] max-laptop:translate-x-[20%] max-laptop:scale-90 max-tablet:top-[6%] max-tablet:-translate-y-[12%] max-tablet:scale-[83%] max-[700px]:mt-large max-[680px]:-translate-y-[22%] max-mobile-large:-left-[230px] max-[500px]:w-[43.75rem] min-[1298px]:right-[35vw] min-[1298px]:top-[22%]">
         <svg
           className=" fade  lapto relative z-10 w-fit  overflow-visible    fill-primary10 transition-all  duration-slow group-hover:fill-primary20"
           viewBox="-10 0 130 100"
@@ -19,10 +19,10 @@ export default function HeroSection() {
 
         <Avatar className="animate-draw absolute top-0 z-40 w-full  overflow-visible [&>*]:stroke-primary80  [&>.cls-3]:fill-none"></Avatar>
       </div>
-      <div className="laptop:w-[100rem]"></div>
+      <div className="laptop:w-[62.5rem]"></div>
       <div className="relative z-10 flex flex-col gap-small pt-extra-large max-[1298px]:translate-x-[20%] max-[1298px]:translate-y-[30%] max-[1150px]:translate-x-[10%] max-laptop:translate-x-0 tablet:pt-extra-large">
         <H2
-          className="slideInFromRight  relative leading-[10rem]  opacity-0 animation-delay-[3s] max-[860px]:leading-[6rem] max-[651px]:leading-[6.6rem] max-[600px]:leading-[5.6rem] max-mobile-large:leading-[4rem]"
+          className="slideInFromRight  relative leading-[6.25rem]  opacity-0 animation-delay-[3s] max-[860px]:leading-[3.75rem] max-[651px]:leading-[4.125rem] max-[600px]:leading-[3.5rem] max-mobile-large:leading-[2.5rem]"
           textType="heading--extra-large"
         >
           MARION DELEERSNYDER

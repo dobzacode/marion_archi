@@ -70,7 +70,7 @@ export default function DesignEspaceTitleBlock({ className }: { className: strin
 
   return (
     <div ref={ref} className={className}>
-      <div className="relative h-fit  max-[1298px]:-translate-x-[50%] max-[1298px]:-translate-y-16 max-laptop:-translate-y-[10vw] max-laptop:translate-x-[-15vw] max-tablet:-translate-y-16  max-tablet:translate-x-10 max-mobile-large:w-[40rem] max-mobile-large:-translate-y-10 max-mobile-large:translate-x-32">
+      <div className="relative h-fit  max-[1298px]:-translate-x-[50%] max-[1298px]:-translate-y-16 max-laptop:-translate-y-[10vw] max-laptop:translate-x-[-15vw] max-tablet:-translate-y-16  max-tablet:translate-x-10 max-mobile-large:w-[25rem] max-mobile-large:-translate-y-10 max-mobile-large:translate-x-32">
         <motion.svg
           viewBox="0 0 200 200"
           xmlns="http://www.w3.org/2000/svg"
@@ -138,7 +138,7 @@ export default function DesignEspaceTitleBlock({ className }: { className: strin
       </div>
       <motion.div
         {...mainDivVariants}
-        className="relative h-[25rem] max-mobile-large:-mt-medium max-mobile-large:mb-small"
+        className="relative h-[15.625rem] max-mobile-large:-mt-medium max-mobile-large:mb-small"
       >
         <H3
           className=" relative z-50 -rotate-12 font-['Distortion_Dos_Analogue']  text-tertiary1 max-mobile-large:translate-x-28 max-mobile-large:translate-y-28 max-mobile-large:rotate-2"

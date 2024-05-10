@@ -5,8 +5,8 @@ import DesignEspaceTitleBlock from './design-espace-title-block';
 
 export default function DesignEspaceSection() {
   return (
-    <section className="flex w-full  flex-wrap-reverse justify-center gap-extra-large px-[10px] py-extra-large max-laptop:mt-large max-tablet:-mt-large max-tablet:pb-[20rem] tablet:gap-small">
-      <ol className="-mt-sub-large flex w-[80rem] flex-col items-center gap-large max-[1298px]:mt-extra-large tablet:px-large  laptop:gap-extra-large">
+    <section className="flex w-full  flex-wrap-reverse justify-center gap-extra-large px-[10px] py-extra-large max-laptop:mt-large max-tablet:-mt-large max-tablet:pb-[12.5rem] tablet:gap-small">
+      <ol className="-mt-sub-large flex w-[50rem] flex-col items-center gap-large max-[1298px]:mt-extra-large tablet:px-large  laptop:gap-extra-large">
         <SubSection
           custom={0}
           title="ARCHITECTURE INTERIEURS"
@@ -17,7 +17,7 @@ export default function DesignEspaceSection() {
             viewBox="0 0 200 200"
             xmlns="http://www.w3.org/2000/svg"
             className={cn(
-              'pointer-events-none absolute z-10 w-[70rem] -translate-y-1/2 overflow-visible fill-tertiary1  duration-slow group-hover:translate-x-0 group-hover:fill-tertiary10 max-laptop:hidden max-laptop:fill-tertiary10 tablet:w-auto laptop:-translate-x-[150%]'
+              'pointer-events-none absolute z-10 w-[43.75rem] -translate-y-1/2 overflow-visible fill-tertiary1  duration-slow group-hover:translate-x-0 group-hover:fill-tertiary10 max-laptop:hidden max-laptop:fill-tertiary10 tablet:w-auto laptop:-translate-x-[150%]'
             )}
           >
             <path
@@ -28,7 +28,7 @@ export default function DesignEspaceSection() {
             />
           </svg>
           <P
-            className="relative z-20 ml-small duration-slowest group-hover:max-h-[40rem] group-hover:opacity-100 laptop:max-h-0 laptop:opacity-0 group-hover:[&>strong:before]:scale-x-100 group-hover:[&>strong:before]:delay-500"
+            className="relative z-20 ml-small duration-slowest group-hover:max-h-[25rem] group-hover:opacity-100 laptop:max-h-0 laptop:opacity-0 group-hover:[&>strong:before]:scale-x-100 group-hover:[&>strong:before]:delay-500"
             textType="body"
           >
             <strong className="before:duration-medium max-laptop:before:bg-tertiary20 laptop:before:scale-x-0 laptop:before:bg-tertiary20 ">
@@ -56,7 +56,7 @@ export default function DesignEspaceSection() {
             viewBox="0 0 200 200"
             xmlns="http://www.w3.org/2000/svg"
             className={cn(
-              'pointer-events-none absolute  z-10 w-[70rem] -translate-y-1/2 overflow-visible fill-tertiary1 transition-all duration-slow group-hover:translate-x-0 group-hover:fill-tertiary10 max-laptop:hidden max-laptop:fill-tertiary10 tablet:w-auto laptop:-translate-x-[150%]'
+              'pointer-events-none absolute  z-10 w-[43.75rem] -translate-y-1/2 overflow-visible fill-tertiary1 transition-all duration-slow group-hover:translate-x-0 group-hover:fill-tertiary10 max-laptop:hidden max-laptop:fill-tertiary10 tablet:w-auto laptop:-translate-x-[150%]'
             )}
           >
             <path
@@ -67,7 +67,7 @@ export default function DesignEspaceSection() {
             />
           </svg>
           <P
-            className="relative  z-20 ml-small duration-slowest  group-hover:max-h-[40rem] group-hover:opacity-100 laptop:max-h-0 laptop:opacity-0 group-hover:[&>strong:before]:scale-x-100 group-hover:[&>strong:before]:delay-500"
+            className="relative  z-20 ml-small duration-slowest  group-hover:max-h-[25rem] group-hover:opacity-100 laptop:max-h-0 laptop:opacity-0 group-hover:[&>strong:before]:scale-x-100 group-hover:[&>strong:before]:delay-500"
             textType="body"
           >
             <strong className="before:rotate-[3deg] before:duration-medium max-laptop:before:bg-tertiary20 laptop:before:scale-x-0 laptop:before:bg-tertiary20 ">
@@ -95,7 +95,7 @@ export default function DesignEspaceSection() {
             viewBox="0 0 200 200"
             xmlns="http://www.w3.org/2000/svg"
             className={cn(
-              'pointer-events-none absolute z-10 w-[70rem] -translate-y-1/2 overflow-visible fill-tertiary1 transition-all duration-slow group-hover:translate-x-0 group-hover:fill-tertiary10 max-laptop:hidden max-laptop:fill-tertiary10 tablet:w-auto laptop:-translate-x-[150%]'
+              'pointer-events-none absolute z-10 w-[43.75rem] -translate-y-1/2 overflow-visible fill-tertiary1 transition-all duration-slow group-hover:translate-x-0 group-hover:fill-tertiary10 max-laptop:hidden max-laptop:fill-tertiary10 tablet:w-auto laptop:-translate-x-[150%]'
             )}
           >
             <path
@@ -104,7 +104,7 @@ export default function DesignEspaceSection() {
             />
           </svg>
           <P
-            className="relative z-20 ml-small duration-slowest  group-hover:max-h-[40rem] group-hover:opacity-100 laptop:max-h-0 laptop:opacity-0 group-hover:[&>strong:before]:scale-x-100 group-hover:[&>strong:before]:delay-500"
+            className="relative z-20 ml-small duration-slowest  group-hover:max-h-[25rem] group-hover:opacity-100 laptop:max-h-0 laptop:opacity-0 group-hover:[&>strong:before]:scale-x-100 group-hover:[&>strong:before]:delay-500"
             textType="body"
           >
             <strong className="before:duration-medium max-laptop:before:bg-tertiary20 laptop:before:scale-x-0 laptop:before:bg-tertiary20 ">
@@ -135,7 +135,7 @@ export default function DesignEspaceSection() {
             viewBox="0 0 200 200"
             xmlns="http://www.w3.org/2000/svg"
             className={cn(
-              'pointer-events-none absolute z-10 w-[70rem] -translate-y-1/2 overflow-visible  fill-tertiary1 transition-all duration-slow group-hover:translate-x-0 group-hover:fill-tertiary10 max-laptop:hidden max-laptop:fill-tertiary10 tablet:w-auto laptop:-translate-x-[150%]'
+              'pointer-events-none absolute z-10 w-[43.75rem] -translate-y-1/2 overflow-visible  fill-tertiary1 transition-all duration-slow group-hover:translate-x-0 group-hover:fill-tertiary10 max-laptop:hidden max-laptop:fill-tertiary10 tablet:w-auto laptop:-translate-x-[150%]'
             )}
           >
             <path
@@ -146,7 +146,7 @@ export default function DesignEspaceSection() {
             />
           </svg>
           <P
-            className="relative z-20 ml-small  duration-slowest  group-hover:max-h-[40rem] group-hover:opacity-100 laptop:max-h-0 laptop:opacity-0 group-hover:[&>strong:before]:scale-x-100 group-hover:[&>strong:before]:delay-500"
+            className="relative z-20 ml-small  duration-slowest  group-hover:max-h-[25rem] group-hover:opacity-100 laptop:max-h-0 laptop:opacity-0 group-hover:[&>strong:before]:scale-x-100 group-hover:[&>strong:before]:delay-500"
             textType="body"
           >
             <strong className="before:duration-medium max-laptop:before:bg-tertiary20 laptop:before:scale-x-0 laptop:before:bg-tertiary20 ">
@@ -175,7 +175,7 @@ export default function DesignEspaceSection() {
           </P>
         </SubSection>
       </ol>
-      <DesignEspaceTitleBlock className="laptop relative flex w-[40rem] flex-col pt-[210px] max-[1298px]:-translate-x-10 max-laptop:translate-x-5 max-tablet:translate-x-0"></DesignEspaceTitleBlock>
+      <DesignEspaceTitleBlock className="laptop relative flex w-[25rem] flex-col pt-[210px] max-[1298px]:-translate-x-10 max-laptop:translate-x-5 max-tablet:translate-x-0"></DesignEspaceTitleBlock>
     </section>
   );
 }

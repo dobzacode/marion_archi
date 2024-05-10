@@ -2,14 +2,14 @@
 
 const plugin = require('tailwindcss/plugin');
 
-const HEADING_EXTRA_LARGE_SIZE = '12.8rem';
-const HEADING_SUB_EXTRA_LARGE_SIZE = '9.6rem';
-const HEADING_LARGE_SIZE = '6.4rem';
-const HEADING_SUBLARGE_SIZE = '4.8rem';
-const HEADING_SIZE = '3.2rem';
-const SUBHEADING_SIZE = '2.4rem';
-const BODY_SIZE = '1.6rem';
-const CAPTION_SIZE = '1.2rem';
+const HEADING_EXTRA_LARGE_SIZE = '8rem';
+const HEADING_SUB_EXTRA_LARGE_SIZE = '6rem';
+const HEADING_LARGE_SIZE = '4rem';
+const HEADING_SUBLARGE_SIZE = '3rem';
+const HEADING_SIZE = '2rem';
+const SUBHEADING_SIZE = '1.5rem';
+const BODY_SIZE = '1rem';
+const CAPTION_SIZE = '0.75rem';
 
 const LIGHTNESS_FACTOR = '20%';
 const SATURATION_FACTOR = 30;
@@ -278,18 +278,18 @@ module.exports = {
         large: HEADING_LARGE_SIZE,
         'sub-large': HEADING_SIZE,
         medium: SUBHEADING_SIZE,
-        'sub-medium': parseFloat(SUBHEADING_SIZE) - 0.4 + 'rem',
+        'sub-medium': parseFloat(SUBHEADING_SIZE) - 0.25 + 'rem',
         small: BODY_SIZE,
-        'extra-small': parseFloat(SUBHEADING_SIZE) - 1.6 + 'rem'
+        'extra-small': parseFloat(SUBHEADING_SIZE) - 1 + 'rem'
       },
       borderRadius: {
         'extra-large': HEADING_EXTRA_LARGE_SIZE,
         large: HEADING_LARGE_SIZE,
         'sub-large': HEADING_SIZE,
         medium: SUBHEADING_SIZE,
-        'sub-medium': parseFloat(SUBHEADING_SIZE) - 0.4 + 'rem',
-        small: parseFloat(SUBHEADING_SIZE) - 0.8 + 'rem',
-        'extra-small': parseFloat(SUBHEADING_SIZE) - 1.6 + 'rem'
+        'sub-medium': parseFloat(SUBHEADING_SIZE) - 0.25 + 'rem',
+        small: parseFloat(SUBHEADING_SIZE) - 0.5 + 'rem',
+        'extra-small': parseFloat(SUBHEADING_SIZE) - 1 + 'rem'
       },
       boxShadow: {
         'medium-light': mediumShadow('0deg 0% 50%'),

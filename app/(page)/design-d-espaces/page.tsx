@@ -42,7 +42,9 @@ export default async function Page() {
 
   return (
     <main className="relative flex h-full w-full flex-col px-[1px]">
-      <DesignMenu></DesignMenu>
+      <Suspense>
+        <DesignMenu></DesignMenu>
+      </Suspense>
       <Suspense>
         <ContentSection designEspaceArr={withImg}></ContentSection>
       </Suspense>

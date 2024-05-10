@@ -47,7 +47,9 @@ export default async function Page() {
   return (
     <>
       <main className="relative flex h-full w-full flex-col px-[1px]">
-        <DesignServiceMenu />
+        <Suspense>
+          <DesignServiceMenu />
+        </Suspense>
         <Suspense>
           <ContentServiceSection designServiceArr={withImg} />
         </Suspense>

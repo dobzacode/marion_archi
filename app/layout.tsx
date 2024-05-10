@@ -1,5 +1,8 @@
+import AlertBanner from '@/components/sanity/alert-banner';
 import { Header } from '@/components/ui/header/header';
 import type { Metadata } from 'next';
+import { VisualEditing } from 'next-sanity';
+import { draftMode } from 'next/headers';
 import './globals.css';
 
 export const metadata: Metadata = {
@@ -16,12 +19,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           ' max-w-screen relative flex min-h-screen flex-col gap-large overflow-x-hidden bg-primary1 py-small tablet:gap-medium tablet:py-medium laptop:py-sub-large'
         }
       >
+        {draftMode().isEnabled && <AlertBanner />}
         <Header
           className=" flex max-h-screen items-center"
           size="medium"
           textColor="primary"
         ></Header>
         {children}
+        {draftMode().isEnabled && <VisualEditing />}
       </body>
     </html>
   );

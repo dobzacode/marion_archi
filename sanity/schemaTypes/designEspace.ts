@@ -46,7 +46,7 @@ export default defineType({
     defineField({
       name: 'squareMeter',
       title: 'Mètre carré',
-      type: 'int',
+      type: 'number',
       group: 'contenu'
     }),
     defineField({

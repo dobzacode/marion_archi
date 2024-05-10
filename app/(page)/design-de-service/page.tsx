@@ -32,17 +32,19 @@ export default async function Page() {
   const withImg = designServiceArr
     ? await Promise.all(
         designServiceArr.map(async (item) => {
-          const url = await urlForImage(item.mainImage)
+          const url = await urlForImage(item?.mainImage)
             .width(1920)
             .height(1080)
             .dpr(2)
             .quality(100)
             .url();
-          const blurSrc = urlForImage(item.mainImage).width(20).quality(20).url();
+          const blurSrc = urlForImage(item?.mainImage).width(20).quality(20).url();
           return { url, blurSrc, ...item };
         })
       )
     : null;
+
+  console.log(designServiceArr);
 
   return (
     <>

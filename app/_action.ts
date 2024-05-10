@@ -1,6 +1,7 @@
-'use server';
+  'use server';
 
 import { google } from 'googleapis';
+import { draftMode } from 'next/headers';
 
 export async function contactAction(formData: FormData) {
   console.log(formData);

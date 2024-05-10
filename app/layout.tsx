@@ -1,5 +1,4 @@
 import AlertBanner from '@/components/sanity/alert-banner';
-import { Header } from '@/components/ui/header/header';
 import type { Metadata } from 'next';
 import { VisualEditing } from 'next-sanity';
 import { draftMode } from 'next/headers';
@@ -20,11 +19,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         }
       >
         {draftMode().isEnabled && <AlertBanner />}
-        <Header
-          className=" flex max-h-screen items-center"
-          size="medium"
-          textColor="primary"
-        ></Header>
+
         {children}
         {draftMode().isEnabled && <VisualEditing />}
       </body>

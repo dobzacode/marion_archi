@@ -1,12 +1,13 @@
+import { DesignEspaceWithUrl } from '@/app/(page)/design-d-espaces/page';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import React, { useMemo } from 'react';
 import useBetterMediaQuery from '../hooks/use-better-media-query';
-import ProjectCard, { Project } from './project-card';
+import ProjectCard from './project-card';
 
 interface CategoryCardProps {
   actualType: string;
   arrLength: number;
-  projectsToShow: Project[];
+  projectsToShow: DesignEspaceWithUrl[] | undefined;
 }
 
 const CategoryCard: React.FC<CategoryCardProps> = React.memo(
@@ -70,17 +71,18 @@ const CategoryCard: React.FC<CategoryCardProps> = React.memo(
       router.push(`${pathname}?type=${actualType}&project=${id}`, { scroll: false });
     };
 
+    if (!projectsToShow) return null;
+
     if (isMobile) {
       return (
         <>
           {projectsToShow.map((project, index) => {
             return (
               <ProjectCard
-                src={`/assets/${actualType}/${project.project_name}/banner-${project.project_name}.jpg`}
+                src={project.url}
                 variants={!searchParams.get('project') ? mobileVariants : secondVariants}
-                handleButtonClick={() => handleButtonClick(project.id)}
                 index={index}
-                key={project.id}
+                key={project._id}
                 {...project}
               ></ProjectCard>
             );
@@ -94,11 +96,10 @@ const CategoryCard: React.FC<CategoryCardProps> = React.memo(
         {projectsToShow.map((project, index) => {
           return (
             <ProjectCard
-              src={`/assets/${actualType}/${project.project_name}/banner-${project.project_name}.jpg`}
+              src={project.url}
               variants={!searchParams.get('project') ? variants : secondVariants}
-              handleButtonClick={() => handleButtonClick(project.id)}
               index={index}
-              key={project.id}
+              key={project._id}
               {...project}
             ></ProjectCard>
           );

@@ -1,16 +1,17 @@
 'use client';
 
 import { usePathname, useSearchParams } from 'next/navigation';
-import { useEffect, useState } from 'react';
+import { Suspense, useEffect, useState } from 'react';
 
-import architecture from '@/lib/design-d-espaces/architecture.json';
-import architecture_interieurs from '@/lib/design-d-espaces/architecture_interieurs.json';
-import architecture_retail from '@/lib/design-d-espaces/architecture_retail.json';
-import architecture_tertiaire from '@/lib/design-d-espaces/architecture_tertiaire.json';
+import { DesignEspaceWithUrl } from '@/app/(page)/design-d-espaces/page';
 import { AnimatePresence } from 'framer-motion';
 import CategoryCard from './category-card';
 
-export default function ContentSection() {
+export default function ContentSection({
+  designEspaceArr
+}: {
+  designEspaceArr: DesignEspaceWithUrl[] | null;
+}) {
   const searchParams = useSearchParams();
   const pathname = usePathname();
   const [actualType, setActualType] = useState<string>('architecture_interieurs');
@@ -24,38 +25,64 @@ export default function ContentSection() {
     <section>
       <ul key="projectList" className="relative flex flex-wrap ">
         <AnimatePresence mode="wait">
-          {actualType === 'architecture_interieurs' && (
-            <CategoryCard
-              key="architecture_interieurs"
-              projectsToShow={architecture_interieurs}
-              arrLength={architecture_interieurs.length}
-              actualType={actualType}
-            />
-          )}
-          {actualType === 'architecture' && (
-            <CategoryCard
-              key="architecture"
-              projectsToShow={architecture}
-              arrLength={architecture.length}
-              actualType={actualType}
-            />
-          )}
-          {actualType === 'architecture_retail' && (
-            <CategoryCard
-              key="architecture_retail"
-              projectsToShow={architecture_retail}
-              arrLength={architecture_retail.length}
-              actualType={actualType}
-            />
-          )}
-          {actualType === 'architecture_tertiaire' && (
-            <CategoryCard
-              key={'architecture_tertiaire'}
-              projectsToShow={architecture_tertiaire}
-              arrLength={architecture_tertiaire.length}
-              actualType={actualType}
-            />
-          )}
+          <Suspense>
+            {actualType === 'architecture_interieurs' && (
+              <CategoryCard
+                key="architecture_interieurs"
+                projectsToShow={designEspaceArr?.filter((item) => {
+                  return item.category === 'interieur';
+                })}
+                arrLength={
+                  designEspaceArr?.filter((item) => {
+                    return item.category === 'interieur';
+                  }).length ?? 0
+                }
+                actualType={actualType}
+              />
+            )}
+            {actualType === 'architecture' && (
+              <CategoryCard
+                key="architecture"
+                projectsToShow={designEspaceArr?.filter((item) => {
+                  return item.category === 'architecture';
+                })}
+                arrLength={
+                  designEspaceArr?.filter((item) => {
+                    return item.category === 'architecture';
+                  }).length ?? 0
+                }
+                actualType={actualType}
+              />
+            )}
+            {actualType === 'architecture_retail' && (
+              <CategoryCard
+                key="architecture_retail"
+                projectsToShow={designEspaceArr?.filter((item) => {
+                  return item.category === 'retail';
+                })}
+                arrLength={
+                  designEspaceArr?.filter((item) => {
+                    return item.category === 'retail';
+                  }).length ?? 0
+                }
+                actualType={actualType}
+              />
+            )}
+            {actualType === 'architecture_tertiaire' && (
+              <CategoryCard
+                key={'architecture_tertiaire'}
+                projectsToShow={designEspaceArr?.filter((item) => {
+                  return item.category === 'tertiaire';
+                })}
+                arrLength={
+                  designEspaceArr?.filter((item) => {
+                    return item.category === 'tertiaire';
+                  }).length ?? 0
+                }
+                actualType={actualType}
+              />
+            )}
+          </Suspense>
         </AnimatePresence>
       </ul>
     </section>

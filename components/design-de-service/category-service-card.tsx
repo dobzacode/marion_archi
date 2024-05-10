@@ -1,16 +1,17 @@
+import { DesignServiceWithUrl } from '@/app/(page)/design-de-service/page';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import React, { useMemo } from 'react';
 import useBetterMediaQuery from '../hooks/use-better-media-query';
-import ProjectCard, { Project } from './project-service-card';
+import ProjectCard from './project-service-card';
 
 interface CategoryCardProps {
   actualType: string;
   arrLength: number;
-  projectsToShow: Project[];
+  projectsToShow: DesignServiceWithUrl[] | undefined;
 }
 
 const CategoryCard: React.FC<CategoryCardProps> = React.memo(
-  ({ actualType, arrLength, projectsToShow }: CategoryCardProps) => {
+  ({ arrLength, projectsToShow }: CategoryCardProps) => {
     const isMobile = useBetterMediaQuery('(max-width: 500px)');
 
     const variants = useMemo(
@@ -66,9 +67,7 @@ const CategoryCard: React.FC<CategoryCardProps> = React.memo(
     const pathname = usePathname();
     const searchParams = useSearchParams();
 
-    const handleButtonClick = (id: string) => {
-      router.push(`${pathname}?type=${actualType}&project=${id}`, { scroll: false });
-    };
+    if (!projectsToShow) return null;
 
     if (isMobile) {
       return (
@@ -76,11 +75,10 @@ const CategoryCard: React.FC<CategoryCardProps> = React.memo(
           {projectsToShow.map((project, index) => {
             return (
               <ProjectCard
-                src={`/assets/${actualType}/${project.project_name}/banner-${project.project_name}.jpg`}
+                src={project.url}
                 variants={!searchParams.get('project') ? mobileVariants : secondVariants}
-                handleButtonClick={() => handleButtonClick(project.id)}
                 index={index}
-                key={project.id}
+                key={project._id}
                 {...project}
               ></ProjectCard>
             );
@@ -94,11 +92,10 @@ const CategoryCard: React.FC<CategoryCardProps> = React.memo(
         {projectsToShow.map((project, index) => {
           return (
             <ProjectCard
-              src={`/assets/${actualType}/${project.project_name}/banner-${project.project_name}.jpg`}
+              src={project.url}
               variants={!searchParams.get('project') ? variants : secondVariants}
-              handleButtonClick={() => handleButtonClick(project.id)}
               index={index}
-              key={project.id}
+              key={project._id}
               {...project}
             ></ProjectCard>
           );

@@ -1,46 +1,34 @@
 import DetailServiceCard from '@/components/design-de-service/detail-service-card';
 import P from '@/components/ui/text/p';
-import projets from '@/lib/design-de-service/projets.json';
-import recherches from '@/lib/design-de-service/recherches.json';
 
 import { sanityFetch } from '@/sanity/lib/fetch';
-import { DesignServiceUnitQueryResponse } from '@/sanity/lib/queries';
+import { DESIGNSERVICE_QUERY, DesignServiceUnitQueryResponse } from '@/sanity/lib/queries';
 import { mdiChevronRight } from '@mdi/js';
 import Icon from '@mdi/react';
 import { Metadata } from 'next';
-import { groq } from 'next-sanity';
-import { draftMode } from 'next/headers';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
-export const generateMetadata = ({ params }: { params: { project_name: string } }): Metadata => {
+export const generateMetadata = ({ params }: { params: { titre: string } }): Metadata => {
   return {
-    title: `Design de service | ${params.project_name}`,
-    description: `Découvrez le projet ${params.project_name} de Marion Deleersnyder.`
+    title: `Design de service | ${params.titre}`,
+    description: `Découvrez le projet ${params.titre} de Marion Deleersnyder.`
   };
 };
 
-export async function generateStaticParams() {
-  const result1 = projets.map((item) => ({ project_name: item.project_name }));
-  const result2 = recherches.map((item) => ({ project_name: item.project_name }));
-
-  return [...result1, ...result2].map((post) => ({
-    project_name: post.project_name
-  }));
-}
 export default async function Page({
   params
 }: {
   params: {
     type: 'recherches' | 'projets';
 
-    project_name: string;
+    titre: string;
   };
 }) {
   const project = await sanityFetch<DesignServiceUnitQueryResponse>({
-    query: groq`*[_type == "designService" && (titre === ${params.project_name})]`,
-    stega: draftMode().isEnabled,
-    perspective: draftMode().isEnabled ? 'previewDrafts' : 'published'
+    query: DESIGNSERVICE_QUERY,
+    params,
+    stega: false
   });
 
   if (!project) {

@@ -57,3 +57,5 @@ export type DesignEspaceQueryResponse = DesignEspace[] | null;
 export type DesignServiceQueryResponse = DesignService[] | null;
 
 export type DesignServiceUnitQueryResponse = DesignService | null;
+
+export type DesignEspaceUnitQueryResponse = DesignService | null;

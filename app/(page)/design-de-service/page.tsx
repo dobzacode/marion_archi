@@ -1,6 +1,11 @@
 import ContentServiceSection from '@/components/design-de-service/content-service-section';
 import DesignServiceMenu from '@/components/design-de-service/design-service-menu';
+import { sanityFetch } from '@/sanity/lib/fetch';
+import { DESIGNSERVICE_QUERY, DesignServiceQueryResponse } from '@/sanity/lib/queries';
+import { urlForImage } from '@/sanity/lib/utils';
 import { Metadata } from 'next';
+import { draftMode } from 'next/headers';
+import { Suspense } from 'react';
 
 export const metadata: Metadata = {
   title: 'Portfolio Design de Service | Marion Deleersnyder, Architecte Visionnaire',
@@ -9,11 +14,30 @@ export const metadata: Metadata = {
 };
 
 export default async function Page() {
+  const designServiceArr = await sanityFetch<DesignServiceQueryResponse>({
+    query: DESIGNSERVICE_QUERY,
+    stega: draftMode().isEnabled,
+    perspective: draftMode().isEnabled ? 'previewDrafts' : 'published'
+  });
+
+  const withImg = await designServiceArr?.map(async (item) => {
+    const url = await urlForImage(item.mainImage)
+      .width(1920)
+      .height(1080)
+      .dpr(2)
+      .quality(100)
+      .url();
+    const blurSrc = urlForImage(item.mainImage).width(20).quality(20).url();
+    return { url, blurSrc, titre: item.titre };
+  });
+
   return (
     <>
       <main className="relative flex h-full w-full flex-col px-[1px]">
         <DesignServiceMenu />
-        <ContentServiceSection />
+        <Suspense>
+          <ContentServiceSection designServiceArr={designServiceArr} />
+        </Suspense>
       </main>
     </>
   );

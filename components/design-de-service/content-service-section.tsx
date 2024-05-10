@@ -5,10 +5,15 @@ import { useEffect, useState } from 'react';
 
 import projets from '@/lib/design-de-service/projets.json';
 import recherches from '@/lib/design-de-service/recherches.json';
+import { DesignServiceQueryResponse } from '@/sanity/lib/queries';
 import { AnimatePresence } from 'framer-motion';
 import CategoryCard from './category-service-card';
 
-export default function ContentServiceSection() {
+export default function ContentServiceSection({
+  designServiceArr
+}: {
+  designServiceArr: DesignServiceQueryResponse;
+}) {
   const searchParams = useSearchParams();
   const pathname = usePathname();
   const [actualType, setActualType] = useState<string>('recherches');

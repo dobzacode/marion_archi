@@ -1,3 +1,5 @@
+'use client';
+
 import { DesignEspaceWithUrl } from '@/app/(page)/design-d-espaces/page';
 import { cn, encodeUrl } from '@/lib/utils';
 import { mdiEyeOffOutline } from '@mdi/js';

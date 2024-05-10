@@ -6,12 +6,10 @@ import architecture_interieurs from '@/lib/design-d-espaces/architecture_interie
 import architecture_retail from '@/lib/design-d-espaces/architecture_retail.json';
 import architecture_tertiaire from '@/lib/design-d-espaces/architecture_tertiaire.json';
 import { sanityFetch } from '@/sanity/lib/fetch';
-import { DesignServiceUnitQueryResponse } from '@/sanity/lib/queries';
+import { DESIGNESPACE_QUERY, DesignEspaceUnitQueryResponse } from '@/sanity/lib/queries';
 import { mdiChevronRight } from '@mdi/js';
 import Icon from '@mdi/react';
 import { Metadata } from 'next';
-import { groq } from 'next-sanity';
-import { draftMode } from 'next/headers';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
@@ -44,10 +42,10 @@ export default async function Page({
     project_name: string;
   };
 }) {
-  const project = await sanityFetch<DesignServiceUnitQueryResponse>({
-    query: groq`*[_type == "designService" && (titre === ${params.project_name})]`,
-    stega: draftMode().isEnabled,
-    perspective: draftMode().isEnabled ? 'previewDrafts' : 'published'
+  const project = await sanityFetch<DesignEspaceUnitQueryResponse>({
+    query: DESIGNESPACE_QUERY,
+    params,
+    stega: false
   });
 
   if (!project) {

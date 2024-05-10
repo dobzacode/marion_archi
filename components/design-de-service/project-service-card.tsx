@@ -1,3 +1,5 @@
+'use client';
+
 import { DesignServiceWithUrl } from '@/app/(page)/design-de-service/page';
 import { cn, encodeUrl } from '@/lib/utils';
 import { mdiEyeOffOutline } from '@mdi/js';

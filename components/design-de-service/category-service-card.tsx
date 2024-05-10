@@ -1,5 +1,4 @@
 import { DesignServiceWithUrl } from '@/app/(page)/design-de-service/page';
-import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import React, { Suspense, useMemo } from 'react';
 import useBetterMediaQuery from '../hooks/use-better-media-query';
 import ProjectCard from './project-service-card';
@@ -52,21 +51,6 @@ const CategoryCard: React.FC<CategoryCardProps> = React.memo(
       [arrLength]
     );
 
-    const secondVariants = {
-      hidden: { y: 0, opacity: 0 },
-      visible: () => ({
-        y: 0,
-        opacity: 1,
-        transition: {
-          duration: 0
-        }
-      })
-    };
-
-    const router = useRouter();
-    const pathname = usePathname();
-    const searchParams = useSearchParams();
-
     if (!projectsToShow) return null;
 
     if (isMobile) {
@@ -77,7 +61,7 @@ const CategoryCard: React.FC<CategoryCardProps> = React.memo(
               <Suspense>
                 <ProjectCard
                   src={project.url}
-                  variants={!searchParams.get('project') ? mobileVariants : secondVariants}
+                  variants={mobileVariants}
                   index={index}
                   key={project._id}
                   {...project}
@@ -96,7 +80,7 @@ const CategoryCard: React.FC<CategoryCardProps> = React.memo(
             <Suspense>
               <ProjectCard
                 src={project.url}
-                variants={!searchParams.get('project') ? variants : secondVariants}
+                variants={variants}
                 index={index}
                 key={project._id}
                 {...project}
@@ -108,7 +92,5 @@ const CategoryCard: React.FC<CategoryCardProps> = React.memo(
     );
   }
 );
-
-CategoryCard.displayName = 'ContentCard';
 
 export default CategoryCard;

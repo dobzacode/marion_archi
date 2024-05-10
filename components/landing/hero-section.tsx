@@ -31,7 +31,7 @@ export default function HeroSection() {
           className="slideInFromRight relative opacity-0  animation-delay-[3s] max-[600px]:text-sub-heading max-[600px]:leading-sub-heading"
           textType="heading"
         >
-          Designer d'espace & Designer de service
+          DESIGNER D&apos;ESPACE & DESIGNER DE SERVICE
         </H3>
       </div>
     </section>

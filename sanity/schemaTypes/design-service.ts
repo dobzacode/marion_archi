@@ -75,7 +75,7 @@ export default defineType({
       validation: (Rule) => Rule.required().warning(`Le champ est obligatoire`)
     }),
     defineField({
-      name: 'diffusionRestitution ',
+      name: 'diffusionRestitution',
       title: 'Diffusion et restitution',
       type: 'blockContent',
       group: 'contenu',

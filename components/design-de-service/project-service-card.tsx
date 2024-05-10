@@ -26,7 +26,7 @@ export default function ProjectServiceCard({ titre, index, variants, url, blurSr
       <Link
         href={`/design-de-service/${
           searchParams.get('type') ? searchParams.get('type') : 'recherches'
-        }/${encodeUrl(titre)}`}
+        }/${encodeUrl(titre).toLowerCase()}`}
         className={cn(
           'relative z-30 aspect-[4/1] overflow-hidden  mobile-large:aspect-square mobile-large:h-full '
         )}

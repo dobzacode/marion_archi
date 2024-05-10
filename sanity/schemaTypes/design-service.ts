@@ -6,9 +6,35 @@ export default defineType({
   type: 'document',
   groups: [
     { name: 'media', title: 'Media' },
-    { name: 'contenu', title: 'Contenu', default: true }
+    { name: 'contenu', title: 'Contenu', default: true },
+    { name: 'seo', title: 'Seo' }
   ],
   fields: [
+    defineField({
+      name: 'slug',
+      title: 'Slug',
+      type: 'slug',
+      group: 'seo',
+      validation: (Rule) => Rule.required(),
+      options: {
+        source: 'title',
+        maxLength: 96
+      }
+    }),
+    defineField({
+      name: 'metatitre',
+      title: 'Métatitre',
+      type: 'string',
+      group: 'seo',
+      validation: (Rule) => Rule.required()
+    }),
+    defineField({
+      name: 'metadescription',
+      title: 'Métadescription',
+      type: 'string',
+      group: 'seo',
+      validation: (Rule) => Rule.required()
+    }),
     defineField({
       name: 'mainImage',
       title: 'Image principale',

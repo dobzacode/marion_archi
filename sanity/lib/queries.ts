@@ -12,6 +12,12 @@ export interface DesignEspace {
   mainImage: Image;
   renovation: string;
   honoraire: string;
+  metadescription: string;
+  metatitre: string;
+  slug: {
+    current: string;
+    _type: string;
+  };
   squareMeter: number;
   description: PortableTextBlock[];
   imageGallery: Image[];
@@ -24,6 +30,12 @@ export interface DesignService {
   _updatedAt: string;
   _rev: string;
   date?: string;
+  metadescription: string;
+  metatitre: string;
+  slug: {
+    current: string;
+    _type: string;
+  };
   category: 'projets' | 'recherches';
   titre: string;
   nom: string;

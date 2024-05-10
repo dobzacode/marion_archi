@@ -28,7 +28,7 @@ export default function ProjectCard({ titre, blurSrc, url, variants, index }: Pr
       <Link
         href={`/design-d-espaces/${
           searchParams.get('type') ? searchParams.get('type') : 'architecture_interieurs'
-        }/${encodeUrl(titre)}`}
+        }/${encodeUrl(titre).toLowerCase()}`}
         className={cn(
           'relative z-30 aspect-[4/1] h-full  overflow-hidden mobile-large:aspect-square '
         )}

@@ -138,10 +138,10 @@ export default function DesignEspaceTitleBlock({ className }: { className: strin
       </div>
       <motion.div
         {...mainDivVariants}
-        className="relative h-[15.625rem] max-mobile-large:-mt-medium max-mobile-large:mb-small"
+        className="relative  h-[15.625rem]  max-mobile-large:-mt-medium max-mobile-large:mb-small"
       >
         <H3
-          className=" relative z-50 -rotate-12 font-['Distortion_Dos_Analogue']  text-tertiary1 max-mobile-large:translate-x-28 max-mobile-large:translate-y-28 max-mobile-large:rotate-2"
+          className=" relative z-50 max-w-[16ch] -rotate-12 font-['Distortion_Dos_Analogue']  text-tertiary1 max-mobile-large:translate-x-28 max-mobile-large:translate-y-28 max-mobile-large:rotate-2"
           textType={'heading'}
         >
           ARCHITECTE D&apos;INTERIEUR ET DESIGNER <br className="mobile-large:hidden"></br>

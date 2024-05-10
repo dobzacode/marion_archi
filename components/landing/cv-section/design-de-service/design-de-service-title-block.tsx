@@ -159,7 +159,7 @@ export default function DesignDeServiceTitleBlock({ className }: { className: st
           className="relative h-[15.625rem] max-mobile-large:-mt-medium max-mobile-large:mb-small"
         >
           <H3
-            className=" relative z-50 -rotate-12 font-['Distortion_Dos_Analogue']  text-tertiary1 max-mobile-large:translate-x-10 max-mobile-large:translate-y-12 "
+            className=" relative z-50 max-w-[15ch] -rotate-12 text-pretty text-center font-['Distortion_Dos_Analogue']  text-tertiary1 max-mobile-large:translate-x-10 max-mobile-large:translate-y-12 "
             textType={'heading'}
           >
             DESIGNER DE <br className="mobile-large:hidden"></br> SERVICE &{' '}

@@ -71,7 +71,7 @@ export default function ContactForm({}: {
                   ></Icon>
                 </PopoverTrigger>
                 <PopoverContent side="right">
-                  <p className="body w-[10rem] break-words">
+                  <p className="body w-full text-pretty">
                     Tu as aussi la possibilité de me contacter au 0635336011 ou à l&apos;adresse
                     mail mtonarchi.contact@gmail.com !
                   </p>
@@ -88,8 +88,8 @@ export default function ContactForm({}: {
                 {state}
               </P>
             )}
-            <div className="flex flex-col gap-extra-small">
-              <div className="flex w-full flex-col justify-between  gap-extra-small mobile-large:flex-row  [&>*]:tracking-wide [&>*]:placeholder:tracking-wide">
+            <div className="flex flex-col gap-small">
+              <div className="flex w-full flex-col justify-between  gap-small mobile-large:flex-row  [&>*]:tracking-wide [&>*]:placeholder:tracking-wide">
                 <Input
                   intent="tertiary"
                   className="max-tablet:py-2 max-tablet:text-caption max-tablet:placeholder:text-caption mobile-large:w-1/2"

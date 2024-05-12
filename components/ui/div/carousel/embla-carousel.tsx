@@ -79,17 +79,19 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
     };
   });
 
+  console.log(imageArr[0]);
+
   return (
     <>
-      <div className="embla slideInFromLeft relative self-start">
-        <div className="embla__viewport" ref={emblaRef}>
+      <div className="embla relative  z-30 w-full">
+        <div className="relative overflow-hidden rounded-sm" ref={emblaRef}>
           <div className="embla__container ">
-            {imageArr.map((image, index) => (
+            {props.imageArr.map((image, index) => (
               <div
                 onClick={() => {
                   openLightbox(index);
                 }}
-                className="embla__slide mr-1 aspect-square h-[20rem]  cursor-pointer rounded-extra-small"
+                className="embla__slide  relative h-[20rem]   cursor-pointer overflow-hidden  rounded-sm mobile-large:h-[40rem]"
                 key={index}
               >
                 <div className="embla__slide__number">
@@ -97,11 +99,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
                 </div>
                 <Image
                   fill
-                  onClick={() => {
-                    openLightbox(index);
-                  }}
-                  className="object-cover"
-                  sizes={'(max-width: 640px) 100vw, 50vw'}
+                  className="object-cover "
                   src={image.url}
                   placeholder="blur"
                   blurDataURL={image.blurSrc}
@@ -110,23 +108,26 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
               </div>
             ))}
           </div>
-          <div className="embla__buttons">
-            <PrevButton onClick={scrollPrev} disabled={prevBtnDisabled} />
-            <NextButton onClick={scrollNext} disabled={nextBtnDisabled} />
+          {props.imageArr.length > 1 && (
+            <div className="absolute top-1/2 flex w-full -translate-y-1/2 justify-between">
+              <PrevButton onClick={scrollPrev} disabled={prevBtnDisabled} />
+              <NextButton onClick={scrollNext} disabled={nextBtnDisabled} />
+            </div>
+          )}
+        </div>
+        {props.imageArr.length > 1 && (
+          <div className="embla__dots absolute bottom-0 z-[99] flex w-full">
+            {scrollSnaps.map((_: any, index: number) => (
+              <DotButton
+                key={index}
+                onClick={() => scrollTo(index)}
+                className={'embla__dot'.concat(
+                  index === selectedIndex ? ' embla__dot--selected' : ''
+                )}
+              />
+            ))}
           </div>
-        </div>
-
-        <div className="embla__dots ">
-          {scrollSnaps.map((_: any, index: number) => (
-            <DotButton
-              key={index}
-              onClick={() => scrollTo(index)}
-              className={'embla__dot'.concat(
-                index === selectedIndex ? ' embla__dot--selected' : ''
-              )}
-            />
-          ))}
-        </div>
+        )}
       </div>
 
       <Lightbox

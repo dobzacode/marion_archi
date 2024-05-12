@@ -40,16 +40,13 @@ export interface DesignService {
   category: 'projets' | 'recherches';
   titre: string;
   nom: string;
-  problematiquesEnjeux: string;
-  mediationsComptages: string;
-  prototypesActions: string;
-  echangesEntretiens_dialogues: string;
-  diffusionRestitution: string;
+  problematiquesEnjeux: PortableTextBlock[];
+  mediationsComptages: PortableTextBlock[];
+  prototypesActions: PortableTextBlock[];
+  echangesEntretiensDialogues: PortableTextBlock[];
+  diffusionRestitution: PortableTextBlock[];
+  preconisations: PortableTextBlock[];
   mainImage: Image;
-  renovation: string;
-  honoraire: string;
-  squareMeter: number;
-  description: PortableTextBlock[];
   imageGallery: Image[];
 }
 

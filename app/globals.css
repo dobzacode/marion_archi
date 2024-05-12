@@ -6,6 +6,10 @@
 @tailwind base;
 
 @layer components {
+  .section-px {
+    @apply px-medium mobile-medium:px-medium mobile-large:px-sub-large tablet:px-large;
+  }
+
   .heading--extra-large {
     @apply font-['Distortion_Dos_Analogue'] text-heading-sub-large font-normal  leading-heading-sub-extra-large mobile-large:text-[4.125rem] min-[600px]:text-[5rem] min-[860px]:text-heading-extra-large min-[860px]:leading-heading-extra-large;
   }
@@ -23,7 +27,7 @@
   }
 
   .heading {
-    @apply text-heading leading-heading tracking-[0.075em];
+    @apply text-heading leading-heading;
   }
 
   .sub-heading {

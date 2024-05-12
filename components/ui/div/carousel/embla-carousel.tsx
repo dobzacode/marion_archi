@@ -1,6 +1,5 @@
 'use client';
 
-import { imageByIndex } from '@/lib/utils';
 import useEmblaCarousel from 'embla-carousel-react';
 import Image from 'next/image';
 import React, { useCallback, useEffect, useState } from 'react';
@@ -10,17 +9,17 @@ import Lightbox from 'yet-another-react-lightbox';
 import Zoom from 'yet-another-react-lightbox/plugins/zoom';
 import 'yet-another-react-lightbox/styles.css';
 
+import { Image as ImageSanity } from '@/sanity/lib/queries';
 import { EmblaCarouselType, EmblaOptionsType } from 'embla-carousel';
 import NextJsImage from './nextjs-image';
 
 type PropType = {
-  slides: number[];
   options?: EmblaOptionsType;
-  imageArr: string[];
+  imageArr: ImageSanity[];
 };
 
 const EmblaCarousel: React.FC<PropType> = (props) => {
-  const { slides, options } = props;
+  const { imageArr, options } = props;
   const [emblaRef, emblaApi] = useEmblaCarousel(options);
   const [prevBtnDisabled, setPrevBtnDisabled] = useState(true);
   const [nextBtnDisabled, setNextBtnDisabled] = useState(true);
@@ -63,30 +62,34 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
     setLightboxIsOpen(false);
   };
 
-  const lightboxSlides = props.imageArr.map((item) => ({
-    src: item,
-    width: 3840,
-    height: 2560,
-    srcSet: [
-      { src: item, width: 320, height: 213 },
-      { src: item, width: 640, height: 426 },
-      { src: item, width: 1200, height: 800 },
-      { src: item, width: 2048, height: 1365 },
-      { src: item, width: 3840, height: 2560 }
-    ]
-  }));
+  const lightboxSlides = props.imageArr.map((item) => {
+    return {
+      src: item.url,
+      width: 3840,
+      height: 2560,
+      alt: item.alt ? item.alt : '',
+      blurDataURL: item.blurSrc,
+      srcSet: [
+        { src: item.url, width: 320, height: 213 },
+        { src: item.url, width: 640, height: 426 },
+        { src: item.url, width: 1200, height: 800 },
+        { src: item.url, width: 2048, height: 1365 },
+        { src: item.url, width: 3840, height: 2560 }
+      ]
+    };
+  });
 
   return (
     <>
-      <div className="embla relative">
+      <div className="embla slideInFromLeft relative self-start">
         <div className="embla__viewport" ref={emblaRef}>
           <div className="embla__container ">
-            {slides.map((index) => (
+            {imageArr.map((image, index) => (
               <div
                 onClick={() => {
                   openLightbox(index);
                 }}
-                className="embla__slide mr-1 aspect-square h-[25rem]  cursor-pointer rounded-extra-small"
+                className="embla__slide mr-1 aspect-square h-[20rem]  cursor-pointer rounded-extra-small"
                 key={index}
               >
                 <div className="embla__slide__number">
@@ -94,9 +97,15 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
                 </div>
                 <Image
                   fill
+                  onClick={() => {
+                    openLightbox(index);
+                  }}
                   className="object-cover"
-                  src={imageByIndex(props.imageArr, index)}
-                  alt={`Slide ${index + 1}`}
+                  sizes={'(max-width: 640px) 100vw, 50vw'}
+                  src={image.url}
+                  placeholder="blur"
+                  blurDataURL={image.blurSrc}
+                  alt={image.alt ? image.alt : `Image ${index + 1}`}
                 ></Image>
               </div>
             ))}

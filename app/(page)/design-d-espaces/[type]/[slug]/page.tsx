@@ -41,7 +41,7 @@ export async function generateMetadata(
   parent: ResolvingMetadata
 ): Promise<Metadata> {
   const project = await sanityFetch<DesignEspaceUnitQueryResponse>({
-    query: DESIGNESPACE_QUERY,
+    query: DESIGNESPACEUNIT_QUERY,
     params: { slug: params.slug },
     stega: false
   });
@@ -72,7 +72,7 @@ export default async function Page({ params }: Props) {
   }
 
   return (
-    <div className="container relative mx-auto flex flex-col items-center gap-medium laptop:max-w-[1000px]">
+    <div className="container relative mx-auto flex flex-col items-center gap-medium px-small laptop:max-w-[1000px]">
       <nav
         aria-label="Fil d'ariane"
         className="slideInFromLeft caption -mt-large flex items-center gap-1 self-start  text-primary90 mobile-large:gap-extra-small tablet:-mt-small"

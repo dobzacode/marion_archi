@@ -40,7 +40,22 @@ export default defineType({
       title: 'Image principale',
       type: 'image',
       group: 'media',
-      validation: (Rule) => Rule.required().warning(`L'image est obligatoire`)
+      validation: (Rule) =>
+        //@ts-ignore
+        Rule.custom(({ asset }) => {
+          return asset ? true : "L'image est obligatoire";
+        })
+    }),
+    defineField({
+      name: 'schema',
+      title: 'Schéma',
+      type: 'image',
+      group: 'media',
+      validation: (Rule) =>
+        //@ts-ignore
+        Rule.custom(({ asset }) => {
+          return asset ? true : 'Le schéma est obligatoire';
+        })
     }),
     defineField({
       name: 'category',

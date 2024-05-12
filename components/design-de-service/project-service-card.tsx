@@ -1,7 +1,7 @@
 'use client';
 
 import { DesignServiceWithUrl } from '@/app/(page)/design-de-service/page';
-import { cn, encodeUrl } from '@/lib/utils';
+import { cn } from '@/lib/utils';
 import { mdiEyeOffOutline } from '@mdi/js';
 import Icon from '@mdi/react';
 import { Variants, motion } from 'framer-motion';
@@ -16,7 +16,7 @@ interface ProjectProps extends DesignServiceWithUrl {
   src: string;
 }
 
-export default function ProjectServiceCard({ titre, index, variants, url, blurSrc }: ProjectProps) {
+export default function ProjectServiceCard({ titre, index, variants, url, blurSrc, slug }: ProjectProps) {
   const searchParams = useSearchParams();
 
   return (
@@ -26,7 +26,7 @@ export default function ProjectServiceCard({ titre, index, variants, url, blurSr
       <Link
         href={`/design-de-service/${
           searchParams.get('type') ? searchParams.get('type') : 'recherches'
-        }/${encodeUrl(titre).toLowerCase()}`}
+        }/${slug.current}`}
         className={cn(
           'relative z-30 aspect-[4/1] overflow-hidden  mobile-large:aspect-square mobile-large:h-full '
         )}

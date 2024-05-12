@@ -14,6 +14,7 @@ export interface DesignEspace {
   honoraire: string;
   metadescription: string;
   metatitre: string;
+  schema: Image;
   slug: {
     current: string;
     _type: string;
@@ -68,6 +69,10 @@ export type DesignEspaceQueryResponse = DesignEspace[] | null;
 
 export type DesignServiceQueryResponse = DesignService[] | null;
 
+export const DESIGNESPACEUNIT_QUERY = groq`*[_type == "designEspace" && slug.current == $slug][0]`;
+
 export type DesignServiceUnitQueryResponse = DesignService | null;
+
+export const DESIGNSERVICEUNIT_QUERY = groq`*[_type == "designService" && slug.current == $slug][0]`;
 
 export type DesignEspaceUnitQueryResponse = DesignEspace | null;

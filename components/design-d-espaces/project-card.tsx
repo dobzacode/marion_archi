@@ -1,7 +1,7 @@
 'use client';
 
 import { DesignEspaceWithUrl } from '@/app/(page)/design-d-espaces/page';
-import { cn, encodeUrl } from '@/lib/utils';
+import { cn } from '@/lib/utils';
 import { mdiEyeOffOutline } from '@mdi/js';
 import Icon from '@mdi/react';
 import { Variants, motion } from 'framer-motion';
@@ -16,8 +16,10 @@ interface ProjectProps extends DesignEspaceWithUrl {
   src: string;
 }
 
-export default function ProjectCard({ titre, blurSrc, url, variants, index }: ProjectProps) {
+export default function ProjectCard({ titre, blurSrc, url, variants, index, slug }: ProjectProps) {
   const searchParams = useSearchParams();
+
+  console.log(slug);
 
   return (
     <li
@@ -28,7 +30,7 @@ export default function ProjectCard({ titre, blurSrc, url, variants, index }: Pr
       <Link
         href={`/design-d-espaces/${
           searchParams.get('type') ? searchParams.get('type') : 'architecture_interieurs'
-        }/${encodeUrl(titre).toLowerCase()}`}
+        }/${slug.current}`}
         className={cn(
           'relative z-30 aspect-[4/1] h-full  overflow-hidden mobile-large:aspect-square '
         )}
